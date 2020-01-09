@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Swatches renders correctly 1`] = `
+<div
+  className="swatches-picker "
+  style={
+    Object {
+      "height": 240,
+      "width": 320,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "inline-block",
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "MozBorderRadius": 2,
+          "MozBoxShadow": "0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)",
+          "OBorderRadius": 2,
+          "OBoxShadow": "0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)",
+          "WebkitBorderRadius": 2,
+          "WebkitBoxShadow": "0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)",
+          "background": "#fff",
+          "borderRadius": 2,
+          "bottom": "0px",
+          "boxShadow": "0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)",
+          "left": "0px",
+          "msBorderRadius": 2,
+          "msBoxShadow": "0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)",
+          "position": "absolute",
+          "right": "0px",
+          "top": "0px",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "height": 240,
+            "overflowY": "scroll",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "padding": "16px 0 6px 16px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "float": "left",
+                "marginRight": "10px",
+                "paddingBottom": "10px",
+                "width": "40px",
+              }
+            }
+          >
+            <span
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                onMouseOver={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "MozBorderRadius": "0 0 2px 2px",
+                    "OBorderRadius": "0 0 2px 2px",
+                    "WebkitBorderRadius": "0 0 2px 2px",
+                    "background": "#fff",
+                    "borderRadius": "0 0 2px 2px",
+                    "cursor": "pointer",
+                    "height": "24px",
+                    "marginBottom": "1px",
+                    "msBorderRadius": "0 0 2px 2px",
+                    "outline": "none",
+                    "overflow": "hidden",
+                    "position": "relative",
+                    "width": "40px",
+                  }
+                }
+                tabIndex={0}
+                title="#fff"
+              >
+                <div
+                  style={
+                    Object {
+                      "color": "#000",
+                      "display": "none",
+                      "marginLeft": "8px",
+                    }
+                  }
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div
+            style={
+              Object {
+                "float": "left",
+                "marginRight": "10px",
+                "paddingBottom": "10px",
+                "width": "40px",
+              }
+            }
+          >
+            <span
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                onMouseOver={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "MozBorderRadius": "0 0 2px 2px",
+                    "OBorderRadius": "0 0 2px 2px",
+                    "WebkitBorderRadius": "0 0 2px 2px",
+                    "background": "#333",
+                    "borderRadius": "0 0 2px 2px",
+                    "cursor": "pointer",
+                    "height": "24px",
+                    "marginBottom": "1px",
+                    "msBorderRadius": "0 0 2px 2px",
+                    "outline": "none",
+                    "overflow": "hidden",
+                    "position": "relative",
+                    "width": "40px",
+                  }
+                }
+                tabIndex={0}
+                title="#333"
+              >
+                <div
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "display": "none",
+                      "marginLeft": "8px",
+                    }
+                  }
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div
+            style={
+              Object {
+                "clear": "both",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SwatchesColor renders correctly 1`] = `
+<span
+  onBlur={[Function]}
+  onFocus={[Function]}
+>
+  <div
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseOver={[Function]}
+    role="button"
+    style={
+      Object {
+        "background": "",
+        "cursor": "pointer",
+        "height": "24px",
+        "marginBottom": "1px",
+        "outline": "none",
+        "position": "relative",
+        "width": "40px",
+      }
+    }
+    tabIndex={0}
+    title=""
+  >
+    <div
+      style={
+        Object {
+          "color": "#fff",
+          "display": "none",
+          "marginLeft": "8px",
+        }
+      }
+    >
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+        />
+      </svg>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`SwatchesColor renders with props 1`] = `
+<span
+  onBlur={[Function]}
+  onFocus={[Function]}
+>
+  <div
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseOver={[Function]}
+    role="button"
+    style={
+      Object {
+        "MozBorderRadius": "0 0 2px 2px",
+        "OBorderRadius": "0 0 2px 2px",
+        "WebkitBorderRadius": "0 0 2px 2px",
+        "background": "",
+        "borderRadius": "0 0 2px 2px",
+        "cursor": "pointer",
+        "height": "24px",
+        "marginBottom": "1px",
+        "msBorderRadius": "0 0 2px 2px",
+        "outline": "none",
+        "overflow": "hidden",
+        "position": "relative",
+        "width": "40px",
+      }
+    }
+    tabIndex={0}
+    title=""
+  >
+    <div
+      style={
+        Object {
+          "color": "#fff",
+          "display": "block",
+          "marginLeft": "8px",
+        }
+      }
+    >
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+        />
+      </svg>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`SwatchesGroup renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "float": "left",
+      "marginRight": "10px",
+      "paddingBottom": "10px",
+      "width": "40px",
+    }
+  }
+>
+  <span
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onMouseOver={[Function]}
+      role="button"
+      style={
+        Object {
+          "MozBorderRadius": "0 0 2px 2px",
+          "OBorderRadius": "0 0 2px 2px",
+          "WebkitBorderRadius": "0 0 2px 2px",
+          "background": "#fff",
+          "borderRadius": "0 0 2px 2px",
+          "cursor": "pointer",
+          "height": "24px",
+          "marginBottom": "1px",
+          "msBorderRadius": "0 0 2px 2px",
+          "outline": "none",
+          "overflow": "hidden",
+          "position": "relative",
+          "width": "40px",
+        }
+      }
+      tabIndex={0}
+      title="#fff"
+    >
+      <div
+        style={
+          Object {
+            "color": "#000",
+            "display": "none",
+            "marginLeft": "8px",
+          }
+        }
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+          />
+        </svg>
+      </div>
+    </div>
+  </span>
+</div>
+`;
