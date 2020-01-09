@@ -6,7 +6,8 @@ import { isValidHex } from '../../helpers/color';
 import EditableInput from '../common/EditableInput';
 
 const ChromeFields = (props) => {
-  const [viewState, setViewState] = useState('');
+  const { view } = props;
+  const [viewState, setViewState] = useState(view);
   const inputRef = useRef();
 
   const toggleViews = () => {
@@ -155,14 +156,19 @@ const ChromeFields = (props) => {
 
 
   useEffect(() => {
-    if (props.hsl.a !== 1 && viewState === 'hex') {
+    if (props.hsl.a !== 1 && props.view === 'hex') {
       setViewState('rgb');
-    } else if (props.hsl.a === 1 && viewState !== 'hex') {
-      setViewState('hex');
-    } else if (viewState !== 'rgb' && viewState !== 'hsl') {
-      setViewState('rgb');
+    } else {
+      setViewState(props.view);
     }
   }, []);
+
+  const { hsl } = props;
+  useEffect(() => {
+    if (props.hsl.a !== 1 && viewState === 'hex') {
+      setViewState('rgb');
+    }
+  }, [hsl]);
 
 
   let fields;
@@ -298,6 +304,15 @@ ChromeFields.propTypes = {
   }).isRequired,
   onChange: PropTypes.func.isRequired,
   hex: PropTypes.string.isRequired,
+  view: PropTypes.oneOf([
+    'hex',
+    'rgb',
+    'hsl',
+  ]),
+};
+
+ChromeFields.defaultProps = {
+  view: 'hex',
 };
 
 export default ChromeFields;

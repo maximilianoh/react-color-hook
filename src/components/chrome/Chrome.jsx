@@ -15,7 +15,7 @@ import ChromePointerCircle from './ChromePointerCircle';
 
 const Chrome = ({
   width, onChange, disableAlpha, rgb, hsl, hsv, hex, renderers,
-  styles: passedStyles, className,
+  styles: passedStyles, className, defaultView,
 }) => {
   const styles = reactCSS(merge({
     default: {
@@ -140,6 +140,7 @@ const Chrome = ({
         <ChromeFields
           rgb={rgb}
           hsl={hsl}
+          view={defaultView}
           hex={hex}
           onChange={onChange}
           disableAlpha={disableAlpha}
@@ -179,6 +180,11 @@ Chrome.propTypes = {
   hsl: PropTypes.shape({}).isRequired,
   renderers: PropTypes.shape({}),
   className: PropTypes.string,
+  defaultView: PropTypes.oneOf([
+    'hex',
+    'rgb',
+    'hsl',
+  ]),
 };
 
 Chrome.defaultProps = {
@@ -187,6 +193,7 @@ Chrome.defaultProps = {
   styles: {},
   className: '',
   renderers: {},
+  defaultView: 'hex',
 };
 
 export default ColorWrap(Chrome);

@@ -65,7 +65,26 @@ test('Chrome onChange events correctly', () => {
   expect(changeSpy).toHaveBeenCalledTimes(3);
   rerender(<Chrome {...red} onChange={changeSpy} />)
   expect(chromePicker[1].children[1].textContent).toBe('hex');
-})
+});
+
+
+test('Chrome view hsl correctly', () => {
+  render(<Chrome {...red} defaultView="hsl" />);
+  let chromePicker = document.querySelector(".chrome-picker").children;
+  expect(chromePicker[1].children[1].textContent).toBe('hsla');
+});
+
+test('Chrome view rgb correctly', () => {
+  render(<Chrome {...red} defaultView="rgb" />);
+  let chromePicker = document.querySelector(".chrome-picker").children;
+  expect(chromePicker[1].children[1].textContent).toBe('rgba');
+});
+
+test('Chrome view hex correctly', () => {
+  render(<Chrome {...red} defaultView="hex" />);
+  let chromePicker = document.querySelector(".chrome-picker").children;
+  expect(chromePicker[1].children[1].textContent).toBe('hex');
+});
 
 test('Chrome renders on server correctly', () => {
   const tree = renderer.create(
@@ -87,6 +106,27 @@ test('ChromePointerCircle renders correctly', () => {
     <ChromePointerCircle />,
   ).toJSON()
   expect(tree).toMatchSnapshot()
+})
+
+test('ChromeFields view hsl  correctly', () => {
+  render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}} 
+    hex="#194D33" onChange={()=>{}} view="hsl" />);
+  let flex = document.querySelector(".flexbox-fix");
+  expect(flex.textContent).toBe('hsla');
+})
+
+test('ChromeFields view rgb  correctly', () => {
+  render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}} 
+    hex="#194D33" onChange={()=>{}} view="rgb" />);
+  let flex = document.querySelector(".flexbox-fix");
+  expect(flex.textContent).toBe('rgba');
+})
+
+test('ChromeFields view hex  correctly', () => {
+  render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}} 
+    hex="#194D33" onChange={()=>{}} view="hex" />);
+  let flex = document.querySelector(".flexbox-fix");
+  expect(flex.textContent).toBe('hex');
 })
 
 test('ChromeFields renders correctly', () => {

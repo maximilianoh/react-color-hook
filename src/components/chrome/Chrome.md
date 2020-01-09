@@ -6,6 +6,17 @@ import {  red } from '../../helpers/color';
 <Chrome {...red} />
 ```
 
+Chrome Views
+```js
+import Chrome from './Chrome.jsx';
+import {  red } from '../../helpers/color';
+<div>
+    <Chrome {...red} defaultView="hex" />
+    <Chrome {...red} defaultView="hsl" />
+    <Chrome {...red} defaultView="rgb" />
+</div>
+```
+
 Chrome onChange
 ```js
 import Chrome from './Chrome.jsx';
