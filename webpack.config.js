@@ -108,7 +108,7 @@ let getFunction = (parameter, env) => {
     module: { rules: rules },
     mode: mode,
     output: {
-      path: __dirname + `bundle/${parameter}/`,
+      path: __dirname + `/bundle/${parameter}/`,
       filename: filename,
       chunkFilename: '[name].bundle.js',
       publicPath: publicPath
