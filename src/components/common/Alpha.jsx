@@ -22,7 +22,7 @@ const Alpha = (props) => {
   };
 
 
-  useEffect(() => () => { handleMouseUp(); }, []);
+  useEffect(() => { handleMouseUp(); }, []);
 
   const { rgb, renderers, pointer } = props;
   const styles = alphaStyle(props, rgb);

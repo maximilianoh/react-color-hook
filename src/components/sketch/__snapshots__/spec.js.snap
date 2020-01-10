@@ -42,7 +42,7 @@ exports[`Sketch renders correctly 1`] = `
           "MozBorderRadius": "",
           "OBorderRadius": "",
           "WebkitBorderRadius": "",
-          "background": "hsl(249.99999999999994,100%, 50%)",
+          "background": "hsl(250.38461538461542,100%, 50%)",
           "borderRadius": "",
           "bottom": "0px",
           "left": "0px",
@@ -109,9 +109,9 @@ exports[`Sketch renders correctly 1`] = `
           style={
             Object {
               "cursor": "default",
-              "left": "66.66666666666667%",
+              "left": "67.53246753246754%",
               "position": "absolute",
-              "top": "70%",
+              "top": "69.80392156862746%",
             }
           }
         >
@@ -239,7 +239,7 @@ exports[`Sketch renders correctly 1`] = `
             <div
               style={
                 Object {
-                  "left": "69.44444444444443%",
+                  "left": "69.55128205128206%",
                   "position": "absolute",
                 }
               }
@@ -1494,7 +1494,7 @@ exports[`Sketch renders on server correctly 1`] = `
           "MozBorderRadius": "",
           "OBorderRadius": "",
           "WebkitBorderRadius": "",
-          "background": "hsl(249.99999999999994,100%, 50%)",
+          "background": "hsl(250.38461538461542,100%, 50%)",
           "borderRadius": "",
           "bottom": "0px",
           "left": "0px",
@@ -1561,9 +1561,9 @@ exports[`Sketch renders on server correctly 1`] = `
           style={
             Object {
               "cursor": "default",
-              "left": "66.66666666666667%",
+              "left": "67.53246753246754%",
               "position": "absolute",
-              "top": "70%",
+              "top": "69.80392156862746%",
             }
           }
         >
@@ -1691,7 +1691,7 @@ exports[`Sketch renders on server correctly 1`] = `
             <div
               style={
                 Object {
-                  "left": "69.44444444444443%",
+                  "left": "69.55128205128206%",
                   "position": "absolute",
                 }
               }

@@ -47,7 +47,7 @@ SliderSwatch.defaultProps = {
   onClick: () => {},
   last: false,
   first: false,
-  offset: '0',
+  offset: 0,
   active: false,
 };
 
@@ -56,7 +56,7 @@ SliderSwatch.propTypes = {
   hsl: PropTypes.shape({
     h: PropTypes.number,
   }).isRequired,
-  offset: PropTypes.string,
+  offset: PropTypes.number,
   active: PropTypes.bool,
   last: PropTypes.bool,
   first: PropTypes.bool,

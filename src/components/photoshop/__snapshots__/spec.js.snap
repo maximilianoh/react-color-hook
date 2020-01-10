@@ -77,7 +77,7 @@ exports[`Photoshop renders correctly 1`] = `
             "MozBorderRadius": "",
             "OBorderRadius": "",
             "WebkitBorderRadius": "",
-            "background": "hsl(249.99999999999994,100%, 50%)",
+            "background": "hsl(250.38461538461542,100%, 50%)",
             "borderRadius": "",
             "bottom": "0px",
             "left": "0px",
@@ -144,9 +144,9 @@ exports[`Photoshop renders correctly 1`] = `
             style={
               Object {
                 "cursor": "default",
-                "left": "66.66666666666667%",
+                "left": "67.53246753246754%",
                 "position": "absolute",
-                "top": "70%",
+                "top": "69.80392156862746%",
               }
             }
           >
@@ -253,7 +253,7 @@ exports[`Photoshop renders correctly 1`] = `
               Object {
                 "left": "0px",
                 "position": "absolute",
-                "top": "30.55555555555557%",
+                "top": "30.448717948717942%",
               }
             }
           >
@@ -563,7 +563,7 @@ exports[`Photoshop renders correctly 1`] = `
                     "width": "40%",
                   }
                 }
-                value="67"
+                value="68"
               />
               <span
                 onMouseDown={[Function]}

@@ -22,7 +22,6 @@ const Slider = ({
       },
     },
   }, passedStyles));
-
   return (
     <div style={styles.wrap || {}} className={`slider-picker ${className}`}>
       <div style={styles.hue}>

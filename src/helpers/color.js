@@ -1,5 +1,5 @@
 import each from 'lodash/each';
-import tinycolor from 'tinycolor2';
+import chroma from 'chroma-js';
 
 const isNumber = (value) => !Number.isNaN(parseFloat(value));
 
@@ -24,12 +24,26 @@ export const simpleCheckForValidColor = (data) => {
   return (checked === passed) ? data : false;
 };
 
+const valueNaN = (h) => (!isNumber(h) ? 0 : h);
+const hslaListToObject = (list) => ({
+  h: valueNaN(list[0]), s: valueNaN(list[1]), l: valueNaN(list[2]), a: valueNaN(list[3]),
+});
+const rgbaListToObject = (list) => ({
+  r: list[0], g: list[1], b: list[2], a: list[3],
+});
+const hsvListToObject = (list) => ({
+  h: valueNaN(list[0]),
+  s: valueNaN(list[1]),
+  v: valueNaN(list[2]),
+});
+
 export const toState = (data, oldHue) => {
-  const color = data.hex ? tinycolor(data.hex) : tinycolor(data);
-  const hsl = color.toHsl();
-  const hsv = color.toHsv();
-  const rgb = color.toRgb();
-  const hex = color.toHex();
+  const colorChroma = data.hex ? chroma(data.hex) : chroma(data);
+  const hsl = hslaListToObject(colorChroma.hsl());
+  const hsv = hsvListToObject(colorChroma.hsv());
+  const rgba = data.a ? colorChroma.alpha(data.a).rgba() : colorChroma.rgba();
+  const rgb = rgbaListToObject(rgba);
+  const hex = colorChroma.hex();
   if (hsl.s === 0) {
     hsl.h = oldHue || 0;
     hsv.h = oldHue || 0;
@@ -38,7 +52,7 @@ export const toState = (data, oldHue) => {
 
   return {
     hsl,
-    hex: transparent ? 'transparent' : `#${hex}`,
+    hex: transparent ? 'transparent' : hex,
     rgb,
     hsv,
     oldHue: data.h || oldHue || hsl.h,
@@ -49,7 +63,7 @@ export const toState = (data, oldHue) => {
 export const isValidHex = (hex) => {
   // disable hex4 and hex8
   const lh = (String(hex).charAt(0) === '#') ? 1 : 0;
-  return hex.length !== (4 + lh) && hex.length < (7 + lh) && tinycolor(hex).isValid();
+  return hex.length !== (4 + lh) && hex.length < (7 + lh) && chroma.valid(hex);
 };
 
 export const getContrastingColor = (data) => {

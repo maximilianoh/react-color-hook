@@ -29,7 +29,7 @@ const SliderSwatches = ({ onClick, hsl }) => {
       <div style={styles.swatch}>
         <SliderSwatch
           hsl={hsl}
-          offset=".80"
+          offset={0.80}
           active={Math.abs(hsl.l - 0.80) < epsilon
             && Math.abs(hsl.s - 0.50) < epsilon}
           onClick={onClick}
@@ -39,7 +39,7 @@ const SliderSwatches = ({ onClick, hsl }) => {
       <div style={styles.swatch}>
         <SliderSwatch
           hsl={hsl}
-          offset=".65"
+          offset={0.65}
           active={Math.abs(hsl.l - 0.65) < epsilon
             && Math.abs(hsl.s - 0.50) < epsilon}
           onClick={onClick}
@@ -48,7 +48,7 @@ const SliderSwatches = ({ onClick, hsl }) => {
       <div style={styles.swatch}>
         <SliderSwatch
           hsl={hsl}
-          offset=".50"
+          offset={0.50}
           active={Math.abs(hsl.l - 0.50) < epsilon
             && Math.abs(hsl.s - 0.50) < epsilon}
           onClick={onClick}
@@ -57,7 +57,7 @@ const SliderSwatches = ({ onClick, hsl }) => {
       <div style={styles.swatch}>
         <SliderSwatch
           hsl={hsl}
-          offset=".35"
+          offset={0.35}
           active={Math.abs(hsl.l - 0.35) < epsilon
             && Math.abs(hsl.s - 0.50) < epsilon}
           onClick={onClick}
@@ -66,7 +66,7 @@ const SliderSwatches = ({ onClick, hsl }) => {
       <div style={styles.swatch}>
         <SliderSwatch
           hsl={hsl}
-          offset=".20"
+          offset={0.20}
           active={Math.abs(hsl.l - 0.20) < epsilon
             && Math.abs(hsl.s - 0.50) < epsilon}
           onClick={onClick}

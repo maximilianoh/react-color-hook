@@ -73,7 +73,7 @@ exports[`Hue renders correctly 1`] = `
       <div
         style={
           Object {
-            "left": "69.44444444444443%",
+            "left": "69.55128205128206%",
             "position": "absolute",
           }
         }
@@ -183,7 +183,7 @@ exports[`Hue renders vertically 1`] = `
           Object {
             "left": "0px",
             "position": "absolute",
-            "top": "30.55555555555557%",
+            "top": "30.448717948717942%",
           }
         }
       >

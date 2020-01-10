@@ -75,7 +75,7 @@ exports[`Slider renders correctly 1`] = `
         <div
           style={
             Object {
-              "left": "69.44444444444443%",
+              "left": "69.55128205128206%",
               "position": "absolute",
             }
           }
@@ -135,7 +135,7 @@ exports[`Slider renders correctly 1`] = `
               "MozBorderRadius": "2px 0 0 2px",
               "OBorderRadius": "2px 0 0 2px",
               "WebkitBorderRadius": "2px 0 0 2px",
-              "background": "hsl(249.99999999999994, 50%, 80%)",
+              "background": "hsl(250.38461538461542, 50%, 80%)",
               "borderRadius": "2px 0 0 2px",
               "cursor": "pointer",
               "height": "12px",
@@ -161,7 +161,7 @@ exports[`Slider renders correctly 1`] = `
           role="grid"
           style={
             Object {
-              "background": "hsl(249.99999999999994, 50%, 65%)",
+              "background": "hsl(250.38461538461542, 50%, 65%)",
               "cursor": "pointer",
               "height": "12px",
             }
@@ -185,7 +185,7 @@ exports[`Slider renders correctly 1`] = `
           role="grid"
           style={
             Object {
-              "background": "hsl(249.99999999999994, 50%, 50%)",
+              "background": "hsl(250.38461538461542, 50%, 50%)",
               "cursor": "pointer",
               "height": "12px",
             }
@@ -209,7 +209,7 @@ exports[`Slider renders correctly 1`] = `
           role="grid"
           style={
             Object {
-              "background": "hsl(249.99999999999994, 50%, 35%)",
+              "background": "hsl(250.38461538461542, 50%, 35%)",
               "cursor": "pointer",
               "height": "12px",
             }
@@ -239,7 +239,7 @@ exports[`Slider renders correctly 1`] = `
               "OTransform": "scaleY(1.8)",
               "WebkitBorderRadius": "0 2px 2px 0",
               "WebkitTransform": "scaleY(1.8)",
-              "background": "hsl(249.99999999999994, 50%, 20%)",
+              "background": "hsl(250.38461538461542, 50%, 20%)",
               "borderRadius": "0 2px 2px 0",
               "cursor": "pointer",
               "height": "12px",
