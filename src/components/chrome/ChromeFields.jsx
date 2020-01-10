@@ -27,6 +27,7 @@ const ChromeFields = (props) => {
 
   const handleChange = (originalData, e) => {
     const data = { ...originalData };
+    // console.dir(data);
     if (data.hex) {
       if (isValidHex(data.hex)) {
         props.onChange({
@@ -165,6 +166,7 @@ const ChromeFields = (props) => {
 
   const { hsl } = props;
   useEffect(() => {
+    // console.dir(hsl);
     if (props.hsl.a !== 1 && viewState === 'hex') {
       setViewState('rgb');
     }

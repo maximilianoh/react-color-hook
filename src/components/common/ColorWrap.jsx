@@ -15,9 +15,11 @@ const ColorWrap = (Picker) => {
       const isValidColor = simpleCheckForValidColor(data);
       if (isValidColor) {
         const colors = toState(data, data.h || colorState.oldHue);
-        setColorState(colors);
-        if (props.onChangeComplete) localDebounce(props.onChangeComplete, colors, event);
-        if (props.onChange) props.onChange(colors, event);
+        if (data[data.source].toUpperCase() === colors[data.source].toUpperCase()) {
+          setColorState(colors);
+          if (props.onChangeComplete) localDebounce(props.onChangeComplete, colors, event);
+          if (props.onChange) props.onChange(colors, event);
+        }
       }
     };
 

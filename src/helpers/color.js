@@ -62,8 +62,10 @@ export const toState = (data, oldHue) => {
 
 export const isValidHex = (hex) => {
   // disable hex4 and hex8
-  const lh = (String(hex).charAt(0) === '#') ? 1 : 0;
-  return hex.length !== (4 + lh) && hex.length < (7 + lh) && chroma.valid(hex);
+  // const lh = (String(hex).charAt(0) === '#') ? 1 : 0;
+  // const result = hex.length !== (4 + lh) && hex.length < (7 + lh) && chroma.valid(hex);
+  const validation = chroma.valid(hex);
+  return validation;
 };
 
 export const getContrastingColor = (data) => {
