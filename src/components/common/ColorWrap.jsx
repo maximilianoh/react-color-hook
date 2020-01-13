@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
-import { simpleCheckForValidColor, toState } from '../../helpers/color';
+import {
+  simpleCheckForValidColor, toState, chromaValidation, isValidToChange, hsvParse,
+} from '../../helpers/color';
 
 const ColorWrap = (Picker) => {
   const ColorPicker = (props) => {
@@ -13,9 +15,13 @@ const ColorWrap = (Picker) => {
 
     const handleChange = (data, event) => {
       const isValidColor = simpleCheckForValidColor(data);
-      if (isValidColor) {
-        const colors = toState(data, data.h || colorState.oldHue);
-        if (data[data.source].toUpperCase() === colors[data.source].toUpperCase()) {
+      if (isValidColor && chromaValidation(isValidColor)) {
+        console.log(data);
+        const preColors = toState(data, data.h || colorState.oldHue);
+        console.log(preColors);
+        if (isValidToChange(data, preColors[data.source], data.source)) {
+          let colors = preColors;
+          if (data.source === 'hsv') colors = hsvParse(preColors, data);
           setColorState(colors);
           if (props.onChangeComplete) localDebounce(props.onChangeComplete, colors, event);
           if (props.onChange) props.onChange(colors, event);

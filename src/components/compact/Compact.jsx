@@ -32,13 +32,12 @@ const Compact = ({
   }, passedStyles));
 
   const handleChange = (data, e) => {
-    if (data.hex) {
-      if (isValidHex(data.hex)) {
-        onChange({
-          hex: data.hex,
-          source: 'hex',
-        }, e);
-      }
+    const value = data.hex ? data.hex : data;
+    if (isValidHex(value)) {
+      onChange({
+        hex: value,
+        source: 'hex',
+      }, e);
     } else {
       onChange(data, e);
     }

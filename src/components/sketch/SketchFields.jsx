@@ -79,7 +79,7 @@ const SketchFields = ({
         s: hsl.s,
         l: hsl.l,
         a: data.a,
-        source: 'rgb',
+        source: 'hsl',
       }, e);
     }
   };

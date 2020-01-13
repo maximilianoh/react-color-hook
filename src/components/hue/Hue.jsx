@@ -24,9 +24,13 @@ export const HuePicker = ({
   }, passedStyles));
 
   // Overwrite to provide pure hue color
-  const handleChange = (data) => onChange({
-    a: 1, h: data.h, l: 0.5, s: 1,
-  });
+  const handleChange = (data, e) => onChange({
+    a: 1,
+    h: data.h,
+    l: 0.5,
+    s: 1,
+    source: 'hsl',
+  }, e);
 
   return (
     <div style={styles.picker} className={`hue-picker ${className}`}>

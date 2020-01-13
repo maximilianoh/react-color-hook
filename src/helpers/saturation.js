@@ -24,7 +24,7 @@ const calculateChange = (e, hsl, container) => {
     s: saturation,
     v: bright,
     a: hsl.a,
-    source: 'rgb',
+    source: 'hsv',
   };
 };
 

@@ -27,7 +27,6 @@ const ChromeFields = (props) => {
 
   const handleChange = (originalData, e) => {
     const data = { ...originalData };
-    // console.dir(data);
     if (data.hex) {
       if (isValidHex(data.hex)) {
         props.onChange({
@@ -54,7 +53,7 @@ const ChromeFields = (props) => {
         s: props.hsl.s,
         l: props.hsl.l,
         a: Math.round(data.a * 100) / 100,
-        source: 'rgb',
+        source: 'hsl',
       }, e);
     } else if (data.h || data.s || data.l) {
       // Remove any occurances of '%'.
@@ -166,7 +165,6 @@ const ChromeFields = (props) => {
 
   const { hsl } = props;
   useEffect(() => {
-    // console.dir(hsl);
     if (props.hsl.a !== 1 && viewState === 'hex') {
       setViewState('rgb');
     }
