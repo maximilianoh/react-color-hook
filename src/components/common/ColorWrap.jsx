@@ -16,9 +16,7 @@ const ColorWrap = (Picker) => {
     const handleChange = (data, event) => {
       const isValidColor = simpleCheckForValidColor(data);
       if (isValidColor && chromaValidation(isValidColor)) {
-        console.log(data);
         const preColors = toState(data, data.h || colorState.oldHue);
-        console.log(preColors);
         if (isValidToChange(data, preColors[data.source], data.source)) {
           let colors = preColors;
           if (data.source === 'hsv') colors = hsvParse(preColors, data);

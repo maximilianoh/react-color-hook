@@ -15,9 +15,14 @@ import Swatches from './components/swatches/Swatches';
 import Twitter from './components/twitter/Twitter';
 
 const CallerComponents = () => {
-  const [color, setColor] = useState('#194D33');
+  const [color, setColor] = useState({
+    r: 25,
+    g: 77,
+    b: 51,
+    a: 1,
+  });
   const handleChangeComplete = (c) => {
-    setColor(c.hex);
+    setColor(c.rgb);
   };
   return (
     <div style={{ display: 'flex', flexFlow: 'wrap' }}>
