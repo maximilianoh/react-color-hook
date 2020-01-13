@@ -22,7 +22,7 @@ export const AlphaPicker = ({
       },
     },
   });
-  debugger; // eslint-disable-line no-debugger
+
   return (
     <div style={styles.picker} className={`alpha-picker ${className}`}>
       <Alpha
