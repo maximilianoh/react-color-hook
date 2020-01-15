@@ -67,13 +67,13 @@ const ColorWrap = (Picker) => {
     },
     hex: '',
     className: '',
-    onChange: () => {},
-    onSwatchHover: () => {},
-    hsl: {},
+    onChange: () => { },
+    onSwatchHover: () => { },
+    hsl: { h: 0, s: 0, l: 0 },
     rgb: {
       r: 0, g: 0, b: 0, a: 0,
     },
-    hsv: {},
+    hsv: { h: 0, s: 0, v: 0 },
     renderers: {},
   };
   return ColorPicker;

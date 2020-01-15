@@ -1,5 +1,7 @@
+const isNumber = (value) => !Number.isNaN(parseFloat(value));
 const calculateChange = (e, hsl, container) => {
-  const { width: containerWidth, height: containerHeight } = container.getBoundingClientRect();
+  const containerWidth = container.clientWidth;
+  const containerHeight = container.clientHeight;
   const x = typeof e.pageX === 'number' ? e.pageX : e.touches[0].pageX;
   const y = typeof e.pageY === 'number' ? e.pageY : e.touches[0].pageY;
   let left = x - (container.getBoundingClientRect().left + window.pageXOffset);
@@ -18,11 +20,10 @@ const calculateChange = (e, hsl, container) => {
 
   const saturation = left / containerWidth;
   const bright = 1 - (top / containerHeight);
-
   return {
     h: hsl.h,
-    s: saturation,
-    v: bright,
+    s: isNumber(saturation) ? saturation : 0,
+    v: isNumber(bright) ? bright : 0,
     a: hsl.a,
     source: 'hsv',
   };

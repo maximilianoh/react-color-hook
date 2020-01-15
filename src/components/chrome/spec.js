@@ -1,11 +1,11 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
 import { simpleCheckForValidColor, red } from '../../helpers/color'
 import Chrome from './Chrome'
 import ChromeFields from './ChromeFields'
 import ChromePointer from './ChromePointer'
 import ChromePointerCircle from './ChromePointerCircle'
 import { render, fireEvent } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import CanvasRenderingContext2DEvent from "jest-canvas-mock";
 
 test('Chrome renders correctly', () => {
@@ -18,8 +18,10 @@ test('Chrome renders correctly', () => {
 test('Chrome onChange events correctly', () => {
   const changeSpy = jest.fn((data) => {
     expect(simpleCheckForValidColor(data)).toBeTruthy()
-  })
-  const { rerender } = render(<Chrome {...red} onChange={changeSpy} />);
+  });
+  const { rerender } = render(<Chrome {...red} onChange={changeSpy} color={{
+    r: 25, g: 77, b: 51, a: 1
+  }} />);
   expect(changeSpy).toHaveBeenCalledTimes(0)
 
 
@@ -28,27 +30,25 @@ test('Chrome onChange events correctly', () => {
   const chromePicker = document.querySelector(".chrome-picker").children;
 
   // Event mousedown
-  const mousedownEvent = new MouseEvent('mousedown', { bubbles: true });
-  Object.defineProperty(mousedownEvent, 'pageX', { get: () => 100 });
-  Object.defineProperty(mousedownEvent, 'pageY', { get: () => 10 });
+  let mousedownEvent = new MouseEvent('mousedown', { bubbles: true });
+  Object.defineProperty(mousedownEvent, 'pageX', { get: () => 90 });
+  Object.defineProperty(mousedownEvent, 'pageY', { get: () => 15 });
 
   // check the Alpha component
   const alphaPointer = flexboxFix[1].children[1].children[0].children[2];
   fireEvent(alphaPointer, mousedownEvent);
   expect(changeSpy).toHaveBeenCalledTimes(1);
 
+  // check the Hue component
+  const huePointer = flexboxFix[1].children[0].children[0].children[0];
+  fireEvent(huePointer, mousedownEvent);
+  expect(changeSpy).toHaveBeenCalledTimes(2);
+
 
   // check Saturation
   const saturationPointer = chromePicker[0].children[0];
   fireEvent(saturationPointer, mousedownEvent);
-  expect(changeSpy).toHaveBeenCalledTimes(2);
-
-
-  // check the Hue component
-  const huePointer = flexboxFix[1].children[0].children[0].children[0];
-  fireEvent(huePointer, mousedownEvent);
   expect(changeSpy).toHaveBeenCalledTimes(3);
-
 
   // check the ChromeFields
   const chromePointer = chromePicker[1].children[1].children[1].children[0];
@@ -109,21 +109,21 @@ test('ChromePointerCircle renders correctly', () => {
 })
 
 test('ChromeFields view hsl  correctly', () => {
-  render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}} 
+  render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}}
     hex="#194D33" onChange={()=>{}} view="hsl" />);
   let flex = document.querySelector(".flexbox-fix");
   expect(flex.textContent).toBe('hsla');
 })
 
 test('ChromeFields view rgb  correctly', () => {
-  render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}} 
+  render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}}
     hex="#194D33" onChange={()=>{}} view="rgb" />);
   let flex = document.querySelector(".flexbox-fix");
   expect(flex.textContent).toBe('rgba');
 })
 
 test('ChromeFields view hex  correctly', () => {
-  render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}} 
+  render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}}
     hex="#194D33" onChange={()=>{}} view="hex" />);
   let flex = document.querySelector(".flexbox-fix");
   expect(flex.textContent).toBe('hex');
@@ -131,7 +131,7 @@ test('ChromeFields view hex  correctly', () => {
 
 test('ChromeFields renders correctly', () => {
   const tree = renderer.create(
-    <ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}} 
+    <ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}}
     hex="#194D33" onChange={()=>{}} />,
   ).toJSON()
   expect(tree).toMatchSnapshot()
