@@ -1,5 +1,5 @@
 {
-  "name": "Template",
+  "name": "react-color-hook",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
@@ -11,6 +11,27 @@
     "clean": "rm -rf lib && mkdir lib",
     "lib": "npm run clean && babel src -d lib --config-file ./buildBabel.config.js"
   },
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximilianoh/react-color-hook"
+  },
+  "bugs": {
+    "url": "https://github.com/maximilianoh/react-color-hook/issues"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "color picker",
+    "react-component",
+    "colorpicker",
+    "picker",
+    "sketch",
+    "chrome",
+    "photoshop",
+    "material design",
+    "popup"
+  ],
   "dependencies": {
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",

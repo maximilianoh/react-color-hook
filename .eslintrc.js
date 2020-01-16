@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     'airbnb',
   ],
+  ignorePatterns: ["node_modules/", "lib/", "bundle/", "devWebpackServer/"],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
