@@ -1,7 +1,7 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 
-let basicObjectFunction = (pathComponent) => {
+let basicObjectFunction = () => {
   return {
     optimization: {
       minimizer: [
@@ -14,6 +14,8 @@ let basicObjectFunction = (pathComponent) => {
         }),
       ],
     },
+
+    entry:'indexRender.jsx',
 
     // LOADERS
     module: {
@@ -43,15 +45,10 @@ let basicObjectFunction = (pathComponent) => {
     // PATH RESOLVE
     resolve: {
       extensions: ['.js', '.jsx', '.json'],
-
       modules: [
         path.resolve(__dirname, `src/`),
         'node_modules'
-      ],
-      alias: {
-        components: path.resolve(__dirname, 'src'),
-        "components(.*)$": path.resolve(__dirname, 'src')
-      }
+      ]
     }
   }
 };
@@ -62,12 +59,6 @@ let devServer = {
   open: true,
   host: '127.0.0.1',
   disableHostCheck: true,
-  proxy: {
-    '/resources/rest/': {
-      target: 'http://localhost:3005',
-      pathRewrite: { '^/resources/rest/': '' }
-    }
-  },
   historyApiFallback: {
     index: `./index.html`,
     rewrites: [
@@ -79,7 +70,7 @@ let devServer = {
 }
 
 let getFunction = (parameter, env) => {
-  let basicObject = basicObjectFunction(parameter);
+  let basicObject = basicObjectFunction();
   let rules = [...basicObject.module.rules];
   let mode = 'production';
   let publicPath = '/dist/';
@@ -120,6 +111,7 @@ let getFunction = (parameter, env) => {
 module.exports = (env) => {
   let returnValue = {};
   let param = 'index';
+  if (env.production) param = 'index';
   if (env) returnValue = getFunction(param, env);
-  return returnValue
+  return returnValue;
 };
