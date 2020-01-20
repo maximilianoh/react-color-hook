@@ -82,7 +82,7 @@
     ],
     "verbose": false,
     "transform": {
-      "^.+\\.jsx?$": "babel-jest"
+      "^.+\\.jsx|.js?$": "babel-jest"
     },
     "globals": {
       "NODE_ENV": "test"
@@ -90,9 +90,6 @@
     "moduleFileExtensions": [
       "js",
       "jsx"
-    ],
-    "moduleDirectories": [
-      "node_modules"
     ]
   }
 }
