@@ -9,7 +9,8 @@
     "doc": "node styleguidist.js",
     "styleguide": "npx styleguidist build",
     "clean": "rm -rf lib && mkdir lib",
-    "lib": "npm run clean && babel src -d lib --config-file ./buildBabel.config.js"
+    "lib": "npm run clean && babel src -d lib --config-file ./buildBabel.config.js",
+    "prepublish": "npm run lib"
   },
   "main": "lib/index.js",
   "repository": {
