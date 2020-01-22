@@ -107,14 +107,13 @@ export const toState = (data, oldHue) => {
   const hsv = hsvListToObject(colorChroma.hsv());
   const rgba = colorChroma.alpha(a).rgba();
   const rgb = rgbaListToObject(rgba);
-  const hex = colorChroma.hex();
+  const hex = colorChroma.alpha(1).hex();
 
   if (hsl.s === 0) {
     hsl.h = oldHue || 0;
     hsv.h = oldHue || 0;
   }
   const transparent = hex === '000000' && rgb.a === 0;
-
   return {
     hsl,
     hex: transparent ? 'transparent' : hex,
