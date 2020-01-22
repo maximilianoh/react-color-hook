@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
 
-import Alpha from './components/alpha/Alpha';
-import Block from './components/block/Block';
-import Circle from './components/circle/Circle';
-import Chrome from './components/chrome/Chrome';
-import Compact from './components/compact/Compact';
-import Github from './components/github/Github';
-import Hue from './components/hue/Hue';
-import Material from './components/material/Material';
-import Photoshop from './components/photoshop/Photoshop';
-import Sketch from './components/sketch/Sketch';
-import Slider from './components/slider/Slider';
-import Swatches from './components/swatches/Swatches';
-import Twitter from './components/twitter/Twitter';
+import {
+  AlphaPicker, BlockPicker, ChromePicker, CirclePicker,
+  CompactPicker, GithubPicker, HuePicker, MaterialPicker, PhotoshopPicker,
+  SketchPicker, SliderPicker, SwatchesPicker, TwitterPicker,
+} from './index';
 
 const CallerComponents = () => {
   const [color, setColor] = useState({
@@ -26,24 +18,24 @@ const CallerComponents = () => {
   };
   return (
     <div style={{ display: 'flex', flexFlow: 'wrap' }}>
-      <Alpha color={color} onChangeComplete={handleChangeComplete} />
-      <Block color={color} onChangeComplete={handleChangeComplete} />
-      <Circle color={color} onChangeComplete={handleChangeComplete} />
-      <Chrome color={color} onChangeComplete={handleChangeComplete} />
-      <Compact color={color} onChangeComplete={handleChangeComplete} />
-      <Github color={color} onChangeComplete={handleChangeComplete} />
-      <Hue color={color} onChangeComplete={handleChangeComplete} />
-      <Material color={color} onChangeComplete={handleChangeComplete} />
-      <Photoshop color={color} onChangeComplete={handleChangeComplete} />
+      <AlphaPicker color={color} onChangeComplete={handleChangeComplete} />
+      <BlockPicker color={color} onChangeComplete={handleChangeComplete} />
+      <CirclePicker color={color} onChangeComplete={handleChangeComplete} />
+      <ChromePicker color={color} onChangeComplete={handleChangeComplete} />
+      <CompactPicker color={color} onChangeComplete={handleChangeComplete} />
+      <GithubPicker color={color} onChangeComplete={handleChangeComplete} />
+      <HuePicker color={color} onChangeComplete={handleChangeComplete} />
+      <MaterialPicker color={color} onChangeComplete={handleChangeComplete} />
+      <PhotoshopPicker color={color} onChangeComplete={handleChangeComplete} />
       <div style={{ flexFlow: 'wrap', width: '500px' }}>
-        <Sketch color={color} onChangeComplete={handleChangeComplete} />
+        <SketchPicker color={color} onChangeComplete={handleChangeComplete} />
       </div>
       <div style={{ flexFlow: 'wrap', width: '500px' }}>
-        <Slider color={color} onChangeComplete={handleChangeComplete} />
+        <SliderPicker color={color} onChangeComplete={handleChangeComplete} />
       </div>
-      <Swatches color={color} onChangeComplete={handleChangeComplete} />
+      <SwatchesPicker color={color} onChangeComplete={handleChangeComplete} />
 
-      <Twitter color={color} onChangeComplete={handleChangeComplete} />
+      <TwitterPicker color={color} onChangeComplete={handleChangeComplete} />
     </div>
   );
 };
