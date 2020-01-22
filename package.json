@@ -71,7 +71,7 @@
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "jest": "^24.9.0",
-    "react-styleguidist": "^10.6.0",
+    "react-styleguidist": "^10.6.1",
     "webpack-cli": "^3.3.10",
     "webpack-hot-middleware": "^2.25.0"
   },
