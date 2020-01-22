@@ -101,7 +101,8 @@ export const hsvParse = (color, data) => {
 
 
 export const toState = (data, oldHue) => {
-  const colorChroma = data.hex ? chroma(data.hex) : chroma(data);
+  const dataValidation = data || '#000000';
+  const colorChroma = data.hex ? chroma(data.hex) : chroma(dataValidation);
   const a = data.a ? data.a : 1;
   const hsl = hslaListToObject(colorChroma.alpha(a).hsl());
   const hsv = hsvListToObject(colorChroma.hsv());
