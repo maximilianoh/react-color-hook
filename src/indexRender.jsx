@@ -4,6 +4,6 @@ import 'core-js/features/number'; // IE10 support
 import 'core-js/features/math'; // IE10 support
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CallerComponents from './CallerComponents';
+import Layout from './Layout';
 
-ReactDOM.render(<CallerComponents />, document.getElementById('app'));
+ReactDOM.render(<Layout />, document.getElementById('app'));

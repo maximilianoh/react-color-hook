@@ -1,6 +1,6 @@
 {
   "name": "react-color-hook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --env.development --progress",
