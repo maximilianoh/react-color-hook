@@ -39,9 +39,8 @@ const DesktopLayout = (props) => {
         </div>
         <div className="column is-one-third">
           <p className="title is-5">CompactPicker</p>
-          <div style={{ marginLeft: '10%', marginRight: '10%' }}>
+          <div style={{ marginLeft: '10%', marginRight: '10%', boxSizing: 'content-box' }}>
             <CompactPicker color={color} onChangeComplete={handleChangeComplete} />
-
           </div>
         </div>
       </div>
