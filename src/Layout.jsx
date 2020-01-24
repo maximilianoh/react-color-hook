@@ -19,7 +19,7 @@ const Layout = () => {
       <section
         className="hero is-medium is-bold"
         style={{
-          backgroundColor: `rgb(${color.r},${color.g},${color.b},${color.a})`,
+          backgroundColor: `rgba(${color.r},${color.g},${color.b},${color.a})`,
         }}
       >
         <div className="hero-head" />
