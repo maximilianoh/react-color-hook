@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   AlphaPicker, BlockPicker, ChromePicker, CirclePicker,
-  CompactPicker, GithubPicker, HuePicker, MaterialPicker, PhotoshopPicker,
+  CompactPicker, GithubPicker, HuePicker, MaterialPicker,
   SketchPicker, SliderPicker, SwatchesPicker, TwitterPicker,
 } from './index';
 
@@ -10,71 +10,98 @@ const MobileLayout = (props) => {
   const { color, handleChangeComplete } = props;
   return (
     <>
-      <div className="columns is-centered">
-        <div className="column is-half">
+      <p className="title is-5">HuePicker</p>
+      <div className="columns is-mobile">
+        <div className="column is-half is-three-fifths is-offset-one-fifth">
           <HuePicker color={color} onChangeComplete={handleChangeComplete} />
         </div>
-        <div className="column is-half">
+      </div>
+
+      <p className="title is-5">AlphaPicker</p>
+      <div className="columns is-mobile">
+        <div className="column is-half is-three-fifths is-offset-one-fifth">
           <AlphaPicker color={color} onChangeComplete={handleChangeComplete} />
         </div>
       </div>
-      <div className="columns is-centered">
-        <div className="column is-half">
+
+      <p className="title is-5">SliderPicker</p>
+      <div className="columns is-mobile">
+        <div className="column is-half is-three-fifths is-offset-one-fifth">
           <SliderPicker color={color} onChangeComplete={handleChangeComplete} />
         </div>
-        <div className="column is-half" style={{ boxSizing: 'content-box' }}>
-          <div style={{ marginLeft: '20%' }}>
-            <GithubPicker color={color} onChangeComplete={handleChangeComplete} />
-          </div>
+      </div>
+
+
+      <p className="title is-5">GithubPicker</p>
+      <div className="columns is-mobile">
+        <div
+          className="column is-half is-three-fifths is-offset-one-fifth"
+          style={{ boxSizing: 'content-box' }}
+        >
+          <GithubPicker color={color} onChangeComplete={handleChangeComplete} />
         </div>
       </div>
-      <div className="columns is-centered">
-        <div className="column is-half">
-          <div style={{ marginLeft: '5%', marginRight: '5%' }}>
-            <CirclePicker color={color} onChangeComplete={handleChangeComplete} />
-          </div>
-        </div>
-        <div className="column is-half">
-          <div style={{ marginLeft: '10%', marginRight: '10%' }}>
-            <CompactPicker color={color} onChangeComplete={handleChangeComplete} />
-          </div>
+
+      <p className="title is-5">CompactPicker</p>
+      <div className="columns is-mobile">
+        <div className="column is-half is-three-fifths is-offset-one-fifth">
+          <CompactPicker color={color} onChangeComplete={handleChangeComplete} />
         </div>
       </div>
-      <div className="columns is-centered">
-        <div className="column is-half" style={{ boxSizing: 'content-box' }}>
-          <div style={{ marginLeft: '30%', marginRight: '30%' }}>
-            <MaterialPicker color={color} onChangeComplete={handleChangeComplete} />
-          </div>
+
+      <p className="title is-5">CirclePicker</p>
+      <div className="columns is-mobile">
+        <div className="column is-half is-three-fifths is-offset-one-fifth">
+          <CirclePicker color={color} onChangeComplete={handleChangeComplete} />
         </div>
-        <div className="column is-half">
+      </div>
+
+      <p className="title is-5">MaterialPicker</p>
+      <div className="columns is-mobile">
+        <div
+          className="column is-half is-three-fifths is-offset-one-fifth"
+          style={{ boxSizing: 'content-box' }}
+        >
+          <MaterialPicker color={color} onChangeComplete={handleChangeComplete} />
+        </div>
+      </div>
+
+
+      <p className="title is-5">TwitterPicker</p>
+      <div className="columns is-mobile">
+        <div className="column is-half is-three-fifths is-offset-one-fifth">
           <TwitterPicker color={color} onChangeComplete={handleChangeComplete} />
         </div>
       </div>
-      <div className="columns is-centered">
-        <div className="column is-half">
-          <div style={{ marginLeft: '15%', marginRight: '15%' }}>
-            <BlockPicker color={color} onChangeComplete={handleChangeComplete} />
-          </div>
+
+      <p className="title is-5">BlockPicker</p>
+      <div className="columns is-mobile">
+        <div className="column is-half is-three-fifths is-offset-one-fifth">
+          <BlockPicker color={color} onChangeComplete={handleChangeComplete} />
         </div>
-        <div className="column is-half">
+      </div>
+
+      <p className="title is-5">ChromePicker</p>
+      <div className="columns is-mobile">
+        <div className="column is-half is-three-fifths is-offset-one-fifth">
           <ChromePicker color={color} onChangeComplete={handleChangeComplete} />
         </div>
       </div>
 
-      <div className="columns is-centered">
-        <div className="column is-half">
+      <p className="title is-5">SketchPicker</p>
+      <div className="columns is-mobile">
+        <div className="column is-half is-three-fifths is-offset-one-fifth">
           <SketchPicker color={color} onChangeComplete={handleChangeComplete} />
         </div>
-        <div className="column is-half">
+      </div>
+
+      <p className="title is-5">SwatchesPicker</p>
+      <div className="columns is-mobile">
+        <div className="column is-half is-three-fifths is-offset-one-fifth">
           <SwatchesPicker color={color} onChangeComplete={handleChangeComplete} />
         </div>
       </div>
 
-      <div className="columns is-centered">
-        <div className="column is-half">
-          <PhotoshopPicker color={color} onChangeComplete={handleChangeComplete} />
-        </div>
-      </div>
     </>
   );
 };

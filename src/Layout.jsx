@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DesktopLayout from './DesktopLayout';
 import MobileLayout from './MobileLayout';
+import TabletLayout from './TabletLayout';
 
 const Layout = () => {
   const [color, setColor] = useState({
@@ -35,11 +36,14 @@ const Layout = () => {
         React-Hook Color Picker
         </p>
       </div>
-      <section className="container">
+      <section className="container is-fluid">
         <div className="is-hidden-touch">
           <DesktopLayout color={color} handleChangeComplete={handleChangeComplete} />
         </div>
-        <div className="is-hidden-desktop">
+        <div className="is-hidden-desktop is-hidden-mobile">
+          <TabletLayout color={color} handleChangeComplete={handleChangeComplete} />
+        </div>
+        <div className="is-hidden-tablet">
           <MobileLayout color={color} handleChangeComplete={handleChangeComplete} />
         </div>
       </section>
