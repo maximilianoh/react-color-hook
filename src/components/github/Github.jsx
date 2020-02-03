@@ -5,6 +5,7 @@ import map from 'lodash/map';
 import merge from 'lodash/merge';
 import ColorWrap from '../common/ColorWrap';
 import GithubSwatch from './GithubSwatch';
+import '../common/style.css';
 
 const Github = ({
   width, colors, onChange, onSwatchHover, triangle,
@@ -20,8 +21,7 @@ const Github = ({
         borderRadius: '4px',
         position: 'relative',
         padding: '5px',
-        display: 'flex',
-        flexWrap: 'wrap',
+        msBoxorient: 'horizontal',
       },
       triangle: {
         position: 'absolute',
@@ -95,19 +95,20 @@ const Github = ({
   });
 
   const handleChange = (hex, e) => onChange({ hex, source: 'hex' }, e);
-
   return (
-    <div style={styles.card} className={`github-picker ${className}`}>
+    <div style={styles.card} className={`github-picker ${className} flexContent`}>
       <div style={styles.triangleShadow} />
       <div style={styles.triangle} />
-      { map(colors, (c) => (
-        <GithubSwatch
-          color={c}
-          key={c}
-          onClick={handleChange}
-          onSwatchHover={onSwatchHover}
-        />
-      )) }
+      {map(colors, (c) => (
+        <div key={`divSwatch${c}`}>
+          <GithubSwatch
+            color={c}
+            key={c}
+            onClick={handleChange}
+            onSwatchHover={onSwatchHover}
+          />
+        </div>
+      ))}
     </div>
   );
 };
