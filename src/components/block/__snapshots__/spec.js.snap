@@ -38,18 +38,15 @@ exports[`Block \`triangle="hide"\` 1`] = `
     }
   />
   <div
+    className="flexContentCenter"
     style={
       Object {
         "MozBorderRadius": "6px 6px 0 0",
         "OBorderRadius": "6px 6px 0 0",
         "WebkitBorderRadius": "6px 6px 0 0",
-        "WebkitJustifyContent": "center",
-        "alignItems": "center",
         "background": "#22194d",
         "borderRadius": "6px 6px 0 0",
-        "display": "flex",
         "height": "110px",
-        "justifyContent": "center",
         "msBorderRadius": "6px 6px 0 0",
         "position": "relative",
       }
@@ -64,7 +61,7 @@ exports[`Block \`triangle="hide"\` 1`] = `
         }
       }
     >
-      #22194d
+      #22194D
     </div>
   </div>
   <div
@@ -448,18 +445,15 @@ exports[`Block \`triangle="hide"\` 2`] = `
     }
   />
   <div
+    className="flexContentCenter"
     style={
       Object {
         "MozBorderRadius": "6px 6px 0 0",
         "OBorderRadius": "6px 6px 0 0",
         "WebkitBorderRadius": "6px 6px 0 0",
-        "WebkitJustifyContent": "center",
-        "alignItems": "center",
         "background": "#22194d",
         "borderRadius": "6px 6px 0 0",
-        "display": "flex",
         "height": "110px",
-        "justifyContent": "center",
         "msBorderRadius": "6px 6px 0 0",
         "position": "relative",
       }
@@ -474,7 +468,7 @@ exports[`Block \`triangle="hide"\` 2`] = `
         }
       }
     >
-      #22194d
+      #22194D
     </div>
   </div>
   <div
@@ -857,18 +851,15 @@ exports[`Block renders correctly 1`] = `
     }
   />
   <div
+    className="flexContentCenter"
     style={
       Object {
         "MozBorderRadius": "6px 6px 0 0",
         "OBorderRadius": "6px 6px 0 0",
         "WebkitBorderRadius": "6px 6px 0 0",
-        "WebkitJustifyContent": "center",
-        "alignItems": "center",
         "background": "#22194d",
         "borderRadius": "6px 6px 0 0",
-        "display": "flex",
         "height": "110px",
-        "justifyContent": "center",
         "msBorderRadius": "6px 6px 0 0",
         "position": "relative",
       }
@@ -883,7 +874,7 @@ exports[`Block renders correctly 1`] = `
         }
       }
     >
-      #22194d
+      #22194D
     </div>
   </div>
   <div

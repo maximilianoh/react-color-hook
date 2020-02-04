@@ -149,12 +149,7 @@ exports[`Sketch renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="flexbox-fix"
-    style={
-      Object {
-        "display": "flex",
-      }
-    }
+    className="flexbox-fix flexContent"
   >
     <div
       style={
@@ -791,12 +786,10 @@ exports[`Sketch renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="flexbox-fix"
+    className="flexContent flexbox-fix"
     style={
       Object {
         "borderTop": "1px solid #eee",
-        "display": "flex",
-        "flexWrap": "wrap",
         "margin": "0 -10px",
         "padding": "10px 0 0 10px",
         "position": "relative",
@@ -1601,12 +1594,7 @@ exports[`Sketch renders on server correctly 1`] = `
     </div>
   </div>
   <div
-    className="flexbox-fix"
-    style={
-      Object {
-        "display": "flex",
-      }
-    }
+    className="flexbox-fix flexContent"
   >
     <div
       style={
@@ -2243,12 +2231,10 @@ exports[`Sketch renders on server correctly 1`] = `
     </div>
   </div>
   <div
-    className="flexbox-fix"
+    className="flexContent flexbox-fix"
     style={
       Object {
         "borderTop": "1px solid #eee",
-        "display": "flex",
-        "flexWrap": "wrap",
         "margin": "0 -10px",
         "padding": "10px 0 0 10px",
         "position": "relative",
@@ -3222,12 +3208,10 @@ exports[`SketchFields renders correctly 1`] = `
 
 exports[`SketchPresetColors renders correctly 1`] = `
 <div
-  className="flexbox-fix"
+  className="flexContent flexbox-fix"
   style={
     Object {
       "borderTop": "1px solid #eee",
-      "display": "flex",
-      "flexWrap": "wrap",
       "margin": "0 -10px",
       "padding": "10px 0 0 10px",
       "position": "relative",
@@ -3368,12 +3352,10 @@ exports[`SketchPresetColors renders correctly 1`] = `
 
 exports[`SketchPresetColors with custom titles renders correctly 1`] = `
 <div
-  className="flexbox-fix"
+  className="flexContent flexbox-fix"
   style={
     Object {
       "borderTop": "1px solid #eee",
-      "display": "flex",
-      "flexWrap": "wrap",
       "margin": "0 -10px",
       "padding": "10px 0 0 10px",
       "position": "relative",
