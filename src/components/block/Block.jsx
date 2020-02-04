@@ -7,6 +7,7 @@ import Checkboard from '../common/Checkboard';
 import ColorWrap from '../common/ColorWrap';
 import EditableInput from '../common/EditableInput';
 import BlockSwatches from './BlockSwatches';
+import '../common/style.css';
 
 const Block = ({
   onChange, onSwatchHover, hex, colors, width, triangle,
@@ -35,9 +36,6 @@ const Block = ({
         height: '110px',
         background: hex,
         borderRadius: '6px 6px 0 0',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
         position: 'relative',
       },
       body: {
@@ -83,7 +81,7 @@ const Block = ({
     <div style={styles.card} className={`block-picker ${className}`}>
       <div style={styles.triangle} />
 
-      <div style={styles.head}>
+      <div style={styles.head} className="flexContentCenter">
         { transparent && (
           <Checkboard borderRadius="6px 6px 0 0" />
         ) }

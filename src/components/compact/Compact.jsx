@@ -46,18 +46,16 @@ const Compact = ({
   return (
     <Raised style={styles.Compact} styles={passedStyles}>
       <div style={styles.compact} className={`compact-picker ${className}`}>
-        <div>
-          { map(colors, (c) => (
-            <CompactColor
-              key={c}
-              color={c}
-              active={c.toLowerCase() === hex}
-              onClick={handleChange}
-              onSwatchHover={onSwatchHover}
-            />
-          )) }
-          <div style={styles.clear} />
-        </div>
+        { map(colors, (c) => (
+          <CompactColor
+            key={c}
+            color={c}
+            active={c.toLowerCase() === hex}
+            onClick={handleChange}
+            onSwatchHover={onSwatchHover}
+          />
+        )) }
+        <div style={styles.clear} />
         <CompactFields hex={hex} rgb={rgb} onChange={handleChange} />
       </div>
     </Raised>

@@ -6,6 +6,7 @@ import merge from 'lodash/merge';
 import * as material from 'material-colors';
 import ColorWrap from '../common/ColorWrap';
 import CircleSwatch from './CircleSwatch';
+import '../common/style.css';
 
 const Circle = ({
   width, onChange, onSwatchHover, colors, hex, circleSize,
@@ -15,8 +16,6 @@ const Circle = ({
     default: {
       card: {
         width,
-        display: 'flex',
-        flexWrap: 'wrap',
         marginRight: -circleSpacing,
         marginBottom: -circleSpacing,
       },
@@ -26,17 +25,19 @@ const Circle = ({
   const handleChange = (hexCode, e) => onChange({ hex: hexCode, source: 'hex' }, e);
 
   return (
-    <div style={styles.card} className={`circle-picker ${className}`}>
+    <div style={styles.card} className={`circle-picker ${className} flexContent`}>
       { map(colors, (c) => (
-        <CircleSwatch
-          key={c}
-          color={c}
-          onClick={handleChange}
-          onSwatchHover={onSwatchHover}
-          active={hex === c.toLowerCase()}
-          circleSize={circleSize}
-          circleSpacing={circleSpacing}
-        />
+        <div key={`divCircleSwatch${c}`}>
+          <CircleSwatch
+            key={c}
+            color={c}
+            onClick={handleChange}
+            onSwatchHover={onSwatchHover}
+            active={hex === c.toLowerCase()}
+            circleSize={circleSize}
+            circleSpacing={circleSpacing}
+          />
+        </div>
       )) }
     </div>
   );

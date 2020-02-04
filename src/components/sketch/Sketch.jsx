@@ -9,6 +9,7 @@ import Alpha from '../common/Alpha';
 import Checkboard from '../common/Checkboard';
 import SketchFields from './SketchFields';
 import SketchPresetColors from './SketchPresetColors';
+import '../common/style.css';
 
 const Sketch = ({
   width, rgb, hex, hsv, hsl, onChange, onSwatchHover,
@@ -33,9 +34,6 @@ const Sketch = ({
       Saturation: {
         radius: '3px',
         shadow: 'inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)',
-      },
-      controls: {
-        display: 'flex',
       },
       sliders: {
         padding: '4px 0',
@@ -99,7 +97,7 @@ const Sketch = ({
           onChange={onChange}
         />
       </div>
-      <div style={styles.controls} className="flexbox-fix">
+      <div className="flexbox-fix flexContent">
         <div style={styles.sliders}>
           <div style={styles.hue}>
             <Hue

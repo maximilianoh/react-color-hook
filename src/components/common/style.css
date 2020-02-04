@@ -3,3 +3,9 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.flexContentCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
