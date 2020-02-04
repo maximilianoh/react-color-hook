@@ -77,6 +77,8 @@ const Block = ({
     },
   }, passedStyles), { 'hide-triangle': triangle === 'hide' });
 
+  const upperHex = hex.toUpperCase();
+
   return (
     <div style={styles.card} className={`block-picker ${className}`}>
       <div style={styles.triangle} />
@@ -86,7 +88,7 @@ const Block = ({
           <Checkboard borderRadius="6px 6px 0 0" />
         ) }
         <div style={styles.label}>
-          { hex }
+          { upperHex }
         </div>
       </div>
 
