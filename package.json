@@ -10,7 +10,8 @@
     "styleguide": "npx styleguidist build",
     "clean": "rm -rf lib && mkdir lib",
     "lib": "npm run clean && babel src -d lib --config-file ./buildBabel.config.js",
-    "prepublish": "npm run lib"
+    "prepublish": "npm run snyk-protect && npm run lib",
+    "snyk-protect": "snyk protect"
   },
   "main": "lib/index.js",
   "repository": {
@@ -46,7 +47,7 @@
     "chroma-js": "^2.1.0",
     "core-js": "^3.6.5",
     "jest-canvas-mock": "^2.2.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.20",
     "material-colors": "^1.2.6",
     "open": "^7.0.4",
     "prop-types": "^15.6.1",
@@ -55,7 +56,8 @@
     "react-test-renderer": "^16.13.1",
     "reactcss": "^1.2.3",
     "shortid": "^2.2.15",
-    "webpack": "^4.43.0"
+    "webpack": "^4.43.0",
+    "snyk": "^1.385.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.9.6",
@@ -97,5 +99,6 @@
       "js",
       "jsx"
     ]
-  }
+  },
+  "snyk": true
 }
