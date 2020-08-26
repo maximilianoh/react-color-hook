@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server --env.development --progress",
     "build": "webpack --env.production --progress",
-    "test": "jest",
+    "test": "jest --config jest.config.js",
     "doc": "node styleguidist.js",
     "styleguide": "npx styleguidist build",
     "clean": "rm -rf lib && mkdir lib",
@@ -80,25 +80,8 @@
     "webpack-cli": "^3.3.12",
     "webpack-hot-middleware": "^2.25.0"
   },
-  "jest": {
-    "rootDir": "./",
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "verbose": false,
-    "moduleNameMapper": {
-      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
-    },
-    "transform": {
-      "^.+\\.jsx|.js?$": "babel-jest"
-    },
-    "globals": {
-      "NODE_ENV": "test"
-    },
-    "moduleFileExtensions": [
-      "js",
-      "jsx"
-    ]
+  "engines": {
+    "node": ">= 10"
   },
   "snyk": true
 }

@@ -1,6 +1,9 @@
 let objectConfig = {};
 if (process.env.NODE_ENV === "test") {
-	objectConfig = {presets: ['@babel/preset-env', '@babel/preset-react'], plugins:["@babel/transform-runtime"]}
+	objectConfig = {
+		presets: ['@babel/preset-env', '@babel/preset-react'], 
+		plugins:["@babel/transform-runtime"]
+	}
 }
 else{
 	objectConfig = {

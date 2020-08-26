@@ -599,7 +599,7 @@ exports[`Chrome renders correctly 1`] = `
           tabIndex={0}
         >
           <svg
-            aria-hidden="true"
+            aria-hidden={true}
             className="MuiSvgIcon-root"
             focusable="false"
             onBlur={[Function]}
@@ -607,7 +607,6 @@ exports[`Chrome renders correctly 1`] = `
             onMouseEnter={[Function]}
             onMouseOut={[Function]}
             onMouseOver={[Function]}
-            role="presentation"
             style={
               Object {
                 "MozBorderRadius": "5px",
@@ -1233,7 +1232,7 @@ exports[`Chrome renders on server correctly 1`] = `
           tabIndex={0}
         >
           <svg
-            aria-hidden="true"
+            aria-hidden={true}
             className="MuiSvgIcon-root"
             focusable="false"
             onBlur={[Function]}
@@ -1241,7 +1240,6 @@ exports[`Chrome renders on server correctly 1`] = `
             onMouseEnter={[Function]}
             onMouseOut={[Function]}
             onMouseOver={[Function]}
-            role="presentation"
             style={
               Object {
                 "MozBorderRadius": "5px",
@@ -1381,7 +1379,7 @@ exports[`ChromeFields renders correctly 1`] = `
       tabIndex={0}
     >
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root"
         focusable="false"
         onBlur={[Function]}
@@ -1389,7 +1387,6 @@ exports[`ChromeFields renders correctly 1`] = `
         onMouseEnter={[Function]}
         onMouseOut={[Function]}
         onMouseOver={[Function]}
-        role="presentation"
         style={
           Object {
             "MozBorderRadius": "5px",
