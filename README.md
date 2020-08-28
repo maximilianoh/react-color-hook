@@ -24,3 +24,9 @@ Wrote in React Hooks
     npm test   
     
     
+## examples
+    Original: http://casesandberg.github.io/react-color/#examples
+    replace 
+    import { ChromePicker } from 'react-color' 
+    to
+    import { ChromePicker } from "react-color-hook";
