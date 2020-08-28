@@ -4,6 +4,15 @@ node_js:
   - "10"
   - "12"
 
+env:
+  - test
+
+matrix:
+  fast_finish: true
+  include:
+    - node_js: "lts/*"
+      env: current_lts
+
 notifications:
   email:
     on_success: never
