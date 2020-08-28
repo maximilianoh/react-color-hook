@@ -83,5 +83,8 @@
   "engines": {
     "node": ">= 10"
   },
+  "files": [
+    "lib"
+  ],
   "snyk": true
 }
