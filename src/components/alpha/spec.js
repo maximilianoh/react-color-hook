@@ -53,3 +53,9 @@ test('Alpha onChange events correctly', () => {
   fireEvent(alphaPointer, event);
   expect(changeSpy).toHaveBeenCalled();
 })
+
+
+test('Alpha class check', () => {
+  render(<Alpha {...red} width={20} height={200} direction="vertical" className="classExample" />);
+  expect(document.querySelector(".classExample")!==null).toBe(true);
+})

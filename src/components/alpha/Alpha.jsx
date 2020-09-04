@@ -7,7 +7,7 @@ import AlphaPointer from './AlphaPointer';
 
 export const AlphaPicker = ({
   rgb, hsl, width, height, onChange, direction, style,
-  renderers, pointer, className = '',
+  renderers, pointer, className,
 }) => {
   const styles = reactCSS({
     default: {
