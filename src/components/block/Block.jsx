@@ -11,7 +11,7 @@ import '../common/style.css';
 
 const Block = ({
   onChange, onSwatchHover, hex, colors, width, triangle,
-  styles: passedStyles = {}, className = '',
+  styles: passedStyles, className,
 }) => {
   const transparent = hex === 'transparent';
   const handleChange = (hexCode, e) => {

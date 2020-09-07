@@ -21,9 +21,20 @@ test('Block onChange events correctly', () => {
   })
   const {queryByTitle} = render(<Block onChange={ changeSpy } />);
   expect(changeSpy).toHaveBeenCalledTimes(0);
-  const firstSwatch = queryByTitle("#D9E3F0")
+  const firstSwatch = queryByTitle("#D9E3F0");
   fireEvent.click(firstSwatch);
   expect(changeSpy).toHaveBeenCalled();
+});
+
+test('Block onChange events incorrectly', () => {
+  const changeSpy = jest.fn((data) => {
+    expect(simpleCheckForValidColor(data)).toBeTruthy()
+  })
+  render(<Block onChange={ changeSpy } />);
+  const input = document.querySelector(".block-picker").children[2].children[1]; // edit input
+  fireEvent.change(input.children[0], { target: { value: 'notcolorvalid' } });
+  expect(changeSpy).not.toHaveBeenCalled();
+
 });
 
 
