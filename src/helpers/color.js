@@ -102,8 +102,16 @@ export const hsvParse = (color, data) => {
 
 export const toState = (data, oldHue) => {
   const dataValidation = data || '#000000';
-  const colorChroma = data.hex ? chroma(data.hex) : chroma(dataValidation);
-  const a = data.a ? data.a : 1;
+  let transparent = false;
+  let colorChroma;
+  let a = data.a ? data.a : 1;
+  if (data.hex && (data.hex==='transparent' || data=='transparent')){
+    colorChroma = chroma('#000000').alpha(0);
+    a = 0;
+    transparent = true;
+  }
+  else if (data.hex) colorChroma = chroma(data.hex);
+  else colorChroma = chroma(dataValidation);
   const hsl = hslaListToObject(colorChroma.alpha(a).hsl());
   const hsv = hsvListToObject(colorChroma.hsv());
   const rgba = colorChroma.alpha(a).rgba();
@@ -114,7 +122,7 @@ export const toState = (data, oldHue) => {
     hsl.h = oldHue || 0;
     hsv.h = oldHue || 0;
   }
-  const transparent = hex === '000000' && rgb.a === 0;
+
   return {
     hsl,
     hex: transparent ? 'transparent' : hex,
@@ -138,7 +146,9 @@ export const getContrastingColor = (data) => {
   if (!data) {
     return '#fff';
   }
-  const col = toState(data);
+  let c = data;
+  if (data === 'transparent') c = {hex:'transparent'};
+  const col = toState(c);
   if (col.hex === 'transparent') {
     return 'rgba(0,0,0,0.4)';
   }

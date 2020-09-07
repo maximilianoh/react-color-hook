@@ -4,6 +4,7 @@ import Block from './Block'
 import BlockSwatches from './BlockSwatches'
 import { simpleCheckForValidColor} from '../../helpers/color'
 import { render, fireEvent } from '@testing-library/react';
+import CanvasRenderingContext2DEvent from "jest-canvas-mock";
 
 test('Block renders correctly', () => {
   const tree = renderer.create(
@@ -78,3 +79,24 @@ test('Block renders custom styles correctly', () => {
   ).toJSON()
   expect(tree.props.style.boxShadow).toBe('none')
 })
+
+
+test('Block transparent', () => {
+  render(<Block hex='transparent' />);
+  const div = document.querySelector(".block-picker").children[1]; // title
+  expect(div.children.length).toBe(2);
+  expect(div.children[1].textContent).toBe('TRANSPARENT');
+});
+
+test('Block without function', () => {
+  const { container } = render(
+    <BlockSwatches colors={ ['#fff', '#999', '#000'] } />
+  );
+  
+  const div = document.querySelector("div").children[0]; //swatches
+  fireEvent.click(div.children[0].children[0]);
+  const event = new MouseEvent('mouseover', { bubbles: true });
+  fireEvent(div.children[0].children[0], event);
+  
+  expect(container).toMatchSnapshot();
+});

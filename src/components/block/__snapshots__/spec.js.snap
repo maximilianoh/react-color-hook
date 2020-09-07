@@ -1220,6 +1220,42 @@ exports[`Block renders correctly 1`] = `
 </div>
 `;
 
+exports[`Block without function 1`] = `
+<div>
+  <div
+    style="margin-right: -10px;"
+  >
+    <span>
+      <div
+        role="button"
+        style="background: rgb(255, 255, 255); height: 22px; width: 22px; cursor: pointer; position: relative; outline: none; float: left; margin-right: 10px; margin-bottom: 10px; border-radius: 4px;"
+        tabindex="0"
+        title="#fff"
+      />
+    </span>
+    <span>
+      <div
+        role="button"
+        style="background: rgb(153, 153, 153); height: 22px; width: 22px; cursor: pointer; position: relative; outline: none; float: left; margin-right: 10px; margin-bottom: 10px; border-radius: 4px;"
+        tabindex="0"
+        title="#999"
+      />
+    </span>
+    <span>
+      <div
+        role="button"
+        style="background: rgb(0, 0, 0); height: 22px; width: 22px; cursor: pointer; position: relative; outline: none; float: left; margin-right: 10px; margin-bottom: 10px; border-radius: 4px;"
+        tabindex="0"
+        title="#000"
+      />
+    </span>
+    <div
+      style="clear: both;"
+    />
+  </div>
+</div>
+`;
+
 exports[`BlockSwatches renders correctly 1`] = `
 <div
   style={

@@ -13,6 +13,16 @@ const ColorWrap = (Picker) => {
       fn(data, event);
     }, 100);
 
+    useEffect(() => {
+      setColorState(toState(color, colorState.oldHue));
+    }, [color]);
+
+    useEffect(() => {
+      if(props.hex){
+        setColorState(toState({hex: props.hex}, colorState.oldHue));
+      }
+    }, []);
+
     const handleChange = (data, event) => {
       const isValidColor = simpleCheckForValidColor(data);
       if (isValidColor && chromaValidation(isValidColor)) {
@@ -34,10 +44,6 @@ const ColorWrap = (Picker) => {
         if (props.onSwatchHover) props.onSwatchHover(colors, event);
       }
     };
-
-    useEffect(() => {
-      setColorState(toState(color, colorState.oldHue));
-    }, [color]);
 
     const optionalEvents = {};
     const { onSwatchHover } = props;
