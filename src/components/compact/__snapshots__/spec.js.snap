@@ -3607,7 +3607,7 @@ exports[`Compact with onSwatchHover renders correctly 1`] = `
         <div
           style={
             Object {
-              "background": "#22194d",
+              "background": "#ff0000",
               "height": "9px",
               "left": "5px",
               "position": "absolute",
@@ -3647,7 +3647,7 @@ exports[`Compact with onSwatchHover renders correctly 1`] = `
                 "width": "80%",
               }
             }
-            value="#22194D"
+            value="#FF0000"
           />
           <span
             onMouseDown={[Function]}
@@ -3693,7 +3693,7 @@ exports[`Compact with onSwatchHover renders correctly 1`] = `
                 "width": "70%",
               }
             }
-            value="34"
+            value="255"
           />
           <span
             onMouseDown={[Function]}
@@ -3745,7 +3745,7 @@ exports[`Compact with onSwatchHover renders correctly 1`] = `
                 "width": "70%",
               }
             }
-            value="25"
+            value="0"
           />
           <span
             onMouseDown={[Function]}
@@ -3797,7 +3797,7 @@ exports[`Compact with onSwatchHover renders correctly 1`] = `
                 "width": "70%",
               }
             }
-            value="77"
+            value="0"
           />
           <span
             onMouseDown={[Function]}

@@ -1487,7 +1487,7 @@ exports[`Sketch renders on server correctly 1`] = `
           "MozBorderRadius": "",
           "OBorderRadius": "",
           "WebkitBorderRadius": "",
-          "background": "hsl(250.38461538461542,100%, 50%)",
+          "background": "hsl(0,100%, 50%)",
           "borderRadius": "",
           "bottom": "0px",
           "left": "0px",
@@ -1554,9 +1554,9 @@ exports[`Sketch renders on server correctly 1`] = `
           style={
             Object {
               "cursor": "default",
-              "left": "67.53246753246754%",
+              "left": "100%",
               "position": "absolute",
-              "top": "69.80392156862746%",
+              "top": "0%",
             }
           }
         >
@@ -1679,7 +1679,7 @@ exports[`Sketch renders on server correctly 1`] = `
             <div
               style={
                 Object {
-                  "left": "69.55128205128206%",
+                  "left": "0%",
                   "position": "absolute",
                 }
               }
@@ -1788,8 +1788,8 @@ exports[`Sketch renders on server correctly 1`] = `
                 "OBoxShadow": undefined,
                 "WebkitBorderRadius": undefined,
                 "WebkitBoxShadow": undefined,
-                "background": "linear-gradient(to right, rgba(34,25,77, 0) 0%,
-             rgba(34,25,77, 1) 100%)",
+                "background": "linear-gradient(to right, rgba(255,0,0, 0) 0%,
+             rgba(255,0,0, 1) 100%)",
                 "borderRadius": undefined,
                 "bottom": "0px",
                 "boxShadow": undefined,
@@ -1902,7 +1902,7 @@ exports[`Sketch renders on server correctly 1`] = `
             "OBoxShadow": "inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)",
             "WebkitBorderRadius": "2px",
             "WebkitBoxShadow": "inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)",
-            "background": "rgba(34,25,77,1)",
+            "background": "rgba(255,0,0,1)",
             "borderRadius": "2px",
             "bottom": "0px",
             "boxShadow": "inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)",
@@ -1963,7 +1963,7 @@ exports[`Sketch renders on server correctly 1`] = `
               "width": "80%",
             }
           }
-          value="22194D"
+          value="FF0000"
         />
         <span
           onMouseDown={[Function]}
@@ -2023,7 +2023,7 @@ exports[`Sketch renders on server correctly 1`] = `
               "width": "80%",
             }
           }
-          value="34"
+          value="255"
         />
         <span
           onMouseDown={[Function]}
@@ -2084,7 +2084,7 @@ exports[`Sketch renders on server correctly 1`] = `
               "width": "80%",
             }
           }
-          value="25"
+          value="0"
         />
         <span
           onMouseDown={[Function]}
@@ -2145,7 +2145,7 @@ exports[`Sketch renders on server correctly 1`] = `
               "width": "80%",
             }
           }
-          value="77"
+          value="0"
         />
         <span
           onMouseDown={[Function]}

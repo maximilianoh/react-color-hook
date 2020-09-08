@@ -183,7 +183,7 @@ exports[`Hue renders vertically 1`] = `
           Object {
             "left": "0px",
             "position": "absolute",
-            "top": "30.448717948717942%",
+            "top": "100%",
           }
         }
       >
