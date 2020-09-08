@@ -15,10 +15,10 @@ test('Sketch renders correctly', () => {
 })
 
 test('Sketch renders on server correctly', () => {
-  const tree = renderer.create(
+  const { container } = render(
     <Sketch renderers={CanvasRenderingContext2DEvent} {...red} />
-  ).toJSON()
-  expect(tree).toMatchSnapshot()
+  );
+  expect(container).toMatchSnapshot();
 })
 
 

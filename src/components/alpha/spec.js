@@ -14,10 +14,10 @@ test('Alpha renders correctly', () => {
 })
 
  test('Alpha renders on server correctly', () => {
-   const tree = renderer.create(
-     <Alpha renderers={ CanvasRenderingContext2DEvent } { ...red } />
-   ).toJSON()
-   expect(tree).toMatchSnapshot()
+  const { container } = render(
+    <Alpha renderers={ CanvasRenderingContext2DEvent } { ...red } />
+  );
+  expect(container).toMatchSnapshot();
  })
 
 test('Alpha renders vertically', () => {
