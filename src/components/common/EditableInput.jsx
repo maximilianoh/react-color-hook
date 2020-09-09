@@ -13,7 +13,7 @@ const VALID_KEY_CODES = [
 const isNumber = (value) => !Number.isNaN(parseFloat(value));
 const isValidKeyCode = (keyCode) => VALID_KEY_CODES.indexOf(keyCode) > -1;
 
-const getFormattedPercentage = (number) => `${number}%`;
+const getFormattedPercentage = (number) => `${number.replace(/%/g, '')}%`;
 const getNumberValue = (value) => Number(String(value).replace(/%/g, ''));
 const getIsPercentage = (value) => String(value).indexOf('%') > -1;
 

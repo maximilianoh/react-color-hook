@@ -15,7 +15,7 @@ const ChromeFields = (props) => {
       setViewState('rgb');
     } else if (viewState === 'rgb') {
       setViewState('hsl');
-    } else if (viewState === 'hsl') {
+    } else { //hsl
       if (props.hsl.a === 1) {
         setViewState('hex');
       } else {
@@ -27,14 +27,7 @@ const ChromeFields = (props) => {
 
   const handleChange = (originalData, e) => {
     const data = { ...originalData };
-    if (data.hex) {
-      if (isValidHex(data.hex)) {
-        props.onChange({
-          hex: data.hex,
-          source: 'hex',
-        }, e);
-      }
-    } else if (data.r || data.g || data.b) {
+    if (data.r || data.g || data.b) {
       props.onChange({
         r: data.r || props.rgb.r,
         g: data.g || props.rgb.g,
@@ -62,11 +55,18 @@ const ChromeFields = (props) => {
 
       props.onChange({
         h: data.h || props.hsl.h,
-        s: Number((data.s && data.s) || props.hsl.s),
-        l: Number((data.l && data.l) || props.hsl.l),
+        s: Number(data.s || props.hsl.s),
+        l: Number(data.l || props.hsl.l),
         source: 'hsl',
       }, e);
-    }
+    } else { //hex
+      if (isValidHex(data.hex)) {
+        props.onChange({
+          hex: data.hex,
+          source: 'hex',
+        }, e);
+      }
+    } 
     originalData = { ...data }; // eslint-disable-line no-param-reassign
   };
 
@@ -168,7 +168,7 @@ const ChromeFields = (props) => {
     if (props.hsl.a !== 1 && viewState === 'hex') {
       setViewState('rgb');
     }
-  }, [hsl]);
+  }, [hsl, hsl.h, hsl.l, hsl.s]);
 
 
   let fields;
@@ -223,7 +223,9 @@ const ChromeFields = (props) => {
         </div>
       </div>
     );
-  } else if (viewState === 'hsl') {
+  } else { //hsl
+    const s = props.hsl.s > 1 ? props.hsl.s/100:props.hsl.s;
+    const l = props.hsl.l > 1 ? props.hsl.l/100:props.hsl.l;
     fields = (
       <div style={styles.fields} className="flexbox-fix">
         <div style={styles.field}>
@@ -238,7 +240,7 @@ const ChromeFields = (props) => {
           <EditableInput
             style={{ input: styles.input, label: styles.label }}
             label="s"
-            value={`${Math.round(props.hsl.s * 100)}%`}
+            value={`${Math.round(s * 100)}%`}
             onChange={handleChange}
           />
         </div>
@@ -246,7 +248,7 @@ const ChromeFields = (props) => {
           <EditableInput
             style={{ input: styles.input, label: styles.label }}
             label="l"
-            value={`${Math.round(props.hsl.l * 100)}%`}
+            value={`${Math.round(l * 100)}%`}
             onChange={handleChange}
           />
         </div>
