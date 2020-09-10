@@ -9,7 +9,7 @@ import '../common/style.css';
 
 const Github = ({
   width, colors, onChange, onSwatchHover, triangle,
-  styles: passedStyles = {}, className,
+  styles: passedStyles, className,
 }) => {
   const styles = reactCSS(merge({
     default: {

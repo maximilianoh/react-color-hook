@@ -63,3 +63,11 @@ test('GithubSwatch renders correctly', () => {
   ).toJSON()
   expect(tree).toMatchSnapshot()
 })
+
+test('GithubSwatch renders correctly', () => {
+  const {queryByTitle} = render(<GithubSwatch color="#B80000" />);
+  const event = new MouseEvent('mouseover', { bubbles: true });
+  const firstSwatch = queryByTitle("#B80000")
+  fireEvent(firstSwatch, event);
+  fireEvent.click(firstSwatch);
+})
