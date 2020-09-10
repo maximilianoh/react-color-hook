@@ -7,10 +7,11 @@ import ColorWrap from '../common/ColorWrap';
 import EditableInput from '../common/EditableInput';
 import Raised from '../common/Raised';
 
-const Material = ({
-  onChange, hex, rgb,
-  styles: passedStyles = {}, className = '',
-}) => {
+const Material = (props) => {
+  const {
+    onChange, hex, rgb,
+    styles: passedStyles, className,
+  } = props;
   const styles = reactCSS(merge({
     default: {
       material: {
@@ -81,20 +82,20 @@ const Material = ({
   }, passedStyles));
 
   const handleChange = (data, e) => {
-    if (data.hex) {
-      if (isValidHex(data.hex)) {
-        onChange({
-          hex: data.hex,
-          source: 'hex',
-        }, e);
-      }
-    } else if (data.r || data.g || data.b) {
+    if (data.r || data.g || data.b) {
       onChange({
         r: data.r || rgb.r,
         g: data.g || rgb.g,
         b: data.b || rgb.b,
         source: 'rgb',
       }, e);
+    } else { //hex
+        if (data.hex && isValidHex(data.hex)) {
+          onChange({
+            hex: data.hex,
+            source: 'hex',
+          }, e);
+        }
     }
   };
 
@@ -144,13 +145,14 @@ Material.propTypes = {
     g: PropTypes.number,
     b: PropTypes.number,
   }).isRequired,
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   hex: PropTypes.string.isRequired,
   styles: PropTypes.shape({}),
 };
 
 Material.defaultProps = {
   styles: {},
+  className:''
 };
 
 export default ColorWrap(Material);

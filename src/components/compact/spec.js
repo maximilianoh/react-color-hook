@@ -87,7 +87,7 @@ test('CompactColor onChange events empty', () => {
 })
 
 test('CompactField onChange empty', () => {
-  const {queryByTitle} = render(<CompactFields { ...red }  />);
+  render(<CompactFields { ...red }  />);
   const field_g = document.querySelector(".flexbox-fix").children[3];
   fireEvent.change(field_g.children[0], { target: {value : '78' }});
 })
