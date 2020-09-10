@@ -13,10 +13,11 @@ test('Hue renders correctly', () => {
 })
 
 test('Hue renders vertically', () => {
-  const tree = renderer.create(
-    <Hue { ...red } width={ 20 } height={ 200 } direction="vertical" />,
-  ).toJSON()
-  expect(tree).toMatchSnapshot()
+  const { container } = render(
+    <Hue { ...red } width={ 20 } height={ 200 } direction="vertical" />
+  );
+  expect(container).toMatchSnapshot();
+  
 })
 
 test('Hue renders custom styles correctly', () => {
@@ -41,7 +42,6 @@ test('Hue onChange events correctly', () => {
   const event = new MouseEvent('mousedown', { bubbles: true });
   Object.defineProperty(event, 'pageX', {get: () => 100});
   Object.defineProperty(event, 'pageY', {get: () => 10});
-  console.dir(hue.children[0]);
   fireEvent(hue.children[0], event);
   expect(changeSpy).toHaveBeenCalledTimes(1);
 })
