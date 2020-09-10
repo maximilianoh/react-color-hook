@@ -58,3 +58,12 @@ test('CircleSwatch renders with sizing and spacing', () => {
   ).toJSON()
   expect(tree).toMatchSnapshot()
 })
+
+
+test('CircleSwatch renders with sizing and spacing', () => {
+  const {queryByTitle} = render(<CircleSwatch color="#f44336" />);
+  const circleSwatch = queryByTitle("#f44336");
+  const event = new MouseEvent('mouseover', { bubbles: true });
+  fireEvent(circleSwatch, event);
+  fireEvent.click(circleSwatch);
+})

@@ -10,7 +10,7 @@ import '../common/style.css';
 
 const Circle = ({
   width, onChange, onSwatchHover, colors, hex, circleSize,
-  styles: passedStyles = {}, circleSpacing, className = '',
+  styles: passedStyles, circleSpacing, className,
 }) => {
   const styles = reactCSS(merge({
     default: {
