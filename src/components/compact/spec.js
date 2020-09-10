@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { simpleCheckForValidColor, red } from '../../helpers/color'
+import { simpleCheckForValidColor, red } from '../../helpers/color';
 import { render, fireEvent } from '@testing-library/react';
 import Compact from './Compact'
 import CompactColor from './CompactColor'

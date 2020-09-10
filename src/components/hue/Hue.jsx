@@ -8,7 +8,7 @@ import HuePointer from './HuePointer';
 
 export const HuePicker = ({
   width, height, onChange, hsl, direction, pointer,
-  styles: passedStyles = {}, className = '',
+  styles: passedStyles, className,
 }) => {
   const styles = reactCSS(merge({
     default: {
@@ -61,6 +61,7 @@ HuePicker.defaultProps = {
   direction: 'horizontal',
   pointer: HuePointer,
   styles: {},
+  className:''
 };
 
 export default ColorWrap(HuePicker);
