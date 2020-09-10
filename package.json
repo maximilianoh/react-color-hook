@@ -6,6 +6,7 @@
     "start": "webpack-dev-server --env.development --progress",
     "build": "webpack --env.production --progress",
     "test": "jest --config jest.config.js",
+    "t": "jest --config jest.config.js src/components/$DIREC/spec.js",
     "doc": "node styleguidist.js",
     "styleguide": "npx styleguidist build",
     "clean": "rm -rf lib && mkdir lib",

@@ -5,7 +5,7 @@ import { getContrastingColor } from '../../helpers/color';
 import Swatch from '../common/Swatch';
 
 const CompactColor = ({
-  color, onClick = () => {}, onSwatchHover, active,
+  color, onClick, onSwatchHover, active,
 }) => {
   const styles = reactCSS({
     default: {

@@ -31,6 +31,15 @@ test('Compact onChange events correctly', () => {
   const firstSwatch = queryByTitle('#4D4D4D');
   fireEvent.click(firstSwatch);
   expect(changeSpy).toHaveBeenCalled();
+  const field_h = document.querySelector(".compact-picker .flexbox-fix").children[1];
+  fireEvent.change(field_h.children[0], { target: {value : '#4D4D44' }});
+  expect(changeSpy).toHaveBeenCalledTimes(2);
+  const field_r = document.querySelector(".compact-picker .flexbox-fix").children[2];
+  fireEvent.change(field_r.children[0], { target: {value : '78' }});
+  expect(changeSpy).toHaveBeenCalledTimes(3);
+  const field_g = document.querySelector(".compact-picker .flexbox-fix").children[3];
+  fireEvent.change(field_g.children[0], { target: {value : '78' }});
+  expect(changeSpy).toHaveBeenCalledTimes(4);
 })
 
 
@@ -66,4 +75,19 @@ test('Compact renders custom styles correctly', () => {
     <Compact { ...red } styles={{ default: { wrap: { boxShadow: '0 0 10px red' } } }} />,
   ).toJSON()
   expect(tree.props.style.boxShadow).toBe('0 0 10px red')
+})
+
+
+test('CompactColor onChange events empty', () => {
+  const {queryByTitle} = render(<CompactColor color='#4D4D4D'  />);
+  const firstSwatch = queryByTitle('#4D4D4D');
+  fireEvent.click(firstSwatch);
+  const event = new MouseEvent('mouseover', { bubbles: true });
+  fireEvent(firstSwatch, event);
+})
+
+test('CompactField onChange empty', () => {
+  const {queryByTitle} = render(<CompactFields { ...red }  />);
+  const field_g = document.querySelector(".flexbox-fix").children[3];
+  fireEvent.change(field_g.children[0], { target: {value : '78' }});
 })

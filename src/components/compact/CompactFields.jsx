@@ -14,7 +14,7 @@ const CompactFields = ({ hex, rgb, onChange }) => {
       },
       active: {
         position: 'absolute',
-        top: '8px',
+        top: '5px',
         left: '5px',
         height: '9px',
         width: '9px',
@@ -55,7 +55,7 @@ const CompactFields = ({ hex, rgb, onChange }) => {
       },
       RGBlabel: {
         position: 'absolute',
-        top: '5px',
+        top: '2px',
         left: '0px',
         lineHeight: '16px',
         textTransform: 'uppercase',

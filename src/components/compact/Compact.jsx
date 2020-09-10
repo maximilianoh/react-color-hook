@@ -11,7 +11,7 @@ import CompactFields from './CompactFields';
 
 const Compact = ({
   onChange, onSwatchHover, colors, hex, rgb,
-  styles: passedStyles = {}, className = '',
+  styles: passedStyles, className,
 }) => {
   const styles = reactCSS(merge({
     default: {
@@ -81,6 +81,7 @@ Compact.defaultProps = {
     '#808900', '#194D33', '#0C797D', '#0062B1', '#653294', '#AB149E',
   ],
   styles: {},
+  className:''
 };
 
 export default ColorWrap(Compact);
