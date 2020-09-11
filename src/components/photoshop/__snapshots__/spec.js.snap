@@ -478,7 +478,6 @@ exports[`Photoshop renders correctly 1`] = `
                 "paddingBottom": "9px",
                 "paddingTop": "5px",
                 "position": "relative",
-                "width": "80px",
               }
             }
           >
@@ -946,7 +945,6 @@ exports[`PhotoshopFields renders correctly 1`] = `
       "paddingBottom": "9px",
       "paddingTop": "5px",
       "position": "relative",
-      "width": "80px",
     }
   }
 >

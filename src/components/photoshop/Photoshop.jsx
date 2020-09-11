@@ -11,10 +11,9 @@ import PhotoshopPointer from './PhotoshopPointer';
 import PhotoshopButton from './PhotoshopButton';
 import PhotoshopPreviews from './PhotoshopPreviews';
 
-const Photoshop = (props) => {
+const Photoshop = ({styles: passedStyles, className,
+  header, onChange, hsl, hsv, rgb, onAccept, onCancel, hex}) => {
   const [currentColor, setCurrentColor] = useState('#FFFFFF');
-
-  const { styles: passedStyles = {}, className = '' } = props;
 
   const styles = reactCSS(merge({
     default: {
@@ -73,14 +72,10 @@ const Photoshop = (props) => {
     },
   }, passedStyles));
 
-  const {
-    header, onChange, hsl, hsv, rgb, onAccept, onCancel, hex,
-  } = props;
   useEffect(() => setCurrentColor(hex), []);
   return (
     <div style={styles.picker} className={`photoshop-picker ${className}`}>
       <div style={styles.head}>{header}</div>
-
       <div style={styles.body} className="flexbox-fix">
         <div style={styles.saturation}>
           <Saturation
@@ -126,8 +121,8 @@ const Photoshop = (props) => {
 Photoshop.propTypes = {
   header: PropTypes.string,
   styles: PropTypes.shape({}),
-  className: PropTypes.string.isRequired,
-  onChange: PropTypes.func,
+  className: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
   onAccept: PropTypes.func,
   onCancel: PropTypes.func,
   hsl: PropTypes.shape({}).isRequired,
@@ -141,7 +136,7 @@ Photoshop.defaultProps = {
   styles: {},
   onCancel: () => {},
   onAccept: () => {},
-  onChange: () => {},
+  className:'',
 };
 
 export default ColorWrap(Photoshop);

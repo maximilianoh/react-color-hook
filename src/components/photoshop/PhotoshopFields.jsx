@@ -12,7 +12,6 @@ const PhotoshopPicker = ({
       fields: {
         paddingTop: '5px',
         paddingBottom: '9px',
-        width: '80px',
         position: 'relative',
       },
       divider: {
@@ -79,14 +78,7 @@ const PhotoshopPicker = ({
   });
 
   const handleChange = (data, e) => {
-    if (data['#']) {
-      if (isValidHex(data['#'])) {
-        onChange({
-          hex: data['#'],
-          source: 'hex',
-        }, e);
-      }
-    } else if (data.r || data.g || data.b) {
+    if (data.r || data.g || data.b) {
       onChange({
         r: data.r || rgb.r,
         g: data.g || rgb.g,
@@ -100,6 +92,13 @@ const PhotoshopPicker = ({
         v: data.v || hsv.v,
         source: 'hsv',
       }, e);
+    } else { //hex
+      if (isValidHex(data['#'])) {
+          onChange({
+            hex: data['#'],
+            source: 'hex',
+          }, e);
+        } 
     }
   };
 
