@@ -51,14 +51,7 @@ const SketchFields = ({
 
   const handleChange = (dataOriginal, e) => {
     const data = { ...dataOriginal };
-    if (data.hex) {
-      if (isValidHex(data.hex)) {
-        onChange({
-          hex: data.hex,
-          source: 'hex',
-        }, e);
-      }
-    } else if (data.r || data.g || data.b) {
+    if (data.r || data.g || data.b) {
       onChange({
         r: data.r || rgb.r,
         g: data.g || rgb.g,
@@ -66,13 +59,12 @@ const SketchFields = ({
         a: rgb.a,
         source: 'rgb',
       }, e);
-    } else if (data.a) {
+    } else if (data.a) { 
       if (data.a < 0) {
         data.a = 0;
       } else if (data.a > 100) {
         data.a = 100;
       }
-
       data.a /= 100;
       onChange({
         h: hsl.h,
@@ -81,6 +73,13 @@ const SketchFields = ({
         a: data.a,
         source: 'hsl',
       }, e);
+    } else {
+      if (isValidHex(data.hex)) {
+        onChange({
+          hex: data.hex,
+          source: 'hex',
+        }, e);
+      } 
     }
   };
 

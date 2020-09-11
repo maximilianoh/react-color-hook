@@ -13,7 +13,7 @@ import '../common/style.css';
 
 const Sketch = ({
   width, rgb, hex, hsv, hsl, onChange, onSwatchHover,
-  disableAlpha, presetColors, renderers, styles: passedStyles = {}, className = '',
+  disableAlpha, presetColors, renderers, styles: passedStyles, className,
 }) => {
   const styles = reactCSS(merge({
     default: {
@@ -155,13 +155,14 @@ Sketch.propTypes = {
   onChange: PropTypes.func.isRequired,
   onSwatchHover: PropTypes.func.isRequired,
   renderers: PropTypes.shape({}).isRequired,
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 Sketch.defaultProps = {
   disableAlpha: false,
   width: 200,
   styles: {},
+  className:'',
   presetColors: ['#D0021B', '#F5A623', '#F8E71C', '#8B572A', '#7ED321', '#417505',
     '#BD10E0', '#9013FE', '#4A90E2', '#50E3C2', '#B8E986', '#000000',
     '#4A4A4A', '#9B9B9B', '#FFFFFF'],
