@@ -1,6 +1,6 @@
 CompactFields
 ```js
 import CompactFields from './CompactFields.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <CompactFields { ...red } />
 ```

@@ -1,8 +1,8 @@
 PhotoshopButton
 ```js
 import PhotoshopButton from './PhotoshopButton.jsx';
-import { red } from '../../helpers/color';
-<PhotoshopButton label="accept" onClick={ () => {} } />
+import { red } from '../../example_color';
+<PhotoshopButton {...red} label="accept" onClick={ () => {} } />
 ```
 
 
@@ -11,5 +11,5 @@ PhotoshopButton children
 import PhotoshopButton from './PhotoshopButton.jsx';
 import { red } from '../../helpers/color';
 const c = <strong>children</strong>;
-<PhotoshopButton label="" onClick={ () => {}}  children={c} />
+<PhotoshopButton {...red} label="" onClick={ () => {}}  children={c} />
 ```

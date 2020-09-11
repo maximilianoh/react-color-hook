@@ -1,7 +1,7 @@
 Github
 ```js
 import Github from './Github.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <Github { ...red } />
 ```
 
@@ -10,7 +10,7 @@ import { red } from '../../helpers/color';
 Github onSwatchHover
 ```js
 import Github from './Github.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 const onChange = (props) => {
     console.dir(props.hex)
 }
@@ -23,7 +23,7 @@ const onChange = (props) => {
 Github onClick
 ```js
 import Github from './Github.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 const changeSpy = (props) => {
     console.dir(props.hex)
 }
@@ -37,14 +37,14 @@ const changeSpy = (props) => {
 Github triangle hide
 ```js
 import Github from './Github.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <Github { ...red } triangle="hide" />
 ```
 
 Github triangle top-right
 ```js
 import Github from './Github.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <Github { ...red } triangle="top-right" />
 ```
 
@@ -52,7 +52,7 @@ import { red } from '../../helpers/color';
 Github custom style
 ```js
 import Github from './Github.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <Github { ...red } styles={{ default: { card: { boxShadow: '0 0 10px red' } } }} />
 ```
 
@@ -60,7 +60,7 @@ import { red } from '../../helpers/color';
 Github custom colors
 ```js
 import Github from './Github.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <Github  { ...red }  colors={[ '#008B02', '#006B76', '#1273DE', '#004DCF', '#5300EB',
     '#EB9694', '#FAD0C3', '#FEF3BD']} />
 ```

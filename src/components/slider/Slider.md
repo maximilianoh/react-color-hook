@@ -1,7 +1,7 @@
 Slider
 ```js
 import Slider from './Slider.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <Slider { ...red } />
 ```
 

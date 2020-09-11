@@ -9,14 +9,14 @@ import Swatches from './Swatches.jsx';
 Swatches colors
 ```js
 import Swatches from './Swatches.jsx';
-import  { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <Swatches hex={ red.hex } colors={ [['#004d40'], ['#333']] } />
 ```
 
 Swatches custom style
 ```js
 import Swatches from './Swatches.jsx';
-import  { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <Swatches hex={ red.hex } styles={{ default: { picker: { boxShadow: '0 0 10px red' } } }} />
 ```
 

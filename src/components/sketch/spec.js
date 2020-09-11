@@ -1,6 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { simpleCheckForValidColor, red } from '../../helpers/color'
+import { simpleCheckForValidColor } from '../../helpers/color';
+import { red } from '../../example_color';
 import Sketch from './Sketch'
 import SketchFields from './SketchFields'
 import SketchPresetColors from './SketchPresetColors'

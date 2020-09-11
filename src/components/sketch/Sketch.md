@@ -1,7 +1,7 @@
 Sketch
 ```js
 import Sketch from './Sketch.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <Sketch {...red} />
 ```
 
@@ -9,7 +9,7 @@ import { red } from '../../helpers/color';
 Sketch custom style
 ```js
 import Sketch from './Sketch.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <Sketch styles={{ default: { picker: { boxShadow: 'none' } } }} />
 ```
 
@@ -44,7 +44,6 @@ const changeSpy = (props) =>{
 Sketch present colors
 ```js
 import Sketch from './Sketch.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <Sketch {...red} presetColors={ ['#BD10E0', '#9013FE', '#4A90E2', '#50E3C2', '#B8E986', '#000000']} />
 ```
-

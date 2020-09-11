@@ -1,7 +1,7 @@
 Compact
 ```js
 import Compact from './Compact.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 
 <Compact { ...red } />
 ```
@@ -10,7 +10,7 @@ import { red } from '../../helpers/color';
 Compact onSwatchHover
 ```js
 import Compact from './Compact.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 const onChange = (props) => {
     console.dir(props.hex)
 }
@@ -23,7 +23,7 @@ const onChange = (props) => {
 Compact onClick
 ```js
 import Compact from './Compact.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 const changeSpy = (props) => {
     console.dir(props.hex)
 }
@@ -36,6 +36,6 @@ const changeSpy = (props) => {
 Compact custom style
 ```js
 import Compact from './Compact.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <Compact { ...red } styles={{ default: { wrap: { boxShadow: '0 0 10px red' } } }} />
 ```

@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer';
 import { render, fireEvent } from '@testing-library/react';
-import { red } from '../../helpers/color'
+import { red } from '../../example_color';
 import Photoshop from './Photoshop'
 import PhotoshopButton from './PhotoshopButton'
 import PhotoshopFields from './PhotoshopFields'

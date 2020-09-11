@@ -8,7 +8,7 @@ import Alpha from './Alpha.jsx';
 Alpha Color Red
 ```js
 import Alpha from './Alpha.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 
 <Alpha {...red} color={red.hex} />
 ```
@@ -17,7 +17,7 @@ import { red } from '../../helpers/color';
 Alpha renders vertically
 ```js
 import Alpha from './Alpha.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 
 <Alpha {...red} width={20} height={100} direction="vertical" />
 ```
@@ -25,7 +25,7 @@ import { red } from '../../helpers/color';
 Alpha onChange events
 ```js
 import Alpha from './Alpha.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 
 const changeSpy = (prop) => { console.log(prop.hsl.a)};
 

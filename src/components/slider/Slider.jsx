@@ -9,7 +9,7 @@ import SliderPointer from './SliderPointer';
 
 const Slider = ({
   hsl, onChange, pointer,
-  styles: passedStyles = {}, className,
+  styles: passedStyles, className,
 }) => {
   const styles = reactCSS(merge({
     default: {

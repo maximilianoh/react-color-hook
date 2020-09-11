@@ -23,6 +23,7 @@ const SliderSwatches = ({ onClick, hsl }) => {
 
   // Acceptible difference in floating point equality
   const epsilon = 0.1;
+  const s = Math.abs(hsl.s - 0.50) < epsilon;
 
   return (
     <div style={styles.swatches}>
@@ -30,8 +31,7 @@ const SliderSwatches = ({ onClick, hsl }) => {
         <SliderSwatch
           hsl={hsl}
           offset={0.80}
-          active={Math.abs(hsl.l - 0.80) < epsilon
-            && Math.abs(hsl.s - 0.50) < epsilon}
+          active={Math.abs(hsl.l - 0.80) < epsilon && s}
           onClick={onClick}
           first
         />
@@ -40,8 +40,7 @@ const SliderSwatches = ({ onClick, hsl }) => {
         <SliderSwatch
           hsl={hsl}
           offset={0.65}
-          active={Math.abs(hsl.l - 0.65) < epsilon
-            && Math.abs(hsl.s - 0.50) < epsilon}
+          active={Math.abs(hsl.l - 0.65) < epsilon && s}
           onClick={onClick}
         />
       </div>
@@ -49,8 +48,7 @@ const SliderSwatches = ({ onClick, hsl }) => {
         <SliderSwatch
           hsl={hsl}
           offset={0.50}
-          active={Math.abs(hsl.l - 0.50) < epsilon
-            && Math.abs(hsl.s - 0.50) < epsilon}
+          active={Math.abs(hsl.l - 0.50) < epsilon && s}
           onClick={onClick}
         />
       </div>
@@ -58,8 +56,7 @@ const SliderSwatches = ({ onClick, hsl }) => {
         <SliderSwatch
           hsl={hsl}
           offset={0.35}
-          active={Math.abs(hsl.l - 0.35) < epsilon
-            && Math.abs(hsl.s - 0.50) < epsilon}
+          active={Math.abs(hsl.l - 0.35) < epsilon && s}
           onClick={onClick}
         />
       </div>
@@ -67,8 +64,7 @@ const SliderSwatches = ({ onClick, hsl }) => {
         <SliderSwatch
           hsl={hsl}
           offset={0.20}
-          active={Math.abs(hsl.l - 0.20) < epsilon
-            && Math.abs(hsl.s - 0.50) < epsilon}
+          active={Math.abs(hsl.l - 0.20) < epsilon && s}
           onClick={onClick}
           last
         />

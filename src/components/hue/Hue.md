@@ -7,13 +7,13 @@ import Hue from './Hue.jsx';
 Hue vertically
 ```js
 import Hue from './Hue.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <Hue { ...red } width={ 20 } height={ 200 } direction="vertical" />
 ```
 
 Hue custom styles
 ```js
 import Hue from './Hue.jsx';
-import { red } from '../../helpers/color';
+import { red } from '../../example_color';
 <Hue { ...red } styles={{ default: { picker: { boxShadow: '0 0 10px red' } } }} />
 ```

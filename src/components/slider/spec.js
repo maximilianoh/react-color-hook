@@ -1,6 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { red } from '../../helpers/color'
+import { render, fireEvent } from '@testing-library/react';
+import { red, yel, br } from '../../example_color';
 import Slider from './Slider'
 import SliderPointer from './SliderPointer'
 import SliderSwatch from './SliderSwatch'
@@ -40,4 +41,33 @@ test('SliderSwatches renders correctly', () => {
     <SliderSwatches { ...red } />,
   ).toJSON()
   expect(tree).toMatchSnapshot()
+});
+
+
+test('SliderSwatch empty event', () => {
+  render(<SliderSwatch { ...red } />);
+  const d = document.querySelector("div");
+  fireEvent.click(d.children[0]);
 })
+
+
+test('SliderSwatches empty event', () => {
+  render(<SliderSwatches { ...red } />);
+  const d = document.querySelector("div div");
+  expect(d.children.length).toBe(6);
+  fireEvent.click(d.children[0].children[0]);
+});
+
+test('SliderSwatches color epsilon', () => {
+  render(<SliderSwatches { ...yel } />);
+  const d = document.querySelector("div div");
+  expect(d.children.length).toBe(6);
+  fireEvent.click(d.children[0].children[0]);
+});
+
+test('SliderSwatches color epsilon 2', () => {
+  render(<SliderSwatches { ...br } />);
+  const d = document.querySelector("div div");
+  expect(d.children.length).toBe(6);
+  fireEvent.click(d.children[0].children[0]);
+});

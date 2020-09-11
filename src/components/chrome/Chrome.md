@@ -1,7 +1,7 @@
 Chrome
 ```js
 import Chrome from './Chrome.jsx';
-import {  red } from '../../helpers/color';
+import { red } from '../../example_color';
 
 <Chrome {...red} />
 ```
@@ -9,7 +9,7 @@ import {  red } from '../../helpers/color';
 Chrome Views
 ```js
 import Chrome from './Chrome.jsx';
-import {  red } from '../../helpers/color';
+import { red } from '../../example_color';
 <div>
     <Chrome {...red} defaultView="hex" />
     <Chrome {...red} defaultView="hsl" />
@@ -20,7 +20,7 @@ import {  red } from '../../helpers/color';
 Chrome onChange
 ```js
 import Chrome from './Chrome.jsx';
-import {  red } from '../../helpers/color';
+import { red } from '../../example_color';
 
 const changeSpy = (props) => { console.dir(props.hex);}
 

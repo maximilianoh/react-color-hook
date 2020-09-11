@@ -1,7 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { render, fireEvent } from '@testing-library/react';
-import { simpleCheckForValidColor, red } from '../../helpers/color';
+import { simpleCheckForValidColor } from '../../helpers/color';
+import { red } from '../../example_color';
 import Alpha from './Alpha';
 import AlphaPointer from './AlphaPointer';
 import CanvasRenderingContext2DEvent from "jest-canvas-mock";

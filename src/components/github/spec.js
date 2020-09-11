@@ -1,6 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { simpleCheckForValidColor, red } from '../../helpers/color'
+import { simpleCheckForValidColor } from '../../helpers/color';
+import { red } from '../../example_color';
 import { render, fireEvent } from '@testing-library/react';
 import Github from './Github'
 import GithubSwatch from './GithubSwatch'

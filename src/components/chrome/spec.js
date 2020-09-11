@@ -1,5 +1,6 @@
 import React from 'react'
-import { simpleCheckForValidColor, red, isValidHex } from '../../helpers/color'
+import { simpleCheckForValidColor, isValidHex } from '../../helpers/color';
+import { red } from '../../example_color';
 import Chrome from './Chrome'
 import ChromeFields from './ChromeFields'
 import ChromePointer from './ChromePointer'
