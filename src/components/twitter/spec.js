@@ -43,7 +43,11 @@ test('Twitter onChange events correctly', () => {
   expect(changeSpy).toHaveBeenCalledTimes(0);
   const firstSwatch = queryByTitle("#FF6900");
   fireEvent.click(firstSwatch);
-  expect(changeSpy).toHaveBeenCalled();
+  expect(changeSpy).toHaveBeenCalledTimes(1);
+  const input = document.querySelectorAll("input")[0];
+  fireEvent.change(input, { target: { value: 'notcolorvalid' } });
+  expect(changeSpy).toHaveBeenCalledTimes(1);
+  
 })
 
 test('Twitter with onSwatchHover events correctly', () => {

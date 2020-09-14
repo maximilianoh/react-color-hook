@@ -11,7 +11,7 @@ import SwatchesGroup from './SwatchesGroup';
 
 const Swatches = ({
   width, height, onChange, onSwatchHover, colors, hex,
-  styles: passedStyles = {}, className = '',
+  styles: passedStyles, className,
 }) => {
   const styles = reactCSS(merge({
     default: {
@@ -33,12 +33,10 @@ const Swatches = ({
   }, passedStyles));
 
   const handleChange = (data, e) => {
-    if (isValidHex(data)) {
-      onChange({
-        hex: data,
-        source: 'hex',
-      }, e);
-    }
+    onChange({
+      hex: data,
+      source: 'hex',
+    }, e);
   };
 
   return (

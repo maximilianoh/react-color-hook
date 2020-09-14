@@ -12,7 +12,7 @@ import Swatch from '../common/Swatch';
 
 const Twitter = ({
   onChange, onSwatchHover, hex, colors, width, triangle,
-  styles: passedStyles = {}, className = '',
+  styles: passedStyles, className,
 }) => {
   const styles = reactCSS(merge({
     default: {

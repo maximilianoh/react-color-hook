@@ -39,12 +39,14 @@ test('Swatches with onSwatchHover events correctly', () => {
     expect(simpleCheckForValidColor(data)).toBeTruthy()
   })
 
-  const {queryByTitle} = render(<Swatches onSwatchHover={ hoverSpy } />);
+  const {queryByTitle} = render(<Swatches onSwatchHover={ hoverSpy } 
+    colors={ [['#004d40'], ['#333'], ['#b71c1c'], ['#hhhhhh']] } />);
   expect(hoverSpy).toHaveBeenCalledTimes(0);
   const event = new MouseEvent('mouseover', { bubbles: true });
-  const firstSwatch = queryByTitle("#b71c1c")
-  fireEvent(firstSwatch, event);
-  expect(hoverSpy).toHaveBeenCalled();
+  const swatch3 = queryByTitle("#b71c1c");
+  fireEvent(swatch3, event);
+  expect(hoverSpy).toHaveBeenCalledTimes(1);
+  
 })
 
 test('SwatchesColor renders correctly', () => {
@@ -66,4 +68,23 @@ test('SwatchesGroup renders correctly', () => {
     <SwatchesGroup active={ red.hex } group={ ['#fff'] } />,
   ).toJSON()
   expect(tree).toMatchSnapshot()
+})
+
+
+test('Swatches empty events', () => {
+  render(<SwatchesGroup active={ red.hex } group={ ['#ffffff','#000000'] }  />);
+  const d = document.querySelector("div").children[0].children;
+  expect(d.length).toBe(2);
+  fireEvent.click(d[0].children[0]);
+  const event = new MouseEvent('mouseover', { bubbles: true });
+  fireEvent(d[0].children[0], event);
+})
+
+
+test('SwatchesColor empty events', () => {
+  render(<SwatchesColor active first last />);
+  const d = document.querySelector("div").children[0].children[0];
+  fireEvent.click(d);
+  const event = new MouseEvent('mouseover', { bubbles: true });
+  fireEvent(d, event);
 })

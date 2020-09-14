@@ -111,7 +111,13 @@ export const toState = (data, oldHue) => {
     transparent = true;
   }
   else if (data.hex) colorChroma = chroma(data.hex);
-  else colorChroma = chroma(dataValidation);
+  else {
+    try {
+      colorChroma = chroma(dataValidation);  
+    } catch (error) {
+      colorChroma = chroma('#000000');
+    }
+  }
   const hsl = hslaListToObject(colorChroma.alpha(a).hsl());
   const hsv = hsvListToObject(colorChroma.hsv());
   const rgba = colorChroma.alpha(a).rgba();
@@ -138,7 +144,13 @@ export const isValidHex = (hex) => {
   // const lh = (String(hex).charAt(0) === '#') ? 1 : 0;
   // const result = hex.length !== (4 + lh) && hex.length < (7 + lh) && chroma.valid(hex);
   // const hasHas = hex.indexOf('#') !== 0 ? '#' : '';
-  const validation = chroma.valid(hex) && typeof hex === 'string';
+
+  let validation = false;
+  try {
+    validation = chroma.valid(hex) && typeof hex === 'string';  
+  } catch (error) {
+    validation = false;
+  }
   return validation;
 };
 
