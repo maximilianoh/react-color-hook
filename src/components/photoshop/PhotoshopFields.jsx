@@ -92,13 +92,11 @@ const PhotoshopPicker = ({
         v: data.v || hsv.v,
         source: 'hsv',
       }, e);
-    } else { //hex
-      if (isValidHex(data['#'])) {
-          onChange({
-            hex: data['#'],
-            source: 'hex',
-          }, e);
-        } 
+    } else if (isValidHex(data['#'])) {
+      onChange({
+        hex: data['#'],
+        source: 'hex',
+      }, e);
     }
   };
 

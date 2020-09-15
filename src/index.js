@@ -12,7 +12,6 @@ import Slider from './components/slider/Slider';
 import Swatches from './components/swatches/Swatches';
 import Twitter from './components/twitter/Twitter';
 
-
 export {
   Alpha as AlphaPicker,
   Block as BlockPicker,

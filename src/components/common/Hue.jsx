@@ -21,7 +21,6 @@ const Hue = (props) => {
     window.addEventListener('mouseup', handleMouseUp);
   };
 
-
   useEffect(() => () => handleMouseUp(), []);
 
   const {

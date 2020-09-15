@@ -11,8 +11,10 @@ import PhotoshopPointer from './PhotoshopPointer';
 import PhotoshopButton from './PhotoshopButton';
 import PhotoshopPreviews from './PhotoshopPreviews';
 
-const Photoshop = ({styles: passedStyles, className,
-  header, onChange, hsl, hsv, rgb, onAccept, onCancel, hex}) => {
+const Photoshop = ({
+  styles: passedStyles, className,
+  header, onChange, hsl, hsv, rgb, onAccept, onCancel, hex,
+}) => {
   const [currentColor, setCurrentColor] = useState('#FFFFFF');
 
   const styles = reactCSS(merge({
@@ -120,7 +122,17 @@ const Photoshop = ({styles: passedStyles, className,
 
 Photoshop.propTypes = {
   header: PropTypes.string,
-  styles: PropTypes.shape({}),
+  styles: PropTypes.shape({
+    picker: PropTypes.string,
+    head: PropTypes.string,
+    body: PropTypes.string,
+    saturation: PropTypes.string,
+    controls: PropTypes.string,
+    top: PropTypes.string,
+    previews: PropTypes.string,
+    actions: PropTypes.string,
+    hue: PropTypes.string,
+  }),
   className: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   onAccept: PropTypes.func,
@@ -136,7 +148,7 @@ Photoshop.defaultProps = {
   styles: {},
   onCancel: () => {},
   onAccept: () => {},
-  className:'',
+  className: '',
 };
 
 export default ColorWrap(Photoshop);

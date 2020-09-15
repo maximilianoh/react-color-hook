@@ -12,7 +12,6 @@ const Checkboard = ({
   );
 };
 
-
 export default Checkboard;
 
 Checkboard.defaultProps = {

@@ -47,7 +47,9 @@ Circle.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   circleSize: PropTypes.number,
   circleSpacing: PropTypes.number,
-  styles: PropTypes.shape({}),
+  styles: PropTypes.shape({
+    card: PropTypes.string,
+  }),
   colors: PropTypes.arrayOf(PropTypes.string),
   hex: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,

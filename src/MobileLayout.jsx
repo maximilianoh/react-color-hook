@@ -31,7 +31,6 @@ const MobileLayout = (props) => {
         </div>
       </div>
 
-
       <p className="title is-5">GithubPicker</p>
       <div className="columns is-mobile">
         <div
@@ -65,7 +64,6 @@ const MobileLayout = (props) => {
           <MaterialPicker color={color} onChangeComplete={handleChangeComplete} />
         </div>
       </div>
-
 
       <p className="title is-5">TwitterPicker</p>
       <div className="columns is-mobile">

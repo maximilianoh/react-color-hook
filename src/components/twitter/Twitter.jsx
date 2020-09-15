@@ -9,7 +9,6 @@ import ColorWrap from '../common/ColorWrap';
 import EditableInput from '../common/EditableInput';
 import Swatch from '../common/Swatch';
 
-
 const Twitter = ({
   onChange, onSwatchHover, hex, colors, width, triangle,
   styles: passedStyles, className,
@@ -161,7 +160,16 @@ Twitter.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   triangle: PropTypes.oneOf(['hide', 'top-left', 'top-right']),
   colors: PropTypes.arrayOf(PropTypes.string),
-  styles: PropTypes.shape({}),
+  styles: PropTypes.shape({
+    card: PropTypes.string,
+    triangleShadow: PropTypes.string,
+    triangle: PropTypes.string,
+    body: PropTypes.string,
+    swatch: PropTypes.string,
+    hash: PropTypes.string,
+    input: PropTypes.string,
+    clear: PropTypes.string,
+  }),
   onChange: PropTypes.func.isRequired,
   onSwatchHover: PropTypes.func.isRequired,
   className: PropTypes.string.isRequired,

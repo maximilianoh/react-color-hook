@@ -187,7 +187,6 @@ export const raisedStyle = (zDepth, radius, background, passedStyles) => reactCS
   },
 }, passedStyles), { 'zDepth-1': zDepth === 1 });
 
-
 export const saturationStyle = (hsl, radius, shadow, hsv, color,
   white, black, circle, point, style) => reactCSS({
   default: {

@@ -45,7 +45,6 @@ const BlockSwatches = ({ colors, onClick, onSwatchHover }) => {
 
 export default BlockSwatches;
 
-
 BlockSwatches.defaultProps = {
   onSwatchHover: () => {},
   onClick: () => {},

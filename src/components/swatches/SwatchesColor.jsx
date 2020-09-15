@@ -95,5 +95,4 @@ SwatchesColor.defaultProps = {
   color: '',
 };
 
-
 export default SwatchesColor;

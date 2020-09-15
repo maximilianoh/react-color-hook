@@ -26,7 +26,6 @@ const AlphaPointer = ({ direction }) => {
   );
 };
 
-
 AlphaPointer.defaultProps = {
   direction: 'horizontal',
 };

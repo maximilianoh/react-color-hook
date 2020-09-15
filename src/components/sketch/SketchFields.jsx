@@ -1,4 +1,3 @@
-
 import React from 'react';
 import reactCSS from 'reactcss';
 import PropTypes from 'prop-types';
@@ -59,7 +58,7 @@ const SketchFields = ({
         a: rgb.a,
         source: 'rgb',
       }, e);
-    } else if (data.a) { 
+    } else if (data.a) {
       if (data.a < 0) {
         data.a = 0;
       } else if (data.a > 100) {
@@ -73,13 +72,11 @@ const SketchFields = ({
         a: data.a,
         source: 'hsl',
       }, e);
-    } else {
-      if (isValidHex(data.hex)) {
-        onChange({
-          hex: data.hex,
-          source: 'hex',
-        }, e);
-      } 
+    } else if (isValidHex(data.hex)) {
+      onChange({
+        hex: data.hex,
+        source: 'hex',
+      }, e);
     }
   };
 

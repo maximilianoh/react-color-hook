@@ -62,7 +62,7 @@ CircleSwatch.propTypes = {
   color: PropTypes.string,
   onClick: PropTypes.func,
   onSwatchHover: PropTypes.func,
-  hover: PropTypes.bool.isRequired, //set by handleHover
+  hover: PropTypes.bool.isRequired, // set by handleHover
   active: PropTypes.bool,
   circleSize: PropTypes.number,
   circleSpacing: PropTypes.number,

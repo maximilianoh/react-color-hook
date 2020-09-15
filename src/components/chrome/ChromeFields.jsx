@@ -15,15 +15,12 @@ const ChromeFields = (props) => {
       setViewState('rgb');
     } else if (viewState === 'rgb') {
       setViewState('hsl');
-    } else { //hsl
-      if (props.hsl.a === 1) {
-        setViewState('hex');
-      } else {
-        setViewState('rgb');
-      }
+    } else if (props.hsl.a === 1) {
+      setViewState('hex');
+    } else {
+      setViewState('rgb');
     }
   };
-
 
   const handleChange = (originalData, e) => {
     const data = { ...originalData };
@@ -59,14 +56,12 @@ const ChromeFields = (props) => {
         l: Number(data.l || props.hsl.l),
         source: 'hsl',
       }, e);
-    } else { //hex
-      if (isValidHex(data.hex)) {
-        props.onChange({
-          hex: data.hex,
-          source: 'hex',
-        }, e);
-      }
-    } 
+    } else if (isValidHex(data.hex)) {
+      props.onChange({
+        hex: data.hex,
+        source: 'hex',
+      }, e);
+    }
     originalData = { ...data }; // eslint-disable-line no-param-reassign
   };
 
@@ -77,7 +72,6 @@ const ChromeFields = (props) => {
   const hideHighlight = (e) => {
     e.currentTarget.style.background = 'transparent';
   };
-
 
   const styles = reactCSS({
     default: {
@@ -154,7 +148,6 @@ const ChromeFields = (props) => {
     },
   }, props, viewState);
 
-
   useEffect(() => {
     if (props.hsl.a !== 1 && props.view === 'hex') {
       setViewState('rgb');
@@ -169,7 +162,6 @@ const ChromeFields = (props) => {
       setViewState('rgb');
     }
   }, [hsl, hsl.h, hsl.l, hsl.s]);
-
 
   let fields;
   if (viewState === 'hex') {
@@ -223,9 +215,9 @@ const ChromeFields = (props) => {
         </div>
       </div>
     );
-  } else { //hsl
-    const s = props.hsl.s > 1 ? props.hsl.s/100:props.hsl.s;
-    const l = props.hsl.l > 1 ? props.hsl.l/100:props.hsl.l;
+  } else { // hsl
+    const s = props.hsl.s > 1 ? props.hsl.s / 100 : props.hsl.s;
+    const l = props.hsl.l > 1 ? props.hsl.l / 100 : props.hsl.l;
     fields = (
       <div style={styles.fields} className="flexbox-fix">
         <div style={styles.field}>

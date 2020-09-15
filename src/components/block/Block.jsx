@@ -104,7 +104,6 @@ const Block = ({
   );
 };
 
-
 Block.defaultProps = {
   width: 170,
   colors: ['#D9E3F0', '#F47373', '#697689', '#37D67A', '#2CCCE4', '#555555',
@@ -115,12 +114,18 @@ Block.defaultProps = {
   hex: '',
 };
 
-
 Block.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   colors: PropTypes.arrayOf(PropTypes.string),
   triangle: PropTypes.oneOf(['top', 'hide']),
-  styles: PropTypes.shape({}),
+  styles: PropTypes.shape({
+    card: PropTypes.string,
+    triangle: PropTypes.string,
+    head: PropTypes.string,
+    label: PropTypes.string,
+    body: PropTypes.string,
+    input: PropTypes.string,
+  }),
   hex: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   onSwatchHover: PropTypes.func.isRequired,

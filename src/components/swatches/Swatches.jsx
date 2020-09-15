@@ -4,7 +4,6 @@ import reactCSS from 'reactcss';
 import map from 'lodash/map';
 import merge from 'lodash/merge';
 import * as material from 'material-colors';
-import { isValidHex } from '../../helpers/color';
 import ColorWrap from '../common/ColorWrap';
 import Raised from '../common/Raised';
 import SwatchesGroup from './SwatchesGroup';
@@ -67,7 +66,12 @@ Swatches.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   colors: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)),
-  styles: PropTypes.shape({}),
+  styles: PropTypes.shape({
+    picker: PropTypes.string,
+    overflow: PropTypes.string,
+    body: PropTypes.string,
+    clear: PropTypes.string,
+  }),
   hex: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
 };

@@ -24,7 +24,6 @@ export const simpleCheckForValidColor = (data) => {
   return (checked === passed) ? data : false;
 };
 
-
 export const chromaValidation = (data) => {
   let validation = false;
   try {
@@ -37,15 +36,11 @@ export const chromaValidation = (data) => {
   return validation;
 };
 
-
-export const isValidToChange = (data, colors, key) => {
-  if (key === 'hex') {
-    const hasHash = data.hex.indexOf('#') === 0 ? '' : '#';
-    return hasHash + data.hex.toUpperCase() === colors.toUpperCase();
-  }
+export const isValidToChange = (data, colors) => {
+  const key = data.source;
   if (key === 'rgb') {
-    const validation = Number(data.r) === colors.r && Number(data.g) === colors.g
-    && Number(data.g) === colors.g;
+    const validation = Number(data.r) === colors.r
+    && Number(data.g) === colors.g && Number(data.g) === colors.g;
     return validation;
   }
   if (key === 'hsv') {
@@ -57,16 +52,18 @@ export const isValidToChange = (data, colors, key) => {
     return validation;
   }
   if (key === 'hsl') {
+    const s = data.l > 1 ? data.l / 100 : data.l;
+    const l = data.l > 1 ? data.l / 100 : data.l;
     try {
-      chroma(data);
+      chroma.hsl(data.h, s, l);
       return true;
     } catch (error) {
       return false;
     }
+  } else { // hex
+    return data.hex.toUpperCase() === colors.toUpperCase();
   }
-  return false;
 };
-
 
 const valueNaN = (h) => (!isNumber(h) ? 0 : h);
 const hslaListToObject = (list) => ({
@@ -99,21 +96,21 @@ export const hsvParse = (color, data) => {
   return result;
 };
 
-
 export const toState = (data, oldHue) => {
   const dataValidation = data || '#000000';
   let transparent = false;
   let colorChroma;
   let a = data.a ? data.a : 1;
-  if (data.hex && (data.hex==='transparent' || data=='transparent')){
+  if (data.hex && (data.hex === 'transparent' || data === 'transparent')) {
     colorChroma = chroma('#000000').alpha(0);
     a = 0;
     transparent = true;
-  }
-  else if (data.hex) colorChroma = chroma(data.hex);
-  else {
+  } else if (data.hex) colorChroma = chroma(data.hex);
+  else if (data.h && data.s && data.l) {
+    colorChroma = chroma.hsl(data.h, data.s, data.l);
+  } else {
     try {
-      colorChroma = chroma(dataValidation);  
+      colorChroma = chroma(dataValidation);
     } catch (error) {
       colorChroma = chroma('#000000');
     }
@@ -123,11 +120,6 @@ export const toState = (data, oldHue) => {
   const rgba = colorChroma.alpha(a).rgba();
   const rgb = rgbaListToObject(rgba);
   const hex = colorChroma.alpha(1).hex();
-
-  if (hsl.s === 0) {
-    hsl.h = oldHue || 0;
-    hsv.h = oldHue || 0;
-  }
 
   return {
     hsl,
@@ -147,7 +139,7 @@ export const isValidHex = (hex) => {
 
   let validation = false;
   try {
-    validation = chroma.valid(hex) && typeof hex === 'string';  
+    validation = chroma.valid(hex) && typeof hex === 'string';
   } catch (error) {
     validation = false;
   }
@@ -159,7 +151,7 @@ export const getContrastingColor = (data) => {
     return '#fff';
   }
   let c = data;
-  if (data === 'transparent') c = {hex:'transparent'};
+  if (data === 'transparent') c = { hex: 'transparent' };
   const col = toState(c);
   if (col.hex === 'transparent') {
     return 'rgba(0,0,0,0.4)';

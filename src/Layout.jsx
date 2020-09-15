@@ -33,7 +33,7 @@ const Layout = () => {
       </section>
       <div className="box cta">
         <p className="has-text-centered">
-        React-Hook Color Picker
+          React-Hook Color Picker
         </p>
       </div>
       <section className="container is-fluid">

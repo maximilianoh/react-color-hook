@@ -8,7 +8,7 @@ const Alpha = (props) => {
   const inputRef = useRef(null);
   const handleChange = (e) => {
     const change = calculateChange(e, props.hsl, props.direction, props.a, inputRef.current);
-    if (change && typeof props.onChange === 'function') props.onChange(change, e);
+    if (change) props.onChange(change, e);
   };
   const handleMouseUp = () => {
     window.removeEventListener('mousemove', handleChange);
@@ -20,7 +20,6 @@ const Alpha = (props) => {
     window.addEventListener('mousemove', handleChange);
     window.addEventListener('mouseup', handleMouseUp);
   };
-
 
   useEffect(() => { handleMouseUp(); }, []);
 
@@ -55,12 +54,12 @@ const Alpha = (props) => {
 
 export default Alpha;
 
-
 Alpha.defaultProps = {
   a: null,
   renderers: {},
   direction: 'horizontal',
   pointer: null,
+  onChange: () => {},
 };
 Alpha.propTypes = {
   hsl: PropTypes.shape({}).isRequired,
@@ -69,5 +68,5 @@ Alpha.propTypes = {
   rgb: PropTypes.shape({}).isRequired,
   renderers: PropTypes.shape({}),
   pointer: PropTypes.func,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
 };

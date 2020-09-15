@@ -112,7 +112,6 @@ const CompactFields = ({ hex, rgb, onChange }) => {
   );
 };
 
-
 CompactFields.propTypes = {
   rgb: PropTypes.shape({
     r: PropTypes.number,

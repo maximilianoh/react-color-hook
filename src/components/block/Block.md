@@ -7,12 +7,15 @@ import Block from './Block.jsx';
 Block Onchange
 ```js
 import Block from './Block.jsx';
+const handleChangeComplete = () =>{
+    console.dir("complete");
+};
 const changeSpy = (props) =>{
     console.dir(props.hex)
 };
 <div>
     Click and see console
-    <Block onChange={ changeSpy } />
+    <Block onChange={ changeSpy } onChangeComplete={handleChangeComplete} />
 </div>
 ```
 

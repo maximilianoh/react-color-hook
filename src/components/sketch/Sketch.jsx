@@ -141,7 +141,18 @@ const Sketch = ({
 Sketch.propTypes = {
   disableAlpha: PropTypes.bool,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  styles: PropTypes.shape({}),
+  styles: PropTypes.shape({
+    picker: PropTypes.string,
+    saturation: PropTypes.string,
+    Saturation: PropTypes.string,
+    sliders: PropTypes.string,
+    hue: PropTypes.string,
+    Hue: PropTypes.string,
+    alpha: PropTypes.string,
+    Alpha: PropTypes.string,
+    color: PropTypes.string,
+    activeColor: PropTypes.string,
+  }),
   presetColors: PropTypes.arrayOf(PropTypes.string),
   rgb: PropTypes.shape({
     r: PropTypes.number,
@@ -162,7 +173,7 @@ Sketch.defaultProps = {
   disableAlpha: false,
   width: 200,
   styles: {},
-  className:'',
+  className: '',
   presetColors: ['#D0021B', '#F5A623', '#F8E71C', '#8B572A', '#7ED321', '#417505',
     '#BD10E0', '#9013FE', '#4A90E2', '#50E3C2', '#B8E986', '#000000',
     '#4A4A4A', '#9B9B9B', '#FFFFFF'],

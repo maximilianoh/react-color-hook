@@ -46,14 +46,17 @@ export const HuePicker = ({
 };
 
 HuePicker.propTypes = {
-  styles: PropTypes.shape({}),
+  styles: PropTypes.shape({
+    hue: PropTypes.string,
+    picker: PropTypes.string,
+  }),
   width: PropTypes.number,
   height: PropTypes.number,
   direction: PropTypes.string,
   pointer: PropTypes.func,
   onChange: PropTypes.func.isRequired,
   hsl: PropTypes.shape({}).isRequired,
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 HuePicker.defaultProps = {
   width: 316,
@@ -61,7 +64,7 @@ HuePicker.defaultProps = {
   direction: 'horizontal',
   pointer: HuePointer,
   styles: {},
-  className:''
+  className: '',
 };
 
 export default ColorWrap(HuePicker);

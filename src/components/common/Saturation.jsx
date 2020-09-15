@@ -25,13 +25,11 @@ const Saturation = (props) => {
     window.removeEventListener('mouseup', handleMouseUp);
   };
 
-
   const handleMouseDown = (e) => {
     handleChange(e);
     window.addEventListener('mousemove', handleChange);
     window.addEventListener('mouseup', handleMouseUp);
   };
-
 
   useEffect(() => () => {
     throttleLocal.cancel();
@@ -83,7 +81,6 @@ const Saturation = (props) => {
     </div>
   );
 };
-
 
 Saturation.defaultProps = {
   radius: '',

@@ -48,7 +48,6 @@ AlphaPicker.defaultProps = {
   style: {},
 };
 
-
 AlphaPicker.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
@@ -62,6 +61,5 @@ AlphaPicker.propTypes = {
   className: PropTypes.string,
 
 };
-
 
 export default ColorWrap(AlphaPicker);

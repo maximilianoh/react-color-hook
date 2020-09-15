@@ -31,5 +31,4 @@ PhotoshopPointerCircle.propTypes = {
   }).isRequired,
 };
 
-
 export default PhotoshopPointerCircle;

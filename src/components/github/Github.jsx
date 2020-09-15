@@ -117,7 +117,11 @@ Github.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   colors: PropTypes.arrayOf(PropTypes.string),
   triangle: PropTypes.oneOf(['hide', 'top-left', 'top-right', 'bottom-left', 'bottom-right']),
-  styles: PropTypes.shape({}),
+  styles: PropTypes.shape({
+    card: PropTypes.string,
+    triangle: PropTypes.string,
+    triangleShadow: PropTypes.string,
+  }),
   onChange: PropTypes.func.isRequired,
   onSwatchHover: PropTypes.func.isRequired,
   className: PropTypes.string,

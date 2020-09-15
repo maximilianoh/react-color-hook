@@ -64,12 +64,16 @@ const Compact = ({
 
 Compact.propTypes = {
   colors: PropTypes.arrayOf(PropTypes.string),
-  styles: PropTypes.shape({}),
+  styles: PropTypes.shape({
+    Compact: PropTypes.string,
+    compact: PropTypes.string,
+    clear: PropTypes.string,
+  }),
   onChange: PropTypes.func.isRequired,
   onSwatchHover: PropTypes.func.isRequired,
   hex: PropTypes.string.isRequired,
   rgb: PropTypes.shape({}).isRequired,
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 Compact.defaultProps = {
@@ -81,7 +85,7 @@ Compact.defaultProps = {
     '#808900', '#194D33', '#0C797D', '#0062B1', '#653294', '#AB149E',
   ],
   styles: {},
-  className:''
+  className: '',
 };
 
 export default ColorWrap(Compact);

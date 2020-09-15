@@ -89,13 +89,11 @@ const Material = (props) => {
         b: data.b || rgb.b,
         source: 'rgb',
       }, e);
-    } else { //hex
-        if (data.hex && isValidHex(data.hex)) {
-          onChange({
-            hex: data.hex,
-            source: 'hex',
-          }, e);
-        }
+    } else if (data.hex && isValidHex(data.hex)) {
+      onChange({
+        hex: data.hex,
+        source: 'hex',
+      }, e);
     }
   };
 
@@ -147,12 +145,22 @@ Material.propTypes = {
   }).isRequired,
   className: PropTypes.string,
   hex: PropTypes.string.isRequired,
-  styles: PropTypes.shape({}),
+  styles: PropTypes.shape({
+    material: PropTypes.string,
+    HEXwrap: PropTypes.string,
+    HEXinput: PropTypes.string,
+    HEXlabel: PropTypes.string,
+    split: PropTypes.string,
+    third: PropTypes.string,
+    RGBwrap: PropTypes.string,
+    RGBinput: PropTypes.string,
+    RGBlabel: PropTypes.string,
+  }),
 };
 
 Material.defaultProps = {
   styles: {},
-  className:''
+  className: '',
 };
 
 export default ColorWrap(Material);

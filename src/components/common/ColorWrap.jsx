@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import {
-  simpleCheckForValidColor, toState, chromaValidation, isValidToChange, hsvParse,
+  simpleCheckForValidColor, toState, chromaValidation, hsvParse,
 } from '../../helpers/color';
 
 const ColorWrap = (Picker) => {
@@ -18,37 +18,31 @@ const ColorWrap = (Picker) => {
     }, [color]);
 
     useEffect(() => {
-      if(props.hex){
-        setColorState(toState({hex: props.hex}, colorState.oldHue));
+      if (props.hex) {
+        setColorState(toState({ hex: props.hex }, colorState.oldHue));
       }
     }, []);
 
     const handleChange = (data, event) => {
       const isValidColor = simpleCheckForValidColor(data);
       if (isValidColor && chromaValidation(isValidColor)) {
-        const preColors = toState(data, data.h || colorState.oldHue);
-        if (isValidToChange(data, preColors[data.source], data.source)) {
-          let colors = preColors;
-          if (data.source === 'hsv') colors = hsvParse(preColors, data);
-          setColorState(colors);
-          if (props.onChangeComplete) localDebounce(props.onChangeComplete, colors, event);
-          if (props.onChange) props.onChange(colors, event);
-        }
+        const preColors = toState(data, data.oldHue || colorState.oldHue);
+        let colors = preColors;
+        if (data.source === 'hsv') colors = hsvParse(preColors, data);
+        props.onChange(colors, event);
+        if (props.onChangeComplete) localDebounce(props.onChangeComplete, colors, event);
+        setColorState(colors);
       }
     };
 
     const handleSwatchHover = (data, event) => {
-      const isValidColor = simpleCheckForValidColor(data);
-      if (isValidColor) {
-        const colors = toState(data, data.h || colorState.oldHue);
-        if (props.onSwatchHover) props.onSwatchHover(colors, event);
-      }
+      const colors = toState(data, data.h || colorState.oldHue);
+      props.onSwatchHover(colors, event);
     };
 
-    const optionalEvents = {};
-    const { onSwatchHover } = props;
-    if (onSwatchHover) optionalEvents.onSwatchHover = handleSwatchHover;
-
+    const optionalEvents = {
+      onSwatchHover: handleSwatchHover,
+    };
     return (
       <Picker
         {...props}

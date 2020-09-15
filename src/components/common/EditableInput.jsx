@@ -119,9 +119,7 @@ const EditableInput = (props) => {
   );
 };
 
-
 export default EditableInput;
-
 
 EditableInput.defaultProps = {
   style: {

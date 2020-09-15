@@ -40,7 +40,12 @@ const Slider = ({
 };
 
 Slider.propTypes = {
-  styles: PropTypes.shape({}),
+  styles: PropTypes.shape({
+    wrap: PropTypes.string,
+    hue: PropTypes.string,
+    Hue: PropTypes.string,
+    swatches: PropTypes.string,
+  }),
   pointer: PropTypes.func,
   hsl: PropTypes.shape({}).isRequired,
   onChange: PropTypes.func.isRequired,
