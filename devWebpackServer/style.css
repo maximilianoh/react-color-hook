@@ -1,0 +1,7 @@
+.compact-picker > .flexbox-fix div:first-of-type{
+    top: 10px!important;
+}
+
+.compact-picker > .flexbox-fix div span{
+    top: 6.5px!important;
+}
