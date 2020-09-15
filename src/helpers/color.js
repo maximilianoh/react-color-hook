@@ -107,7 +107,9 @@ export const toState = (data, oldHue) => {
     transparent = true;
   } else if (data.hex) colorChroma = chroma(data.hex);
   else if (data.h && data.s && data.l) {
-    colorChroma = chroma.hsl(data.h, data.s, data.l);
+    const s = data.s > 1 ? data.s / 100 : data.s;
+    const l = data.l > 1 ? data.l / 100 : data.l;
+    colorChroma = chroma.hsl(data.h, s, l);
   } else {
     try {
       colorChroma = chroma(dataValidation);

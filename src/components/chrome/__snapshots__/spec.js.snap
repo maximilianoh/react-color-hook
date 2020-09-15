@@ -489,6 +489,7 @@ exports[`Chrome renders correctly 1`] = `
     </div>
     <div
       className="flexbox-fix"
+      id="chromeFields"
       style={
         Object {
           "display": "flex",
@@ -496,6 +497,570 @@ exports[`Chrome renders correctly 1`] = `
         }
       }
     >
+      <div
+        className="flexbox-fix"
+        style={
+          Object {
+            "MozBoxFlex": "1",
+            "WebkitBoxFlex": "1",
+            "WebkitFlex": "1",
+            "display": "none",
+            "flex": "1",
+            "marginLeft": "-6px",
+            "msFlex": "1",
+          }
+        }
+      >
+        <div
+          className="flexbox-fix"
+          style={
+            Object {
+              "MozBoxFlex": "1",
+              "WebkitBoxFlex": "1",
+              "WebkitFlex": "1",
+              "display": "flex",
+              "flex": "1",
+              "marginLeft": "-6px",
+              "msFlex": "1",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="34"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                r
+              </span>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="25"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                g
+              </span>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="77"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                b
+              </span>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="1"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                a
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="flexbox-fix"
+        style={
+          Object {
+            "MozBoxFlex": "1",
+            "WebkitBoxFlex": "1",
+            "WebkitFlex": "1",
+            "display": "none",
+            "flex": "1",
+            "marginLeft": "-6px",
+            "msFlex": "1",
+          }
+        }
+      >
+        <div
+          className="flexbox-fix"
+          style={
+            Object {
+              "MozBoxFlex": "1",
+              "WebkitBoxFlex": "1",
+              "WebkitFlex": "1",
+              "display": "flex",
+              "flex": "1",
+              "marginLeft": "-6px",
+              "msFlex": "1",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="250"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                h
+              </span>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="51%"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                s
+              </span>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="20%"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                l
+              </span>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="1"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                a
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
       <div
         className="flexbox-fix"
         style={
@@ -511,66 +1076,81 @@ exports[`Chrome renders correctly 1`] = `
         }
       >
         <div
+          className="flexbox-fix"
           style={
             Object {
-              "paddingLeft": "6px",
-              "width": "100%",
+              "MozBoxFlex": "1",
+              "WebkitBoxFlex": "1",
+              "WebkitFlex": "1",
+              "display": "flex",
+              "flex": "1",
+              "marginLeft": "-6px",
+              "msFlex": "1",
             }
           }
         >
           <div
             style={
               Object {
-                "position": "relative",
+                "paddingLeft": "6px",
+                "width": "100%",
               }
             }
           >
-            <input
-              onBlur={[Function]}
-              onChange={[Function]}
-              onKeyDown={[Function]}
-              placeholder=""
-              spellCheck="false"
+            <div
               style={
                 Object {
-                  "MozBorderRadius": "2px",
-                  "MozBoxShadow": "inset 0 0 0 1px #dadada",
-                  "OBorderRadius": "2px",
-                  "OBoxShadow": "inset 0 0 0 1px #dadada",
-                  "WebkitBorderRadius": "2px",
-                  "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
-                  "border": "none",
-                  "borderRadius": "2px",
-                  "boxShadow": "inset 0 0 0 1px #dadada",
-                  "color": "#333",
-                  "fontSize": "11px",
-                  "height": "21px",
-                  "msBorderRadius": "2px",
-                  "msBoxShadow": "inset 0 0 0 1px #dadada",
-                  "textAlign": "center",
-                  "width": "100%",
+                  "position": "relative",
                 }
               }
-              value="#22194D"
-            />
-            <span
-              onMouseDown={[Function]}
-              role="button"
-              style={
-                Object {
-                  "color": "#969696",
-                  "display": "block",
-                  "fontSize": "11px",
-                  "lineHeight": "11px",
-                  "marginTop": "12px",
-                  "textAlign": "center",
-                  "textTransform": "uppercase",
-                }
-              }
-              tabIndex={0}
             >
-              hex
-            </span>
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="#22194D"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                hex
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -1122,6 +1702,7 @@ exports[`Chrome renders on server correctly 1`] = `
     </div>
     <div
       className="flexbox-fix"
+      id="chromeFields"
       style={
         Object {
           "display": "flex",
@@ -1129,6 +1710,570 @@ exports[`Chrome renders on server correctly 1`] = `
         }
       }
     >
+      <div
+        className="flexbox-fix"
+        style={
+          Object {
+            "MozBoxFlex": "1",
+            "WebkitBoxFlex": "1",
+            "WebkitFlex": "1",
+            "display": "none",
+            "flex": "1",
+            "marginLeft": "-6px",
+            "msFlex": "1",
+          }
+        }
+      >
+        <div
+          className="flexbox-fix"
+          style={
+            Object {
+              "MozBoxFlex": "1",
+              "WebkitBoxFlex": "1",
+              "WebkitFlex": "1",
+              "display": "flex",
+              "flex": "1",
+              "marginLeft": "-6px",
+              "msFlex": "1",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="34"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                r
+              </span>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="25"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                g
+              </span>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="77"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                b
+              </span>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="1"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                a
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="flexbox-fix"
+        style={
+          Object {
+            "MozBoxFlex": "1",
+            "WebkitBoxFlex": "1",
+            "WebkitFlex": "1",
+            "display": "none",
+            "flex": "1",
+            "marginLeft": "-6px",
+            "msFlex": "1",
+          }
+        }
+      >
+        <div
+          className="flexbox-fix"
+          style={
+            Object {
+              "MozBoxFlex": "1",
+              "WebkitBoxFlex": "1",
+              "WebkitFlex": "1",
+              "display": "flex",
+              "flex": "1",
+              "marginLeft": "-6px",
+              "msFlex": "1",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="250"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                h
+              </span>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="51%"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                s
+              </span>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="20%"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                l
+              </span>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "paddingLeft": "6px",
+                "width": "100%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="1"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                a
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
       <div
         className="flexbox-fix"
         style={
@@ -1144,66 +2289,81 @@ exports[`Chrome renders on server correctly 1`] = `
         }
       >
         <div
+          className="flexbox-fix"
           style={
             Object {
-              "paddingLeft": "6px",
-              "width": "100%",
+              "MozBoxFlex": "1",
+              "WebkitBoxFlex": "1",
+              "WebkitFlex": "1",
+              "display": "flex",
+              "flex": "1",
+              "marginLeft": "-6px",
+              "msFlex": "1",
             }
           }
         >
           <div
             style={
               Object {
-                "position": "relative",
+                "paddingLeft": "6px",
+                "width": "100%",
               }
             }
           >
-            <input
-              onBlur={[Function]}
-              onChange={[Function]}
-              onKeyDown={[Function]}
-              placeholder=""
-              spellCheck="false"
+            <div
               style={
                 Object {
-                  "MozBorderRadius": "2px",
-                  "MozBoxShadow": "inset 0 0 0 1px #dadada",
-                  "OBorderRadius": "2px",
-                  "OBoxShadow": "inset 0 0 0 1px #dadada",
-                  "WebkitBorderRadius": "2px",
-                  "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
-                  "border": "none",
-                  "borderRadius": "2px",
-                  "boxShadow": "inset 0 0 0 1px #dadada",
-                  "color": "#333",
-                  "fontSize": "11px",
-                  "height": "21px",
-                  "msBorderRadius": "2px",
-                  "msBoxShadow": "inset 0 0 0 1px #dadada",
-                  "textAlign": "center",
-                  "width": "100%",
+                  "position": "relative",
                 }
               }
-              value="#22194D"
-            />
-            <span
-              onMouseDown={[Function]}
-              role="button"
-              style={
-                Object {
-                  "color": "#969696",
-                  "display": "block",
-                  "fontSize": "11px",
-                  "lineHeight": "11px",
-                  "marginTop": "12px",
-                  "textAlign": "center",
-                  "textTransform": "uppercase",
-                }
-              }
-              tabIndex={0}
             >
-              hex
-            </span>
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                spellCheck="false"
+                style={
+                  Object {
+                    "MozBorderRadius": "2px",
+                    "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                    "OBorderRadius": "2px",
+                    "OBoxShadow": "inset 0 0 0 1px #dadada",
+                    "WebkitBorderRadius": "2px",
+                    "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                    "border": "none",
+                    "borderRadius": "2px",
+                    "boxShadow": "inset 0 0 0 1px #dadada",
+                    "color": "#333",
+                    "fontSize": "11px",
+                    "height": "21px",
+                    "msBorderRadius": "2px",
+                    "msBoxShadow": "inset 0 0 0 1px #dadada",
+                    "textAlign": "center",
+                    "width": "100%",
+                  }
+                }
+                value="#22194D"
+              />
+              <span
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "color": "#969696",
+                    "display": "block",
+                    "fontSize": "11px",
+                    "lineHeight": "11px",
+                    "marginTop": "12px",
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  }
+                }
+                tabIndex={0}
+              >
+                hex
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -1269,6 +2429,7 @@ exports[`Chrome renders on server correctly 1`] = `
 exports[`ChromeFields renders correctly 1`] = `
 <div
   className="flexbox-fix"
+  id="chromeFields"
   style={
     Object {
       "display": "flex",
@@ -1276,6 +2437,570 @@ exports[`ChromeFields renders correctly 1`] = `
     }
   }
 >
+  <div
+    className="flexbox-fix"
+    style={
+      Object {
+        "MozBoxFlex": "1",
+        "WebkitBoxFlex": "1",
+        "WebkitFlex": "1",
+        "display": "none",
+        "flex": "1",
+        "marginLeft": "-6px",
+        "msFlex": "1",
+      }
+    }
+  >
+    <div
+      className="flexbox-fix"
+      style={
+        Object {
+          "MozBoxFlex": "1",
+          "WebkitBoxFlex": "1",
+          "WebkitFlex": "1",
+          "display": "flex",
+          "flex": "1",
+          "marginLeft": "-6px",
+          "msFlex": "1",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "paddingLeft": "6px",
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <input
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder=""
+            spellCheck="false"
+            style={
+              Object {
+                "MozBorderRadius": "2px",
+                "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                "OBorderRadius": "2px",
+                "OBoxShadow": "inset 0 0 0 1px #dadada",
+                "WebkitBorderRadius": "2px",
+                "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                "border": "none",
+                "borderRadius": "2px",
+                "boxShadow": "inset 0 0 0 1px #dadada",
+                "color": "#333",
+                "fontSize": "11px",
+                "height": "21px",
+                "msBorderRadius": "2px",
+                "msBoxShadow": "inset 0 0 0 1px #dadada",
+                "textAlign": "center",
+                "width": "100%",
+              }
+            }
+            value="25"
+          />
+          <span
+            onMouseDown={[Function]}
+            role="button"
+            style={
+              Object {
+                "color": "#969696",
+                "display": "block",
+                "fontSize": "11px",
+                "lineHeight": "11px",
+                "marginTop": "12px",
+                "textAlign": "center",
+                "textTransform": "uppercase",
+              }
+            }
+            tabIndex={0}
+          >
+            r
+          </span>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "paddingLeft": "6px",
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <input
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder=""
+            spellCheck="false"
+            style={
+              Object {
+                "MozBorderRadius": "2px",
+                "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                "OBorderRadius": "2px",
+                "OBoxShadow": "inset 0 0 0 1px #dadada",
+                "WebkitBorderRadius": "2px",
+                "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                "border": "none",
+                "borderRadius": "2px",
+                "boxShadow": "inset 0 0 0 1px #dadada",
+                "color": "#333",
+                "fontSize": "11px",
+                "height": "21px",
+                "msBorderRadius": "2px",
+                "msBoxShadow": "inset 0 0 0 1px #dadada",
+                "textAlign": "center",
+                "width": "100%",
+              }
+            }
+            value="77"
+          />
+          <span
+            onMouseDown={[Function]}
+            role="button"
+            style={
+              Object {
+                "color": "#969696",
+                "display": "block",
+                "fontSize": "11px",
+                "lineHeight": "11px",
+                "marginTop": "12px",
+                "textAlign": "center",
+                "textTransform": "uppercase",
+              }
+            }
+            tabIndex={0}
+          >
+            g
+          </span>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "paddingLeft": "6px",
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <input
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder=""
+            spellCheck="false"
+            style={
+              Object {
+                "MozBorderRadius": "2px",
+                "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                "OBorderRadius": "2px",
+                "OBoxShadow": "inset 0 0 0 1px #dadada",
+                "WebkitBorderRadius": "2px",
+                "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                "border": "none",
+                "borderRadius": "2px",
+                "boxShadow": "inset 0 0 0 1px #dadada",
+                "color": "#333",
+                "fontSize": "11px",
+                "height": "21px",
+                "msBorderRadius": "2px",
+                "msBoxShadow": "inset 0 0 0 1px #dadada",
+                "textAlign": "center",
+                "width": "100%",
+              }
+            }
+            value="51"
+          />
+          <span
+            onMouseDown={[Function]}
+            role="button"
+            style={
+              Object {
+                "color": "#969696",
+                "display": "block",
+                "fontSize": "11px",
+                "lineHeight": "11px",
+                "marginTop": "12px",
+                "textAlign": "center",
+                "textTransform": "uppercase",
+              }
+            }
+            tabIndex={0}
+          >
+            b
+          </span>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "paddingLeft": "6px",
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <input
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder=""
+            spellCheck="false"
+            style={
+              Object {
+                "MozBorderRadius": "2px",
+                "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                "OBorderRadius": "2px",
+                "OBoxShadow": "inset 0 0 0 1px #dadada",
+                "WebkitBorderRadius": "2px",
+                "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                "border": "none",
+                "borderRadius": "2px",
+                "boxShadow": "inset 0 0 0 1px #dadada",
+                "color": "#333",
+                "fontSize": "11px",
+                "height": "21px",
+                "msBorderRadius": "2px",
+                "msBoxShadow": "inset 0 0 0 1px #dadada",
+                "textAlign": "center",
+                "width": "100%",
+              }
+            }
+            value="1"
+          />
+          <span
+            onMouseDown={[Function]}
+            role="button"
+            style={
+              Object {
+                "color": "#969696",
+                "display": "block",
+                "fontSize": "11px",
+                "lineHeight": "11px",
+                "marginTop": "12px",
+                "textAlign": "center",
+                "textTransform": "uppercase",
+              }
+            }
+            tabIndex={0}
+          >
+            a
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="flexbox-fix"
+    style={
+      Object {
+        "MozBoxFlex": "1",
+        "WebkitBoxFlex": "1",
+        "WebkitFlex": "1",
+        "display": "none",
+        "flex": "1",
+        "marginLeft": "-6px",
+        "msFlex": "1",
+      }
+    }
+  >
+    <div
+      className="flexbox-fix"
+      style={
+        Object {
+          "MozBoxFlex": "1",
+          "WebkitBoxFlex": "1",
+          "WebkitFlex": "1",
+          "display": "flex",
+          "flex": "1",
+          "marginLeft": "-6px",
+          "msFlex": "1",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "paddingLeft": "6px",
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <input
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder=""
+            spellCheck="false"
+            style={
+              Object {
+                "MozBorderRadius": "2px",
+                "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                "OBorderRadius": "2px",
+                "OBoxShadow": "inset 0 0 0 1px #dadada",
+                "WebkitBorderRadius": "2px",
+                "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                "border": "none",
+                "borderRadius": "2px",
+                "boxShadow": "inset 0 0 0 1px #dadada",
+                "color": "#333",
+                "fontSize": "11px",
+                "height": "21px",
+                "msBorderRadius": "2px",
+                "msBoxShadow": "inset 0 0 0 1px #dadada",
+                "textAlign": "center",
+                "width": "100%",
+              }
+            }
+            value="150"
+          />
+          <span
+            onMouseDown={[Function]}
+            role="button"
+            style={
+              Object {
+                "color": "#969696",
+                "display": "block",
+                "fontSize": "11px",
+                "lineHeight": "11px",
+                "marginTop": "12px",
+                "textAlign": "center",
+                "textTransform": "uppercase",
+              }
+            }
+            tabIndex={0}
+          >
+            h
+          </span>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "paddingLeft": "6px",
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <input
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder=""
+            spellCheck="false"
+            style={
+              Object {
+                "MozBorderRadius": "2px",
+                "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                "OBorderRadius": "2px",
+                "OBoxShadow": "inset 0 0 0 1px #dadada",
+                "WebkitBorderRadius": "2px",
+                "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                "border": "none",
+                "borderRadius": "2px",
+                "boxShadow": "inset 0 0 0 1px #dadada",
+                "color": "#333",
+                "fontSize": "11px",
+                "height": "21px",
+                "msBorderRadius": "2px",
+                "msBoxShadow": "inset 0 0 0 1px #dadada",
+                "textAlign": "center",
+                "width": "100%",
+              }
+            }
+            value="51%"
+          />
+          <span
+            onMouseDown={[Function]}
+            role="button"
+            style={
+              Object {
+                "color": "#969696",
+                "display": "block",
+                "fontSize": "11px",
+                "lineHeight": "11px",
+                "marginTop": "12px",
+                "textAlign": "center",
+                "textTransform": "uppercase",
+              }
+            }
+            tabIndex={0}
+          >
+            s
+          </span>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "paddingLeft": "6px",
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <input
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder=""
+            spellCheck="false"
+            style={
+              Object {
+                "MozBorderRadius": "2px",
+                "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                "OBorderRadius": "2px",
+                "OBoxShadow": "inset 0 0 0 1px #dadada",
+                "WebkitBorderRadius": "2px",
+                "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                "border": "none",
+                "borderRadius": "2px",
+                "boxShadow": "inset 0 0 0 1px #dadada",
+                "color": "#333",
+                "fontSize": "11px",
+                "height": "21px",
+                "msBorderRadius": "2px",
+                "msBoxShadow": "inset 0 0 0 1px #dadada",
+                "textAlign": "center",
+                "width": "100%",
+              }
+            }
+            value="20%"
+          />
+          <span
+            onMouseDown={[Function]}
+            role="button"
+            style={
+              Object {
+                "color": "#969696",
+                "display": "block",
+                "fontSize": "11px",
+                "lineHeight": "11px",
+                "marginTop": "12px",
+                "textAlign": "center",
+                "textTransform": "uppercase",
+              }
+            }
+            tabIndex={0}
+          >
+            l
+          </span>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "paddingLeft": "6px",
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <input
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder=""
+            spellCheck="false"
+            style={
+              Object {
+                "MozBorderRadius": "2px",
+                "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                "OBorderRadius": "2px",
+                "OBoxShadow": "inset 0 0 0 1px #dadada",
+                "WebkitBorderRadius": "2px",
+                "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                "border": "none",
+                "borderRadius": "2px",
+                "boxShadow": "inset 0 0 0 1px #dadada",
+                "color": "#333",
+                "fontSize": "11px",
+                "height": "21px",
+                "msBorderRadius": "2px",
+                "msBoxShadow": "inset 0 0 0 1px #dadada",
+                "textAlign": "center",
+                "width": "100%",
+              }
+            }
+            value="1"
+          />
+          <span
+            onMouseDown={[Function]}
+            role="button"
+            style={
+              Object {
+                "color": "#969696",
+                "display": "block",
+                "fontSize": "11px",
+                "lineHeight": "11px",
+                "marginTop": "12px",
+                "textAlign": "center",
+                "textTransform": "uppercase",
+              }
+            }
+            tabIndex={0}
+          >
+            a
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
   <div
     className="flexbox-fix"
     style={
@@ -1291,66 +3016,81 @@ exports[`ChromeFields renders correctly 1`] = `
     }
   >
     <div
+      className="flexbox-fix"
       style={
         Object {
-          "paddingLeft": "6px",
-          "width": "100%",
+          "MozBoxFlex": "1",
+          "WebkitBoxFlex": "1",
+          "WebkitFlex": "1",
+          "display": "flex",
+          "flex": "1",
+          "marginLeft": "-6px",
+          "msFlex": "1",
         }
       }
     >
       <div
         style={
           Object {
-            "position": "relative",
+            "paddingLeft": "6px",
+            "width": "100%",
           }
         }
       >
-        <input
-          onBlur={[Function]}
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          placeholder=""
-          spellCheck="false"
+        <div
           style={
             Object {
-              "MozBorderRadius": "2px",
-              "MozBoxShadow": "inset 0 0 0 1px #dadada",
-              "OBorderRadius": "2px",
-              "OBoxShadow": "inset 0 0 0 1px #dadada",
-              "WebkitBorderRadius": "2px",
-              "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
-              "border": "none",
-              "borderRadius": "2px",
-              "boxShadow": "inset 0 0 0 1px #dadada",
-              "color": "#333",
-              "fontSize": "11px",
-              "height": "21px",
-              "msBorderRadius": "2px",
-              "msBoxShadow": "inset 0 0 0 1px #dadada",
-              "textAlign": "center",
-              "width": "100%",
+              "position": "relative",
             }
           }
-          value="#194D33"
-        />
-        <span
-          onMouseDown={[Function]}
-          role="button"
-          style={
-            Object {
-              "color": "#969696",
-              "display": "block",
-              "fontSize": "11px",
-              "lineHeight": "11px",
-              "marginTop": "12px",
-              "textAlign": "center",
-              "textTransform": "uppercase",
-            }
-          }
-          tabIndex={0}
         >
-          hex
-        </span>
+          <input
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder=""
+            spellCheck="false"
+            style={
+              Object {
+                "MozBorderRadius": "2px",
+                "MozBoxShadow": "inset 0 0 0 1px #dadada",
+                "OBorderRadius": "2px",
+                "OBoxShadow": "inset 0 0 0 1px #dadada",
+                "WebkitBorderRadius": "2px",
+                "WebkitBoxShadow": "inset 0 0 0 1px #dadada",
+                "border": "none",
+                "borderRadius": "2px",
+                "boxShadow": "inset 0 0 0 1px #dadada",
+                "color": "#333",
+                "fontSize": "11px",
+                "height": "21px",
+                "msBorderRadius": "2px",
+                "msBoxShadow": "inset 0 0 0 1px #dadada",
+                "textAlign": "center",
+                "width": "100%",
+              }
+            }
+            value="#194D33"
+          />
+          <span
+            onMouseDown={[Function]}
+            role="button"
+            style={
+              Object {
+                "color": "#969696",
+                "display": "block",
+                "fontSize": "11px",
+                "lineHeight": "11px",
+                "marginTop": "12px",
+                "textAlign": "center",
+                "textTransform": "uppercase",
+              }
+            }
+            tabIndex={0}
+          >
+            hex
+          </span>
+        </div>
       </div>
     </div>
   </div>

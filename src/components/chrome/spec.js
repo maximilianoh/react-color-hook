@@ -53,38 +53,63 @@ test('Chrome onChange events correctly', () => {
 
   // check the ChromeFields
   const chromePointer = chromePicker[1].children[1].children[1].children[0];
-  expect(chromePicker[1].children[1].textContent).toBe('hex');
+  let chromeFields = document.querySelector("#chromeFields");
+  // childrens: 0 rgb, hsl 1, hex 2
+  expect(chromeFields.children[2].style.display).toBe('flex'); //hex
+  expect(chromeFields.children[1].style.display).toBe('none'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('none'); //rgb
   fireEvent.click(chromePointer);
   expect(changeSpy).toHaveBeenCalledTimes(3);
-  rerender(<Chrome {...red} onChange={changeSpy} />)
-  expect(chromePicker[1].children[1].textContent).toBe('rgba');
+  rerender(<Chrome {...red} onChange={changeSpy} />);
+  chromeFields = document.querySelector("#chromeFields");
+  expect(chromeFields.children[2].style.display).toBe('flex'); //hex
+  expect(chromeFields.children[1].style.display).toBe('none'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('none'); //rgb
   fireEvent.click(chromePointer);
   expect(changeSpy).toHaveBeenCalledTimes(3);
-  rerender(<Chrome {...red} onChange={changeSpy} />)
-  expect(chromePicker[1].children[1].textContent).toBe('hsla');
+  rerender(<Chrome {...red} onChange={changeSpy} />);
+  chromeFields = document.querySelector("#chromeFields");
+  expect(chromeFields.children[2].style.display).toBe('flex'); //hex
+  expect(chromeFields.children[1].style.display).toBe('none'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('none'); //rgb
   fireEvent.click(chromePointer);
   expect(changeSpy).toHaveBeenCalledTimes(3);
-  rerender(<Chrome {...red} onChange={changeSpy} />)
-  expect(chromePicker[1].children[1].textContent).toBe('hex');
+  rerender(<Chrome {...red} onChange={changeSpy} />);
+  chromeFields = document.querySelector("#chromeFields");
+  expect(chromeFields.children[2].style.display).toBe('flex'); //hex
+  expect(chromeFields.children[1].style.display).toBe('none'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('none'); //rgb
 });
 
 
 test('Chrome view hsl correctly', () => {
   render(<Chrome {...red} defaultView="hsl" />);
   let chromePicker = document.querySelector(".chrome-picker").children;
-  expect(chromePicker[1].children[1].textContent).toBe('hsla');
+  const chromeFields = document.querySelector("#chromeFields");
+  // childrens: 0 rgb, hsl 1, hex 2
+  expect(chromeFields.children[2].style.display).toBe('none'); //hex
+  expect(chromeFields.children[1].style.display).toBe('flex'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('none'); //rgb
 });
 
 test('Chrome view rgb correctly', () => {
   render(<Chrome {...red} defaultView="rgb" />);
   let chromePicker = document.querySelector(".chrome-picker").children;
-  expect(chromePicker[1].children[1].textContent).toBe('rgba');
+  const chromeFields = document.querySelector("#chromeFields");
+  // childrens: 0 rgb, hsl 1, hex 2
+  expect(chromeFields.children[2].style.display).toBe('none'); //hex
+  expect(chromeFields.children[1].style.display).toBe('none'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('flex'); //rgb
 });
 
 test('Chrome view hex correctly', () => {
   render(<Chrome {...red} defaultView="hex" />);
   let chromePicker = document.querySelector(".chrome-picker").children;
-  expect(chromePicker[1].children[1].textContent).toBe('hex');
+  const chromeFields = document.querySelector("#chromeFields");
+  // childrens: 0 rgb, hsl 1, hex 2
+  expect(chromeFields.children[2].style.display).toBe('flex'); //hex
+  expect(chromeFields.children[1].style.display).toBe('none'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('none'); //rgb
 });
 
 test('Chrome renders on server correctly', () => {
@@ -112,22 +137,31 @@ test('ChromePointerCircle renders correctly', () => {
 test('ChromeFields view hsl  correctly', () => {
   render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}}
     hex="#194D33" onChange={()=>{}} view="hsl" />);
-  let flex = document.querySelector(".flexbox-fix");
-  expect(flex.textContent).toBe('hsla');
+  const chromeFields = document.querySelector("#chromeFields");
+  // childrens: 0 rgb, hsl 1, hex 2
+  expect(chromeFields.children[2].style.display).toBe('none'); //hex
+  expect(chromeFields.children[1].style.display).toBe('flex'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('none'); //rgb
 })
 
 test('ChromeFields view rgb  correctly', () => {
   render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}}
     hex="#194D33" onChange={()=>{}} view="rgb" />);
-  let flex = document.querySelector(".flexbox-fix");
-  expect(flex.textContent).toBe('rgba');
+    const chromeFields = document.querySelector("#chromeFields");
+    // childrens: 0 rgb, hsl 1, hex 2
+    expect(chromeFields.children[2].style.display).toBe('none'); //hex
+    expect(chromeFields.children[1].style.display).toBe('none'); //hsl
+    expect(chromeFields.children[0].style.display).toBe('flex'); //rgb
 })
 
 test('ChromeFields view hex  correctly', () => {
   render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}}
     hex="#194D33" onChange={()=>{}} view="hex" />);
-  let flex = document.querySelector(".flexbox-fix");
-  expect(flex.textContent).toBe('hex');
+    const chromeFields = document.querySelector("#chromeFields");
+    // childrens: 0 rgb, hsl 1, hex 2
+    expect(chromeFields.children[2].style.display).toBe('flex'); //hex
+    expect(chromeFields.children[1].style.display).toBe('none'); //hsl
+    expect(chromeFields.children[0].style.display).toBe('none'); //rgb
 })
 
 test('ChromeFields renders correctly', () => {
@@ -157,13 +191,23 @@ test('ChromeFields change view default', () => {
     hex="#194D33" onChange={()=>{}} />);
   let flex = document.querySelector(".flexbox-fix");
   let toggleV = flex.children[flex.children.length-1].children[0];
-  expect(flex.textContent).toBe('hex');
+  const chromeFields = document.querySelector("#chromeFields");
+  // childrens: 0 rgb, hsl 1, hex 2
+  expect(chromeFields.children[2].style.display).toBe('flex'); //hex
+  expect(chromeFields.children[1].style.display).toBe('none'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('none'); //rgb
   fireEvent.click(toggleV);
-  expect(flex.textContent).toBe('rgba');
+  expect(chromeFields.children[2].style.display).toBe('none'); //hex
+  expect(chromeFields.children[1].style.display).toBe('none'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('flex'); //rgb
   fireEvent.click(toggleV);
-  expect(flex.textContent).toBe('hsla');
+  expect(chromeFields.children[2].style.display).toBe('none'); //hex
+  expect(chromeFields.children[1].style.display).toBe('flex'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('none'); //rgb
   fireEvent.click(toggleV);
-  expect(flex.textContent).toBe('hex');
+  expect(chromeFields.children[2].style.display).toBe('flex'); //hex
+  expect(chromeFields.children[1].style.display).toBe('none'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('none'); //rgb
   
 })
 
@@ -172,11 +216,19 @@ test('ChromeFields change view ', () => {
     hex="#194D33" onChange={()=>{}} view="hsl" />);
   let flex = document.querySelector(".flexbox-fix");
   let toggleV = flex.children[flex.children.length-1].children[0];
-  expect(flex.textContent).toBe('hsla');
+  const chromeFields = document.querySelector("#chromeFields");
+  // childrens: 0 rgb, hsl 1, hex 2
+  expect(chromeFields.children[2].style.display).toBe('none'); //hex
+  expect(chromeFields.children[1].style.display).toBe('flex'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('none'); //rgb
   fireEvent.click(toggleV);
-  expect(flex.textContent).toBe('rgba');
+  expect(chromeFields.children[2].style.display).toBe('none'); //hex
+  expect(chromeFields.children[1].style.display).toBe('none'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('flex'); //rgb
   fireEvent.click(toggleV);
-  expect(flex.textContent).toBe('hsla');
+  expect(chromeFields.children[2].style.display).toBe('none'); //hex
+  expect(chromeFields.children[1].style.display).toBe('flex'); //hsl
+  expect(chromeFields.children[0].style.display).toBe('none'); //rgb
 })
 
 
@@ -195,8 +247,11 @@ test('ChromeFields swap event', () => {
 test('ChromeFields set rgb', () => {
   render(<ChromeFields hsl={{h:150, l:20, s:51, a:0.5}} rgb={{r:25, g:77, b:51, a:0.5}}
     hex="#194D33" onChange={()=>{}} />);
-  const flex = document.querySelector(".flexbox-fix");
-  expect(flex.textContent).toBe('rgba');
+    const chromeFields = document.querySelector("#chromeFields");
+    // childrens: 0 rgb, hsl 1, hex 2
+    expect(chromeFields.children[2].style.display).toBe('none'); //hex
+    expect(chromeFields.children[1].style.display).toBe('none'); //hsl
+    expect(chromeFields.children[0].style.display).toBe('flex'); //rgb
 })
 
 test('ChromeFields hex change', () => {
@@ -206,7 +261,9 @@ test('ChromeFields hex change', () => {
 
   render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}}
     hex="#194D33" onChange={changeSpy} />);
-  const edit = document.querySelector(".flexbox-fix .flexbox-fix").children[0].children[0];
+  const chromeFields = document.querySelector("#chromeFields");
+  // childrens: 0 rgb, hsl 1, hex 2
+  const edit = chromeFields.children[2].children[0].children[0].children[0];
   fireEvent.change(edit.children[0], { target: {value : '#ff0000' }});
   expect(changeSpy).toHaveBeenCalledTimes(1);
   expect(edit.children[0].value).toBe('#ff0000');
@@ -221,11 +278,13 @@ test('ChromeFields rgb change', () => {
 
   render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}}
     hex="#194D33" onChange={changeSpy} view="rgb" />);
-  const edit = document.querySelector(".flexbox-fix .flexbox-fix").children[0].children[0];
+  const chromeFields = document.querySelector("#chromeFields");
+  // childrens: 0 rgb, hsl 1, hex 2
+  const edit = chromeFields.children[0].children[0].children[0].children[0];
   fireEvent.change(edit.children[0], { target: {value : '26' }});
   expect(changeSpy).toHaveBeenCalledTimes(1);
   expect(edit.children[0].value).toBe('26');
-  const edit2 = document.querySelector(".flexbox-fix .flexbox-fix").children[1].children[0];
+  const edit2 = chromeFields.children[0].children[0].children[2].children[0];
   fireEvent.change(edit2.children[0], { target: {value : '76' }});
   expect(changeSpy).toHaveBeenCalledTimes(2);
   expect(edit2.children[0].value).toBe('76');
@@ -235,9 +294,11 @@ test('ChromeFields hsl change', () => {
   const changeSpy = jest.fn(() => {});
   render(<ChromeFields hsl={{h:150, l:20, s:0.51, a:1}} rgb={{r:25, g:77, b:51, a:1}}
     hex="#194D33" onChange={changeSpy} view="hsl" />);
-  const edit = document.querySelector(".flexbox-fix .flexbox-fix").children[0].children[0];
-  const edit2 = document.querySelector(".flexbox-fix .flexbox-fix").children[1].children[0];
-  const edit3 = document.querySelector(".flexbox-fix .flexbox-fix").children[2].children[0];
+  const chromeFields = document.querySelector("#chromeFields");
+  // childrens: 0 rgb, hsl 1, hex 2
+  const edit = chromeFields.children[1].children[0].children[0].children[0];
+  const edit2 = chromeFields.children[1].children[0].children[1].children[0];
+  const edit3 = chromeFields.children[1].children[0].children[2].children[0];
 
   expect(edit.children[0].value).toBe('150');
   expect(edit2.children[0].value).toBe('51%');
@@ -263,7 +324,9 @@ test('ChromeFields alpha change', () => {
   const changeSpy = jest.fn(() => {});
   render(<ChromeFields hsl={{h:150, l:20, s:51, a:1}} rgb={{r:25, g:77, b:51, a:1}}
     hex="#194D33" onChange={changeSpy} view="rgb" />);
-  const edit = document.querySelector(".flexbox-fix .flexbox-fix").children[3].children[0];
+  const chromeFields = document.querySelector("#chromeFields");
+  // childrens: 0 rgb, hsl 1, hex 2
+  const edit = chromeFields.children[0].children[0].children[3].children[0];
   fireEvent.change(edit.children[0], { target: {value : '2' }});
   expect(changeSpy).toHaveBeenCalledTimes(1);
   expect(edit.children[0].value).toBe('2');
