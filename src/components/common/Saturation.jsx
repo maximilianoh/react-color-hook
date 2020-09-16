@@ -11,13 +11,11 @@ const Saturation = (props) => {
   }, 50);
 
   const handleChange = (e) => {
-    if (typeof props.onChange === 'function') {
-      throttleLocal(
-        props.onChange,
-        calculateChange(e, props.hsl, inputRef.current),
-        e,
-      );
-    }
+    throttleLocal(
+      props.onChange,
+      calculateChange(e, props.hsl, inputRef.current),
+      e,
+    );
   };
 
   const handleMouseUp = () => {
@@ -41,10 +39,9 @@ const Saturation = (props) => {
   } = props;
   const {
     color, white, black, circle,
-  } = style || {};
-  const point = style && style.pointer ? style.pointer : '';
+  } = style;
   const styles = saturationStyle(hsl, radius, shadow, hsv, color,
-    white, black, circle, point, style);
+    white, black, circle, style.pointer, style);
   const Pointer = pointer;
   return (
     <div
@@ -85,12 +82,15 @@ const Saturation = (props) => {
 Saturation.defaultProps = {
   radius: '',
   shadow: '',
-  style: {},
+  style: {
+    pointer: ''
+  },
   pointer: null,
+  onChange:()=>{},
 };
 
 Saturation.propTypes = {
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   hsl: PropTypes.shape({
     h: PropTypes.number,
     v: PropTypes.number,

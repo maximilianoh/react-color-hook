@@ -6,6 +6,19 @@ import Alpha from "./Alpha";
 import Block from "../block/Block";
 import Compact from "../compact/Compact";
 import CanvasRenderingContext2DEvent from "jest-canvas-mock";
+import Hue from './Hue';
+
+beforeAll(() => {
+  Object.defineProperty(HTMLElement.prototype, 'clientHeight', {
+    configurable: true,
+    value: 16,
+  });
+  Object.defineProperty(HTMLElement.prototype, 'clientWidth', { 
+    configurable: true, value: 310 
+  });
+});
+
+
 
 jest.mock("lodash/debounce", () =>
   jest.fn(fn => {
@@ -17,15 +30,14 @@ jest.mock("lodash/debounce", () =>
 test('common Alpha empty event not change', () => {
   const { rerender } = render(<Alpha {...red} a={1} />);
   const event = new MouseEvent('mousedown', { bubbles: true });
-  Object.defineProperty(event, 'pageX', {get: () => 100});
+  Object.defineProperty(event, 'pageX', {get: () => 0});
   Object.defineProperty(event, 'pageY', {get: () => 10});
   let alphaPointer = document.querySelector("div").children[0].children[2];
   fireEvent(alphaPointer, event);
-  
-  rerender(<Alpha {...red} />);
+  rerender(<Alpha {...red} a={0} />);
   alphaPointer = document.querySelector("div").children[0].children[2];
   fireEvent(alphaPointer, event);
-})
+});
 
 test('Block onChangeComplete events correctly', async () => {
   let times = 0;
@@ -63,3 +75,18 @@ test('Compact onChange events correctly', async () => {
 });
 
 
+test('common Alpha empty event not change', () => {
+  const { rerender } = render(<Hue {...red} a={1} />);
+  const event = new MouseEvent('mousedown', { bubbles: true });
+  Object.defineProperty(event, 'pageX', {get: () => 0});
+  Object.defineProperty(event, 'pageY', {get: () => 10});
+  let alphaPointer = document.querySelector("div").children[0].children[0];
+  fireEvent(alphaPointer, event);
+  
+  rerender(<Hue {...red} a={0.5} />);
+  const event2 = new MouseEvent('mousedown', { bubbles: true });
+  Object.defineProperty(event2, 'pageX', {get: () => 100});
+  Object.defineProperty(event2, 'pageY', {get: () => 10});
+  alphaPointer = document.querySelector("div").children[0].children[0];
+  fireEvent(alphaPointer, event2);
+});

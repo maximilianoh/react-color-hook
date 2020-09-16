@@ -4,7 +4,7 @@ import { raisedStyle } from './commonStyles';
 
 const Raised = ({
   zDepth, radius, background, children,
-  styles: passedStyles = {},
+  styles: passedStyles,
 }) => {
   const styles = raisedStyle(zDepth, radius, background, passedStyles);
   return (

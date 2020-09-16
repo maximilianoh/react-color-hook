@@ -100,7 +100,7 @@ export const toState = (data, oldHue) => {
   const dataValidation = data || '#000000';
   let transparent = false;
   let colorChroma;
-  let a = data.a ? data.a : 1;
+  let a = data.a >=0 && data.a <= 1 ? data.a : 1;
   if (data.hex && (data.hex === 'transparent' || data === 'transparent')) {
     colorChroma = chroma('#000000').alpha(0);
     a = 0;

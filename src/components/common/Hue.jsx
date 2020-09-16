@@ -7,7 +7,7 @@ const Hue = (props) => {
   const inputRef = useRef();
   const handleChange = (e) => {
     const change = calculateChange(e, props.direction, props.hsl, inputRef.current);
-    if (change && typeof props.onChange === 'function') props.onChange(change, e);
+    if (change) props.onChange(change, e);
   };
 
   const handleMouseUp = () => {
@@ -76,6 +76,7 @@ Hue.defaultProps = {
   shadow: '',
   radius: '',
   pointer: null,
+  onChange: () => {},
 };
 
 Hue.propTypes = {
@@ -83,7 +84,7 @@ Hue.propTypes = {
   hsl: PropTypes.shape({
     h: PropTypes.number.isRequired,
   }).isRequired,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   radius: PropTypes.string,
   shadow: PropTypes.string,
   pointer: PropTypes.func,
