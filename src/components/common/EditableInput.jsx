@@ -123,9 +123,9 @@ export default EditableInput;
 
 EditableInput.defaultProps = {
   style: {
-    wrap: '',
+    wrap: {},
     input: {},
-    label: '',
+    label: {},
   },
   arrowOffset: DEFAULT_ARROW_OFFSET,
   placeholder: '',

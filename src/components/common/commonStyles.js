@@ -70,7 +70,7 @@ export const checkboardStyle = (white, grey, size, renderers, borderRadius, boxS
 });
 
 export const editableInputStyle = (props, style) => {
-  const { wrap, input } = style;
+  const { wrap, input, label } = style;
   return reactCSS({
     default: {
       wrap: {
@@ -78,9 +78,9 @@ export const editableInputStyle = (props, style) => {
       },
     },
     'user-override': {
-      wrap: style && wrap ? wrap : {},
-      input: style && input ? input : {},
-      label: style && style.label ? style.label : {},
+      wrap,
+      input,
+      label,
     },
     'dragLabel-true': {
       label: {

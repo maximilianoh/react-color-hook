@@ -4,22 +4,25 @@ import handleFocus from '../../helpers/interaction';
 import Checkboard from './Checkboard';
 import { swatchStyle } from './commonStyles';
 
-const ENTER = 13;
-
 const Swatch = ({
   color, style, onClick, onHover, title,
   children, focus, focusStyle,
 }) => {
-  const transparent = color === 'transparent';
   const styles = swatchStyle(style, focus, focusStyle, color);
+  const Checkb = color === 'transparent' ? (
+    <Checkboard
+      borderRadius={styles.swatch.borderRadius}
+      boxShadow="inset 0 0 0 1px rgba(0,0,0,0.1)"
+    />
+  ) : (<></>);
   const handleClick = (e) => onClick(color, e);
-  const handleKeyDown = (e) => e.keyCode === ENTER && onClick(color, e);
+  const handleKeyDown = (e) => (e.key === 'Enter' ? onClick(color, e) : null);
   const handleHover = (e) => onHover(color, e);
 
-  const optionalEvents = {};
-  if (onHover) {
-    optionalEvents.onMouseOver = handleHover;
-  }
+  const optionalEvents = {
+    onMouseOver: handleHover,
+  };
+
   const showTitle = title || color;
   return (
     <div
@@ -32,17 +35,10 @@ const Swatch = ({
       {...optionalEvents}
     >
       { children }
-      { transparent && (
-        <Checkboard
-          borderRadius={styles.swatch.borderRadius}
-          boxShadow="inset 0 0 0 1px rgba(0,0,0,0.1)"
-        />
-      ) }
+      { Checkb }
     </div>
   );
 };
-
-export default handleFocus(Swatch);
 
 Swatch.defaultProps = {
   focusStyle: {},
@@ -65,3 +61,5 @@ Swatch.propTypes = {
   focus: PropTypes.bool,
   children: PropTypes.shape({}),
 };
+
+export default handleFocus(Swatch);

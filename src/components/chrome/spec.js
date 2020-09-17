@@ -51,6 +51,12 @@ test('Chrome onChange events correctly', () => {
   fireEvent(saturationPointer, mousedownEvent);
   expect(changeSpy).toHaveBeenCalledTimes(3);
 
+  const touchs = [{ pageX: 90, pageY: 15 }];
+  fireEvent.touchStart(saturationPointer, { touches: touchs});
+  expect(changeSpy).toHaveBeenCalledTimes(4);
+  fireEvent.touchMove(saturationPointer, { touches: touchs });
+  expect(changeSpy).toHaveBeenCalledTimes(5);
+
   // check the ChromeFields
   const chromePointer = chromePicker[1].children[1].children[1].children[0];
   let chromeFields = document.querySelector("#chromeFields");
@@ -59,21 +65,21 @@ test('Chrome onChange events correctly', () => {
   expect(chromeFields.children[1].style.display).toBe('none'); //hsl
   expect(chromeFields.children[0].style.display).toBe('none'); //rgb
   fireEvent.click(chromePointer);
-  expect(changeSpy).toHaveBeenCalledTimes(3);
+  expect(changeSpy).toHaveBeenCalledTimes(5);
   rerender(<Chrome {...red} onChange={changeSpy} />);
   chromeFields = document.querySelector("#chromeFields");
   expect(chromeFields.children[2].style.display).toBe('flex'); //hex
   expect(chromeFields.children[1].style.display).toBe('none'); //hsl
   expect(chromeFields.children[0].style.display).toBe('none'); //rgb
   fireEvent.click(chromePointer);
-  expect(changeSpy).toHaveBeenCalledTimes(3);
+  expect(changeSpy).toHaveBeenCalledTimes(5);
   rerender(<Chrome {...red} onChange={changeSpy} />);
   chromeFields = document.querySelector("#chromeFields");
   expect(chromeFields.children[2].style.display).toBe('flex'); //hex
   expect(chromeFields.children[1].style.display).toBe('none'); //hsl
   expect(chromeFields.children[0].style.display).toBe('none'); //rgb
   fireEvent.click(chromePointer);
-  expect(changeSpy).toHaveBeenCalledTimes(3);
+  expect(changeSpy).toHaveBeenCalledTimes(5);
   rerender(<Chrome {...red} onChange={changeSpy} />);
   chromeFields = document.querySelector("#chromeFields");
   expect(chromeFields.children[2].style.display).toBe('flex'); //hex

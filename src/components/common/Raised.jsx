@@ -21,7 +21,11 @@ Raised.propTypes = {
   background: PropTypes.string,
   zDepth: PropTypes.oneOf([0, 1, 2, 3, 4, 5]),
   radius: PropTypes.number,
-  styles: PropTypes.shape({}),
+  styles: PropTypes.shape({
+    wrap: PropTypes.string,
+    bg: PropTypes.string,
+    content: PropTypes.string,
+  }),
   children: PropTypes.shape({}).isRequired,
 };
 
@@ -29,7 +33,11 @@ Raised.defaultProps = {
   background: '#fff',
   zDepth: 1,
   radius: 2,
-  styles: {},
+  styles: {
+    wrap: '',
+    bg: '',
+    content: '',
+  },
 };
 
 export default Raised;

@@ -83,10 +83,14 @@ Saturation.defaultProps = {
   radius: '',
   shadow: '',
   style: {
-    pointer: ''
+    pointer: '',
+    color: '',
+    white: '',
+    black: '',
+    circle: '',
   },
   pointer: null,
-  onChange:()=>{},
+  onChange: () => {},
 };
 
 Saturation.propTypes = {
@@ -98,6 +102,10 @@ Saturation.propTypes = {
   }).isRequired,
   style: PropTypes.shape({
     pointer: PropTypes.string,
+    color: PropTypes.string,
+    white: PropTypes.string,
+    black: PropTypes.string,
+    circle: PropTypes.string,
   }),
   hsv: PropTypes.shape({
     v: PropTypes.number,
