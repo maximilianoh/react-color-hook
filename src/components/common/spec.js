@@ -42,6 +42,21 @@ test('common Alpha empty event not change', () => {
   fireEvent(alphaPointer, event);
 });
 
+test('common Alpha event change', () => {
+  const { rerender } = render(<Alpha {...red} a={1} />);
+  const touchs = [{ pageX: 90, pageY: 15 }];
+  let alphaPointer = document.querySelector("div").children[0].children[2];
+  fireEvent.touchStart(alphaPointer, { touches: touchs});
+  fireEvent.touchStart(alphaPointer, { touches: [{ pageX: -1, pageY: 15 }]});
+  fireEvent.touchStart(alphaPointer, { touches: [{ pageX: 311, pageY: 15 }]});
+  rerender(<Alpha {...red} a={1} direction="vertical" />);
+  alphaPointer = document.querySelector("div").children[0].children[2];
+  fireEvent.touchStart(alphaPointer, { touches: touchs});
+  fireEvent.touchStart(alphaPointer, { touches: [{ pageX: 90, pageY: -1 }]});
+  fireEvent.touchStart(alphaPointer, { touches: [{ pageX: 900, pageY: 17 }]});
+});
+
+
 test('Block onChangeComplete events correctly', async () => {
   let times = 0;
   const handleChangeComplete = () => { times+=1; };
@@ -85,6 +100,10 @@ test('common Alpha empty event not change', () => {
   Object.defineProperty(event, 'pageY', {get: () => 10});
   let alphaPointer = document.querySelector("div").children[0].children[0];
   fireEvent(alphaPointer, event);
+  const touchs = [{ pageX: 90, pageY: 15 }];
+  fireEvent.touchStart(alphaPointer, { touches: touchs});
+  fireEvent.touchStart(alphaPointer, { touches: [{ pageX: -1, pageY: -1 }]});
+  fireEvent.touchStart(alphaPointer, { touches: [{ pageX: 311, pageY: 17 }]});
   
   rerender(<Hue {...red} a={0.5} />);
   const event2 = new MouseEvent('mousedown', { bubbles: true });
@@ -92,6 +111,12 @@ test('common Alpha empty event not change', () => {
   Object.defineProperty(event2, 'pageY', {get: () => 10});
   alphaPointer = document.querySelector("div").children[0].children[0];
   fireEvent(alphaPointer, event2);
+
+  rerender(<Hue {...red} a={1} direction="vertical" />);
+  alphaPointer = document.querySelector("div").children[0].children[0];
+  fireEvent.touchStart(alphaPointer, { touches: touchs});
+  fireEvent.touchStart(alphaPointer, { touches: [{ pageX: -1, pageY: -1 }]});
+  fireEvent.touchStart(alphaPointer, { touches: [{ pageX: 311, pageY: 17 }]});
 });
 
 
@@ -112,6 +137,13 @@ test('Saturation empty events', async () => {
   const but = document.querySelector("[role='button']"); 
   const touchs = [{ pageX: 90, pageY: 15 }];
   fireEvent.touchStart(but, { touches: touchs});
+  fireEvent.touchStart(but, { touches: [{ pageX: -1, pageY: -1 }]});
+  fireEvent.touchStart(but, { touches: [{ pageX: 311, pageY: 17 }]});
+  fireEvent.touchStart(but, { touches: [{ pageX: 's', pageY: 's' }]});
+  const event = new MouseEvent('mousedown', { bubbles: true });
+  Object.defineProperty(event, 'pageX', {get: () => 100});
+  Object.defineProperty(event, 'pageY', {get: () => 10});
+  fireEvent(but, event);
 });
 
 test('EditableInput events', async () => {

@@ -36,35 +36,6 @@ export const chromaValidation = (data) => {
   return validation;
 };
 
-export const isValidToChange = (data, colors) => {
-  const key = data.source;
-  if (key === 'rgb') {
-    const validation = Number(data.r) === colors.r
-    && Number(data.g) === colors.g && Number(data.g) === colors.g;
-    return validation;
-  }
-  if (key === 'hsv') {
-    const s = data.s > 1 ? data.s / 100 : data.s;
-    const v = data.v > 1 ? data.v / 100 : data.v;
-    const validation = Number(data.h) >= 0 && Number(data.h) <= 360
-    && Number(s) >= 0 && Number(s) <= 1
-    && Number(v) >= 0 && Number(v) <= 1;
-    return validation;
-  }
-  if (key === 'hsl') {
-    const s = data.l > 1 ? data.l / 100 : data.l;
-    const l = data.l > 1 ? data.l / 100 : data.l;
-    try {
-      chroma.hsl(data.h, s, l);
-      return true;
-    } catch (error) {
-      return false;
-    }
-  } else { // hex
-    return data.hex.toUpperCase() === colors.toUpperCase();
-  }
-};
-
 const valueNaN = (h) => (!isNumber(h) ? 0 : h);
 const hslaListToObject = (list) => ({
   h: valueNaN(list[0]), s: valueNaN(list[1]), l: valueNaN(list[2]), a: valueNaN(list[3]),
