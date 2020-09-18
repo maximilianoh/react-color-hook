@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, act } from '@testing-library/react';
 import { simpleCheckForValidColor } from '../../helpers/color';
 import { red } from '../../example_color';
 import Alpha from "./Alpha";
@@ -9,6 +9,7 @@ import CanvasRenderingContext2DEvent from "jest-canvas-mock";
 import Hue from './Hue';
 import Swatch from "./Swatch";
 import Saturation from "./Saturation";
+import EditableInput from "./EditableInput";
 
 beforeAll(() => {
   Object.defineProperty(HTMLElement.prototype, 'clientHeight', {
@@ -111,4 +112,38 @@ test('Saturation empty events', async () => {
   const but = document.querySelector("[role='button']"); 
   const touchs = [{ pageX: 90, pageY: 15 }];
   fireEvent.touchStart(but, { touches: touchs});
+});
+
+test('EditableInput events', async () => {
+  const { rerender } = render(<EditableInput value='240' dragLabel="r" label="r" dragMax="255" />);
+  let inp = document.querySelector("input");  
+  fireEvent.keyDown(inp, { keyCode: 40, target:{ value: '250'} });
+  fireEvent.keyDown(inp, { keyCode: 38, target:{ value: '250'} });
+  fireEvent.keyDown(inp, { keyCode: 38, target:{ value: '2s'} });
+  fireEvent.focus(inp);
+  fireEvent.change(inp);
+  fireEvent.focus(inp);
+  fireEvent.blur(inp);
+  act(() => inp.focus());
+  const event = new MouseEvent('blur', { bubbles: true, target:{ value:'200'} });
+  fireEvent(inp, event);
+
+  
+
+  let but = document.querySelector("[role='button']");
+  fireEvent.mouseDown(but, {movementX:1});
+
+  rerender(<EditableInput value='256' dragLabel="r" label="r" dragMax="255" />);
+  but = document.querySelector("[role='button']");
+  fireEvent.mouseDown(but, {movementX:1});
+  inp = document.querySelector("input");  
+  fireEvent.blur(inp);
+
+
+  rerender(<EditableInput value='250' label="r" dragMax="255" />);
+  inp = document.querySelector("input");  
+  fireEvent.blur(inp);
+  fireEvent(inp, event);
+  but = document.querySelector("[role='button']");
+  fireEvent.mouseDown(but, {movementX:1});
 });

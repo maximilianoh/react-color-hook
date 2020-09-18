@@ -26,17 +26,15 @@ const EditableInput = (props) => {
   const getValueObjectWithLabel = (v) => ({ [props.label]: v });
 
   const handleDrag = (e) => {
-    if (props.dragLabel) {
-      const newValue = Math.round(props.value + e.movementX);
-      if (newValue >= 0 && newValue <= props.dragMax) {
-        if (props.onChange) props.onChange(getValueObjectWithLabel(newValue), e);
-      }
+    const newValue = Math.round(getNumberValue(props.value) + getNumberValue(e.movementX));
+    if (newValue >= 0 && newValue <= props.dragMax) {
+      props.onChange(getValueObjectWithLabel(newValue), e);
     }
   };
 
   const setUpdatedValue = (v, e) => {
     const onChangeValue = props.label ? getValueObjectWithLabel(v) : v;
-    if (props.onChange) props.onChange(onChangeValue, e);
+    props.onChange(onChangeValue, e);
 
     const isPercentage = getIsPercentage(e.target.value);
     setValueState(isPercentage ? getFormattedPercentage(v) : v);
@@ -67,15 +65,13 @@ const EditableInput = (props) => {
     setUpdatedValue(e.target.value, e);
   };
 
-  const getArrowOffset = () => props.arrowOffset || DEFAULT_ARROW_OFFSET;
-
   const handleKeyDown = (e) => {
     // In case `e.target.value` is a percentage remove the `%` character
     // and update accordingly with a percentage
     // https://github.com/casesandberg/react-color/issues/383
     const v = getNumberValue(e.target.value);
     if (isNumber(v) && isValidKeyCode(e.keyCode)) {
-      const offset = getArrowOffset();
+      const offset = props.arrowOffset;
       const updatedValue = e.keyCode === UP_KEY_CODE ? v + offset : v - offset;
 
       setUpdatedValue(updatedValue, e);
@@ -83,11 +79,11 @@ const EditableInput = (props) => {
   };
 
   useEffect(() => {
-    if (inputRef.current && inputRef.current.input === document.activeElement) {
-      setBlurValueState(String(props.value).toUpperCase());
+    if (inputRef.current && inputRef.current === document.activeElement) {
+      setBlurValueState(String(value).toUpperCase());
     } else {
-      setBlurValueState(!blurValueState && String(props.value).toUpperCase());
-      setValueState(String(props.value).toUpperCase());
+      setBlurValueState(!blurValueState && String(value).toUpperCase());
+      setValueState(String(value).toUpperCase());
     }
   }, [value]);
 
@@ -133,6 +129,7 @@ EditableInput.defaultProps = {
   dragMax: '',
   dragLabel: '',
   label: '',
+  onChange: () => {},
 };
 
 EditableInput.propTypes = {
@@ -140,7 +137,7 @@ EditableInput.propTypes = {
   label: PropTypes.string,
   dragLabel: PropTypes.string,
   dragMax: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   hideLabel: PropTypes.bool,
   placeholder: PropTypes.string,
   arrowOffset: PropTypes.number,
