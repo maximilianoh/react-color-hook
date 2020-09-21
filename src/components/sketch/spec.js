@@ -5,7 +5,7 @@ import { red } from '../../example_color';
 import Sketch from './Sketch'
 import SketchFields from './SketchFields'
 import SketchPresetColors from './SketchPresetColors'
-import CanvasRenderingContext2DEvent from "jest-canvas-mock";
+import CanvasRenderingContext2D from "jest-canvas-mock";
 import { render, fireEvent } from '@testing-library/react';
 
 test('Sketch renders correctly', () => {
@@ -17,7 +17,7 @@ test('Sketch renders correctly', () => {
 
 test('Sketch renders on server correctly', () => {
   const { container } = render(
-    <Sketch renderers={CanvasRenderingContext2DEvent} {...red} />
+    <Sketch renderers={CanvasRenderingContext2D} {...red} />
   );
   expect(container).toMatchSnapshot();
 })

@@ -5,7 +5,7 @@ import { simpleCheckForValidColor } from '../../helpers/color';
 import { red } from '../../example_color';
 import Alpha from './Alpha';
 import AlphaPointer from './AlphaPointer';
-import CanvasRenderingContext2DEvent from "jest-canvas-mock";
+import "jest-canvas-mock";
 
 test('Alpha renders correctly', () => {
   const tree = renderer.create(
@@ -15,8 +15,9 @@ test('Alpha renders correctly', () => {
 })
 
  test('Alpha renders on server correctly', () => {
+  const mockCanvas = () => document.createElement("canvas");
   const { container } = render(
-    <Alpha renderers={ CanvasRenderingContext2DEvent } { ...red } />
+    <Alpha renderers={ {canvas:mockCanvas} } { ...red } />
   );
   expect(container).toMatchSnapshot();
  })

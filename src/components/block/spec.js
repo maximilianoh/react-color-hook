@@ -4,7 +4,7 @@ import Block from './Block'
 import BlockSwatches from './BlockSwatches'
 import { simpleCheckForValidColor} from '../../helpers/color'
 import { render, fireEvent } from '@testing-library/react';
-import CanvasRenderingContext2DEvent from "jest-canvas-mock";
+import CanvasRenderingContext2D from "jest-canvas-mock";
 
 test('Block renders correctly', () => {
   const tree = renderer.create(

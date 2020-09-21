@@ -35,6 +35,8 @@ test('Material onChange', () => {
   expect(field_g.children[0].value).toBe('250');
   expect(field_h.children[0].style.borderBottom).toBe('2px solid #fafa01');
 
+  fireEvent.change(field_g.children[0], { target: {value : 'h' }});
+  expect(field_h.children[0].style.borderBottom).toBe('2px solid #fafa01');
 
   fireEvent.change(field_h.children[0], { target: {value : '#FF00hhh' }});
   expect(field_h.children[0].style.borderBottom).toBe('2px solid #fafa01');

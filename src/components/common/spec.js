@@ -5,7 +5,7 @@ import { red } from '../../example_color';
 import Alpha from "./Alpha";
 import Block from "../block/Block";
 import Compact from "../compact/Compact";
-import CanvasRenderingContext2DEvent from "jest-canvas-mock";
+import CanvasRenderingContext2D from "jest-canvas-mock";
 import Hue from './Hue';
 import Swatch from "./Swatch";
 import Saturation from "./Saturation";
@@ -122,13 +122,15 @@ test('common Alpha empty event not change', () => {
 
 test('Swatch empty events', async () => {
   render(<Swatch color='transparent' focus={true} />);
-  const but = document.querySelector("[role='button']"); 
+  const but = document.querySelector("[role='button']");
   fireEvent.click(but);
   const event = new MouseEvent('mouseover', { bubbles: true });
   fireEvent(but, event);
   fireEvent.keyDown(but, { key: 'Enter', code: 'Enter' });
   fireEvent.keyDown(but, { key: 'A', code: 'keyA' });
-
+  const span = document.querySelector("span");
+  fireEvent.focus(span);
+  fireEvent.blur(span);
 });
 
 

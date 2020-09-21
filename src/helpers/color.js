@@ -13,12 +13,6 @@ export const simpleCheckForValidColor = (data) => {
       if (isNumber(data[letter])) {
         passed += 1;
       }
-      if (letter === 's' || letter === 'l') {
-        const percentPatt = /^\d+%$/;
-        if (percentPatt.test(data[letter])) {
-          passed += 1;
-        }
-      }
     }
   });
   return (checked === passed) ? data : false;
@@ -68,7 +62,6 @@ export const hsvParse = (color, data) => {
 };
 
 export const toState = (data, oldHue) => {
-  const dataValidation = data || '#000000';
   let transparent = false;
   let colorChroma;
   let a = data.a >= 0 && data.a <= 1 ? data.a : 1;
@@ -83,7 +76,7 @@ export const toState = (data, oldHue) => {
     colorChroma = chroma.hsl(data.h, s, l);
   } else {
     try {
-      colorChroma = chroma(dataValidation);
+      colorChroma = chroma(data);
     } catch (error) {
       colorChroma = chroma('#000000');
     }
@@ -104,20 +97,11 @@ export const toState = (data, oldHue) => {
   };
 };
 
-export const isValidHex = (hex) => {
-  // disable hex4 and hex8
-  // const lh = (String(hex).charAt(0) === '#') ? 1 : 0;
-  // const result = hex.length !== (4 + lh) && hex.length < (7 + lh) && chroma.valid(hex);
-  // const hasHas = hex.indexOf('#') !== 0 ? '#' : '';
-
-  let validation = false;
-  try {
-    validation = chroma.valid(hex) && typeof hex === 'string';
-  } catch (error) {
-    validation = false;
-  }
-  return validation;
-};
+// disable hex4 and hex8
+// const lh = (String(hex).charAt(0) === '#') ? 1 : 0;
+// const result = hex.length !== (4 + lh) && hex.length < (7 + lh) && chroma.valid(hex);
+// const hasHas = hex.indexOf('#') !== 0 ? '#' : '';
+export const isValidHex = (hex) => chroma.valid(hex);
 
 export const getContrastingColor = (data) => {
   if (!data) {

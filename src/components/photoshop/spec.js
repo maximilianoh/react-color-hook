@@ -59,6 +59,14 @@ test('PhotoshopPreviews renders correctly', () => {
 })
 
 
+test('Photoshop hsv events', () => {
+  render( <Photoshop { ...red }  />);
+  const inp = document.querySelectorAll('input');
+  fireEvent.change(inp[1], { target: {value : '90' }});
+  fireEvent.change(inp[2], { target: {value : '90' }});
+  fireEvent.change(inp[3], { target: {value : '90' }});
+})
+
 test('Photoshop empty events', () => {
   render( <Photoshop { ...red }  />);
   const act = document.querySelector(".photoshop-picker .flexbox-fix .flexbox-fix").children[1];

@@ -7,7 +7,7 @@ import ChromePointer from './ChromePointer'
 import ChromePointerCircle from './ChromePointerCircle'
 import { render, fireEvent } from '@testing-library/react';
 import renderer from 'react-test-renderer';
-import CanvasRenderingContext2DEvent from "jest-canvas-mock";
+import CanvasRenderingContext2D from "jest-canvas-mock";
 
 test('Chrome renders correctly', () => {
   const tree = renderer.create(
@@ -120,7 +120,7 @@ test('Chrome view hex correctly', () => {
 
 test('Chrome renders on server correctly', () => {
   const tree = renderer.create(
-    <Chrome renderers={CanvasRenderingContext2DEvent} {...red} />
+    <Chrome renderers={CanvasRenderingContext2D} {...red} />
   ).toJSON()
   expect(tree).toMatchSnapshot()
 })

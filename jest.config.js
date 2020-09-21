@@ -14,4 +14,6 @@ module.exports = {
   moduleFileExtensions: ["js", "jsx"],
   coverageDirectory: "./coverage/",
   collectCoverage: true,
+  setupFiles: ["jest-canvas-mock"]
+  
 };

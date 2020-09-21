@@ -1,9 +1,6 @@
 const checkboardCache = {};
 
 export const render = (c1, c2, size, ServerCanvas) => {
-  if (typeof document === 'undefined' && !ServerCanvas) {
-    return null;
-  }
   const canvas = ServerCanvas ? new ServerCanvas() : document.createElement('canvas');
   canvas.width = size * 2;
   canvas.height = size * 2;
