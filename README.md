@@ -7,9 +7,13 @@ Wrote in React Hooks
 
     npm start
 
-## Documentation and use
+## Dev Styleguide
 
     npm run doc
+    
+## Prod StyleGuide
+
+    https://maximilianoh.github.io/react-color-hook/
 
 ## Build project
 
