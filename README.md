@@ -3,6 +3,9 @@
 Color picker based on https://github.com/casesandberg/react-color
 Wrote in React Hooks
 
+[Style Guide](https://maximilianoh.github.io/react-color-hook/)
+
+
 ## Development
 
     npm start
@@ -10,10 +13,7 @@ Wrote in React Hooks
 ## Dev Styleguide
 
     npm run doc
-    
-## Prod StyleGuide
-
-    https://maximilianoh.github.io/react-color-hook/
+   
 
 ## Build project
 
