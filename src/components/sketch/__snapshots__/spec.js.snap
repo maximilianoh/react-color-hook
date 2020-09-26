@@ -149,7 +149,13 @@ exports[`Sketch renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="flexbox-fix flexContent"
+    className="flexbox-fix"
+    style={
+      Object {
+        "display": "flex",
+        "flexWrap": "wrap",
+      }
+    }
   >
     <div
       style={
@@ -786,10 +792,12 @@ exports[`Sketch renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="flexContent flexbox-fix"
+    className="flexbox-fix"
     style={
       Object {
         "borderTop": "1px solid #eee",
+        "display": "flex",
+        "flexWrap": "wrap",
         "margin": "0 -10px",
         "padding": "10px 0 0 10px",
         "position": "relative",
@@ -1491,7 +1499,8 @@ exports[`Sketch renders on server correctly 1`] = `
       </div>
     </div>
     <div
-      class="flexbox-fix flexContent"
+      class="flexbox-fix"
+      style="display: flex; flex-wrap: wrap;"
     >
       <div
         style="padding: 4px 0px; flex: 1;"
@@ -1689,8 +1698,8 @@ exports[`Sketch renders on server correctly 1`] = `
       </div>
     </div>
     <div
-      class="flexContent flexbox-fix"
-      style="margin: 0px -10px; padding: 10px 0px 0px 10px; border-top: 1px solid #eee; position: relative;"
+      class="flexbox-fix"
+      style="display: flex; flex-wrap: wrap; margin: 0px -10px; padding: 10px 0px 0px 10px; border-top: 1px solid #eee; position: relative;"
     >
       <div
         style="width: 16px; height: 16px; margin: 0px 10px 10px 0px;"
@@ -2195,10 +2204,12 @@ exports[`SketchFields renders correctly 1`] = `
 
 exports[`SketchPresetColors renders correctly 1`] = `
 <div
-  className="flexContent flexbox-fix"
+  className="flexbox-fix"
   style={
     Object {
       "borderTop": "1px solid #eee",
+      "display": "flex",
+      "flexWrap": "wrap",
       "margin": "0 -10px",
       "padding": "10px 0 0 10px",
       "position": "relative",
@@ -2339,10 +2350,12 @@ exports[`SketchPresetColors renders correctly 1`] = `
 
 exports[`SketchPresetColors with custom titles renders correctly 1`] = `
 <div
-  className="flexContent flexbox-fix"
+  className="flexbox-fix"
   style={
     Object {
       "borderTop": "1px solid #eee",
+      "display": "flex",
+      "flexWrap": "wrap",
       "margin": "0 -10px",
       "padding": "10px 0 0 10px",
       "position": "relative",

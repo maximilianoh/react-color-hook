@@ -2,7 +2,7 @@
 
 exports[`Github \`triangle="hide"\` 1`] = `
 <div
-  className="github-picker  flexContent"
+  className="github-picker "
   style={
     Object {
       "MozBorderRadius": "4px",
@@ -15,6 +15,8 @@ exports[`Github \`triangle="hide"\` 1`] = `
       "border": "1px solid rgba(0,0,0,0.2)",
       "borderRadius": "4px",
       "boxShadow": "0 3px 12px rgba(0,0,0,0.15)",
+      "display": "flex",
+      "flexWrap": "wrap",
       "msBorderRadius": "4px",
       "msBoxShadow": "0 3px 12px rgba(0,0,0,0.15)",
       "msBoxorient": "horizontal",
@@ -689,7 +691,7 @@ exports[`Github \`triangle="hide"\` 1`] = `
 
 exports[`Github \`triangle="top-right"\` 1`] = `
 <div
-  className="github-picker  flexContent"
+  className="github-picker "
   style={
     Object {
       "MozBorderRadius": "4px",
@@ -702,6 +704,8 @@ exports[`Github \`triangle="top-right"\` 1`] = `
       "border": "1px solid rgba(0,0,0,0.2)",
       "borderRadius": "4px",
       "boxShadow": "0 3px 12px rgba(0,0,0,0.15)",
+      "display": "flex",
+      "flexWrap": "wrap",
       "msBorderRadius": "4px",
       "msBoxShadow": "0 3px 12px rgba(0,0,0,0.15)",
       "msBoxorient": "horizontal",
@@ -1378,7 +1382,7 @@ exports[`Github \`triangle="top-right"\` 1`] = `
 
 exports[`Github renders correctly 1`] = `
 <div
-  className="github-picker  flexContent"
+  className="github-picker "
   style={
     Object {
       "MozBorderRadius": "4px",
@@ -1391,6 +1395,8 @@ exports[`Github renders correctly 1`] = `
       "border": "1px solid rgba(0,0,0,0.2)",
       "borderRadius": "4px",
       "boxShadow": "0 3px 12px rgba(0,0,0,0.15)",
+      "display": "flex",
+      "flexWrap": "wrap",
       "msBorderRadius": "4px",
       "msBoxShadow": "0 3px 12px rgba(0,0,0,0.15)",
       "msBoxorient": "horizontal",

@@ -11,7 +11,7 @@
     "styleguide": "npx styleguidist build",
     "lint": "eslint src --fix --ext .js --ext .jsx --ignore-pattern spec.js",
     "clean": "rm -rf lib && mkdir lib",
-    "lib": "npm run clean && babel src -d lib --config-file ./buildBabel.config.js  --copy-files --no-copy-ignored",
+    "lib": "npm run clean && babel src -d lib --config-file ./buildBabel.config.js",
     "prepublish": "npm run snyk-protect && npm run lib",
     "snyk-protect": "snyk protect"
   },

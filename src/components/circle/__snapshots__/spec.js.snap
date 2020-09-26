@@ -2,9 +2,11 @@
 
 exports[`Circle renders correctly 1`] = `
 <div
-  className="circle-picker  flexContent"
+  className="circle-picker "
   style={
     Object {
+      "display": "flex",
+      "flexWrap": "wrap",
       "marginBottom": -14,
       "marginRight": -14,
       "width": 252,
