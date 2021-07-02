@@ -51,7 +51,7 @@
     "jest-canvas-mock": "^2.3.0",
     "lodash": "^4.17.20",
     "material-colors": "^1.2.6",
-    "open": "^7.2.1",
+    "open": "^7.3.0",
     "prop-types": "^15.6.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
