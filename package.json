@@ -58,7 +58,7 @@
     "react-test-renderer": "^16.14.0",
     "reactcss": "^1.2.3",
     "shortid": "^2.2.15",
-    "snyk": "^1.399.1",
+    "snyk": "^1.667.0",
     "webpack": "^4.44.2"
   },
   "devDependencies": {
