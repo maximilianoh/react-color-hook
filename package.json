@@ -39,7 +39,7 @@
   "dependencies": {
     "@babel/cli": "^7.12.0",
     "@babel/core": "^7.12.0",
-    "@babel/preset-env": "^7.12.0",
+    "@babel/preset-env": "^7.22.6",
     "@babel/preset-react": "^7.10.4",
     "@babel/runtime": "^7.12.0",
     "@loadable/component": "^5.13.2",
@@ -58,7 +58,7 @@
     "react-test-renderer": "^16.14.0",
     "reactcss": "^1.2.3",
     "shortid": "^2.2.15",
-    "snyk": "^1.399.1",
+    "snyk": "^1.685.0",
     "webpack": "^4.44.2"
   },
   "devDependencies": {
