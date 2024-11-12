@@ -46,7 +46,7 @@
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "babel-loader": "^8.1.0",
-    "chroma-js": "^2.1.0",
+    "chroma-js": "^2.2.0",
     "core-js": "^3.6.5",
     "jest-canvas-mock": "^2.3.0",
     "lodash": "^4.17.21",
@@ -58,7 +58,7 @@
     "react-test-renderer": "^16.14.0",
     "reactcss": "^1.2.3",
     "shortid": "^2.2.15",
-    "snyk": "^1.399.1",
+    "snyk": "^1.996.0",
     "webpack": "^4.44.2"
   },
   "devDependencies": {
